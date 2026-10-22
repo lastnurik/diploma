@@ -1,5 +1,7 @@
 # Project Proposal
 
+**Status:** First pre-defense proposal, 22 October 2026. The supervisor has requested a limited October submission. The proposed users, scope and technical solution are hypotheses to refine with more analysis and input; detailed requirements are expected in late November to mid December.
+
 ## Identification
 
 **English title:** Development of an AI-Assisted Platform for Generating Playable Browser Games from User-Provided Storylines  
@@ -10,49 +12,46 @@
 **Period:** October 2026 to May 2027  
 **Format:** Group diploma project
 
-## Problem and intended users
+## Problem and proposed audience
 
-A user can describe a game story in ordinary language, but turning it into a working game also requires consistent rules, controls, scene data and an achievable ending. A prose outline or generated source file does not itself demonstrate a playable result. The proposed platform addresses that gap for story authors, teachers and small teams that need a quick browser-based 2D game prototype. The relevance of these user groups and their precise needs remain hypotheses until supported by the planned user research.
+A person can describe a game story in ordinary language, but turning it into a working game also requires coherent rules, controls, scene data and an achievable ending. A prose outline or generated code file does not by itself demonstrate a playable result. We propose to investigate a browser-based tool for story authors, teachers and small creative teams who may want a quick game prototype. Whether these groups need this tool, which mechanics matter to them and what compromises they accept remain research questions. The [relevance section](evidence/relevance.md) separates current evidence from those assumptions.
 
-## Aim and objectives
+## Aim and preliminary objectives
 
-The aim is to build a platform that transforms a user-provided storyline and selected parameters into a complete, playable 2D browser game with a beginning, core gameplay and an ending. The system should preserve the central premise when simplifying mechanics that cannot be reliably generated. Its objectives are to:
+The proposed aim is a platform that transforms a user-provided storyline and selected parameters into a playable browser game with a beginning, meaningful player actions and an ending. We will examine how faithfully it can preserve the central story if mechanics must be simplified. Preliminary objectives are:
 
-1. Let the user enter/edit a story and game parameters and view project versions and generation progress.
-2. Interpret the story into a structured game specification describing genre, objective, scenes, entities, supported player actions, state changes and completion conditions.
-3. Validate the specification and produced game data, attempt a bounded correction where appropriate, and report an actionable failure otherwise.
-4. Use a controlled browser game client to preview and run the generated result; show the user what was simplified.
-5. Provide server APIs, asynchronous generation jobs, artifact/version storage and safe delivery of game content.
-6. Evaluate launch, presence of requested core actions, ability to reach an ending, and the fidelity of simplifications on varied story prompts.
+1. Investigate intended users, comparable tools and relevant research; collect actual stakeholder input.
+2. Determine a feasible range of game mechanics and a representation of story goals, scenes, player actions and endings.
+3. Design and build a browser authoring and play experience with a platform service and an AI-assisted generation component.
+4. Evaluate actual outputs for launch, central player actions, observed ending and fidelity to the story; report failures and limitations.
 
-## Proposed system boundary and outcome
+The October submission addresses objective 1 only in its initial desk-research form. Further input will inform the precise requirements and acceptance measures in late November to mid December.
 
-The browser client collects the request and renders a playable game; the platform server manages projects, versions, jobs and delivered artifacts; the generation service maps a story to a verifiable specification and game data. The first supported mechanic set will be deliberately bounded. Unsupported requests will be simplified transparently or rejected with an explanation. A specification alone is an intermediate artifact, not a successful final game.
+## Intended outcome and boundaries to decide
 
-The expected final outcome is a working prototype that takes a story, creates and checks a game specification, reveals simplifications and launches a game in the browser that can be completed. Planned evaluation prompts include different genres, such as platformer, racing and card-game ideas, with any out-of-scope mechanic explicitly identified. Launch, main actions and completion will be checked separately. Functional reliability has priority over visual sophistication.
+The intended final outcome is a working prototype that accepts a story and launches a game in the browser that a person can complete. The concept includes a browser interface, a service for projects and generation workflow, and a component that interprets the story. The exact division, game types, AI method, supported actions, simplification policy, data contract and technologies are **not yet approved**. A generated outline alone is an intermediate artifact rather than the intended final result. We will choose a bounded first scope based on the evidence and feasibility work, and distinguish supported behavior from transparently simplified or rejected requests.
 
-## Individual contribution and integration
+## Team contribution
 
-| Student | Development responsibility and independently assessable output |
+| Student | Preliminary area of independent contribution |
 | --- | --- |
-| Almadi Madiuly | Frontend and UX/UI: story entry, parameters, progress, simplifications, project catalogue, preview/play and retry; client application and checked user scenarios. |
-| Zhaksylyk Aldiyar | Backend and platform architecture: data model and versions, API, jobs, statuses, logging, artifact storage/publication, safe content delivery; documented service, integration tests and reproducible deployment. |
-| Yessengeldi Nurgeldi | AI engineering and generation backend: genre/goal/action extraction, structured specification, scenes/rules/data, simplification, validation, repair/failure handling; generation service and evaluation on varied prompts. |
+| Almadi Madiuly | Frontend and UX/UI: investigate author workflow and expectations; later implement and evaluate the browser experience. |
+| Zhaksylyk Aldiyar | Backend and platform: investigate integration and delivery constraints; later implement the service and end-to-end path. |
+| Yessengeldi Nurgeldi | AI and generation: investigate generation, validation and fidelity; later implement and evaluate the generation component. |
 
-The team jointly agrees the specification format, simplification policy and evaluation corpus. Integration must demonstrate a complete request-to-playable-game path; each member presents the result and evidence of their own module. Non-development pre-defense work is divided across all three in the task plan.
+All three will agree shared interfaces and evaluation criteria after the research phase. [October tasks](october-tasks.md) assign the limited submission and the next input collection.
 
-## Stages
+## Provisional stages
 
 | Period | Checkpoint |
 | --- | --- |
-| October–November 2026 | Agree scope, specification and acceptance criteria; show story input and launch a prewritten game. |
-| December 2026 | Build client, server and executable mechanics; manually made games launch and end. |
-| January–February 2027 | Connect generation to the platform; show simplifications and handle failures. |
-| March–April 2027 | Evaluate varied prompts, measure successful generation and resolve defects. |
-| May 2027 | Complete documentation, final demonstration and review responses. |
+| By 24 October 2026 | Submit project proposal, honest relevance analysis, minimal shared repository and tasks. |
+| Late October–November 2026 | Gather user/supervisor input, compare research and existing tools, test feasibility assumptions. |
+| Late November–mid December 2026 | Agree bounded scope, requirements, acceptance measures and architecture using those findings. |
+| January–May 2027 | Implement, integrate, evaluate and document the agreed prototype; refine dates after scope review. |
 
 ## First pre-defense status
 
-The 24 October 2026 submission is the analysis and design checkpoint. It contains the project scope, relevance evidence, literature and alternatives, verifiable requirements, three architecture diagrams, UX prototype, evaluation plan, milestones and reviewed repository history. It does not assert that the final application or measured generation results already exist.
+The limited October package does not claim a built or evaluated system, conducted interviews, finalized requirements, approved architecture or supervisor acceptance of technical choices. It gives the committee a concrete proposal and exposes what evidence is still needed. Earlier detailed working drafts are retained separately for later review and are not part of this submission.
 
-**Source:** Supplied supervisor proposal, *Представление научного руководителя о готовности обучающихся к выполнению дипломного проекта*, pp. 1–5. This text extracts the project description and role division; the separate supervisor-readiness form contains personal academic information and should not be published in a public repository.
+**Source:** Supplied supervisor proposal, *Представление научного руководителя о готовности обучающихся к выполнению дипломного проекта*, pp. 1–5. This text extracts the project description and role division; the separate form contains personal academic information and should not be published in a public repository. The October scope follows the supervisor's later message supplied by the user.

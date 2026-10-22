@@ -1,0 +1,32 @@
+# User Relevance Survey and Outreach Method
+
+**Purpose.** Gather early evidence about whether story authors, educators, and small creative/game teams would use a tool that turns a storyline into a playable 2D browser game. This questionnaire asks about present workflow, desired actions and output, and unacceptable compromises. It is designed for about five minutes. It has **not yet been distributed**; no responses or discussions are claimed here.
+
+## Survey introduction and consent
+
+> We are three Software Engineering students at Astana IT University researching a proposed tool that would turn a short story idea into a playable browser game. This survey takes about five minutes. Participation is voluntary; you may skip any question or stop. We will use answers in aggregate in our diploma project and avoid publishing names or identifying details. Please do not include confidential stories, student information, or personal details in free-text answers. An optional, separate invitation at the end asks whether you would discuss your answers with us. Continuing to the questions means you agree to the use of your anonymous survey answers for this academic project.
+
+If the respondent does not agree, end the form without collecting answers. Configure the form to avoid automatic email collection or sign-in requirements where feasible. Keep any optional follow-up contact separately from the anonymous survey export; do not commit raw responses or contact details to Git.
+
+## Questions
+
+1. **Which best describes your interest in creating a game?** Select all that apply: I write stories; I teach or design learning activities; I develop/design games; I work in a small creative team; I play games and have an idea; other (describe); I have no interest in creating a game. This identifies whether the respondent resembles a target user.
+2. **Have you tried turning an idea or story into a playable game?** Yes, finished one; yes, tried but did not finish; no, but I would like to; no interest. If yes, which tools or methods did you use? Optional free text. This separates prior experience from interest.
+3. **What is the hardest part of making a game from a story idea?** Choose up to two: deciding gameplay rules; drawing or finding assets; programming; designing levels/scenes; making the game possible to finish; testing; publishing/sharing; time/cost; other (describe). Include “I have not tried” as an option.
+4. **Imagine entering a short story and receiving a playable browser game. Which two parts would matter most?** Select up to two: retaining the story's central idea; matching the requested genre; including the main player actions; having a clear goal and ending; visual appearance; speed of creation; editing the result; being able to share it; other (describe).
+5. **What should the player do in a game based on your idea?** Optional short free text. Give a concrete action, such as moving, choosing dialogue, collecting an item, solving a puzzle, or racing. Avoid requesting the complete story or confidential material.
+6. **What output would you expect before you considered the generated result useful?** Select all that apply: a game playable immediately in my browser; editable project/source files; a link to share; a short explanation of gameplay and controls; a list of changes made to my request; an image/video preview; other (describe).
+7. **If the requested mechanic cannot be generated reliably, which response would you prefer?** Choose one: a simpler playable mechanic with an explanation; ask me to revise the request before generating; show several simpler options for me to choose; report that generation failed; other (describe).
+8. **Which outcome would make the tool unacceptable even if a game opens?** Choose up to two: main story premise lost; requested core action missing; game cannot be completed; game crashes; changes are hidden; controls are confusing; result cannot be edited/shared; other (describe).
+9. **How would you judge whether the game represents your idea?** Optional short free text. This helps form a later fidelity rubric without assuming that visual similarity is enough.
+10. **Would you consider trying a prototype of this tool?** Yes; maybe; no. Optional: what would change your answer? Do not treat stated interest as proof of actual adoption.
+
+**Separate optional follow-up invitation:** “Would you be willing to have a 10–15 minute text or voice discussion about your answers? If yes, provide a contact method in this separate form. Your contact will be used only to arrange that discussion and will not be linked to the anonymous survey export.” A “no” response must remain fully valid survey participation.
+
+## Distribution and evidence recording
+
+Recruit through channels that can reach the stated target groups: university game-development or writing clubs, instructors who use interactive teaching material, and small creator communities. Share the same neutral invitation and survey link in each channel; do not imply the product already works. Ask a channel moderator first if its rules require it. Note each actual channel, date, invitation wording, and number of usable responses in a private collection log. Record respondent types in aggregate (for example, author, educator, developer/team, interested player) and allow overlap because Q1 is multi-select. Report total responses and target-group subset separately; do not claim a representative sample.
+
+After responses arrive, summarize counts for closed questions and group free-text themes with short anonymous paraphrases. Preserve contradictory or negative feedback. In `docs/evidence/relevance.md`, distinguish **verified observation** (what respondents said), **interpretation** (what it might imply), and **design decision** (a requirement or scope change). Cite the questionnaire version, field dates and sample size. Do not put raw contact information, private stories or response exports in the repository.
+
+The pre-defense checklist asks for **3–5 discussions with user representatives or a substantive actual-client agreement**. This survey alone does not meet that threshold. If respondents consent, invite 3–5 people from different relevant roles for brief follow-up discussions and record the actual date, role, questions, anonymized answers and resulting requirement changes. Ask the supervisor whether written/text follow-ups qualify. If discussions do not happen, state the requirement as outstanding rather than converting survey submissions into fictional interviews.
