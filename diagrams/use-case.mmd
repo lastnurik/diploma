@@ -1,0 +1,23 @@
+%% Proposed author use cases; IDs reconcile with docs/requirements/frontend.md.
+%% Mermaid flowchart uses oval use-case nodes within the system boundary.
+flowchart LR
+    author["Author"]
+
+    subgraph system["AI-assisted browser-game platform — proposed"]
+        direction TB
+        uc01(["UC-01 Enter/edit story<br/>and game parameters"])
+        uc02(["UC-02 Submit generation<br/>request"])
+        uc03(["UC-03 Check progress<br/>or failure"])
+        uc04(["UC-04 Inspect result<br/>and simplifications"])
+        uc05(["UC-05 Preview, play,<br/>finish and replay"])
+        uc06(["UC-06 Browse catalogue<br/>and versions"])
+        uc07(["UC-07 Edit and retry<br/>or regenerate"])
+    end
+
+    author --- uc01
+    author --- uc02
+    author --- uc03
+    author --- uc04
+    author --- uc05
+    author --- uc06
+    author --- uc07

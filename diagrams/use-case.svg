@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="900" viewBox="0 0 1050 900" role="img" aria-labelledby="title desc">
+  <title id="title">Author use cases for the proposed browser game platform</title>
+  <desc id="desc">The author is associated with seven use cases: enter story and parameters; submit generation; check progress or failure; inspect result and simplifications; preview, play, finish and replay; browse catalogue and versions; edit and retry or regenerate. All cases are inside the proposed platform boundary.</desc>
+  <rect width="1050" height="900" fill="#f8fafc"/>
+  <text x="48" y="43" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#102a43">Author use cases</text>
+  <rect x="348" y="72" width="660" height="796" rx="18" fill="#64748b"/>
+  <rect x="350" y="74" width="656" height="792" rx="16" fill="#fff"/>
+  <text x="678" y="103" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#334155">AI-assisted browser-game platform · proposed</text>
+  <g>
+    <polygon points="190.7,450.7 473.7,160.7 472.3,159.3 189.3,449.3" fill="#64748b"/>
+    <polygon points="190.5,450.8 473.5,269.8 472.5,268.2 189.5,449.2" fill="#64748b"/>
+    <polygon points="190.2,451.0 473.2,379.0 472.8,377.0 189.8,449.0" fill="#64748b"/>
+    <polygon points="189.9,451.0 472.9,488.0 473.1,486.0 190.1,449.0" fill="#64748b"/>
+    <polygon points="189.5,450.9 472.5,596.9 473.5,595.1 190.5,449.1" fill="#64748b"/>
+    <polygon points="189.3,450.7 472.3,705.7 473.7,704.3 190.7,449.3" fill="#64748b"/>
+    <polygon points="189.2,450.6 472.2,814.6 473.8,813.4 190.8,449.4" fill="#64748b"/>
+  </g>
+  <g>
+    <circle cx="150" cy="381" r="20" fill="#102a43"/>
+    <circle cx="150" cy="381" r="17" fill="#fff"/>
+    <polygon points="148.5,400.0 148.5,463.0 151.5,463.0 151.5,400.0" fill="#102a43"/>
+    <polygon points="113.0,422.5 187.0,422.5 187.0,419.5 113.0,419.5" fill="#102a43"/>
+    <polygon points="148.8,462.1 114.8,504.1 117.2,505.9 151.2,463.9" fill="#102a43"/>
+    <polygon points="148.8,463.9 182.8,505.9 185.2,504.1 151.2,462.1" fill="#102a43"/>
+  </g>
+  <text x="150" y="541" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#102a43">Author</text>
+  <g fill="#eaf3fb" stroke="#2473a6" stroke-width="2">
+    <ellipse cx="720" cy="160" rx="247" ry="43" fill="#2473a6"/>
+    <ellipse cx="720" cy="160" rx="245" ry="41" fill="#eaf3fb"/>
+    <ellipse cx="720" cy="269" rx="247" ry="43" fill="#2473a6"/>
+    <ellipse cx="720" cy="269" rx="245" ry="41" fill="#eaf3fb"/>
+    <ellipse cx="720" cy="378" rx="247" ry="43" fill="#2473a6"/>
+    <ellipse cx="720" cy="378" rx="245" ry="41" fill="#eaf3fb"/>
+    <ellipse cx="720" cy="487" rx="247" ry="43" fill="#2473a6"/>
+    <ellipse cx="720" cy="487" rx="245" ry="41" fill="#eaf3fb"/>
+    <ellipse cx="720" cy="596" rx="247" ry="43" fill="#2473a6"/>
+    <ellipse cx="720" cy="596" rx="245" ry="41" fill="#eaf3fb"/>
+    <ellipse cx="720" cy="705" rx="247" ry="43" fill="#2473a6"/>
+    <ellipse cx="720" cy="705" rx="245" ry="41" fill="#eaf3fb"/>
+    <ellipse cx="720" cy="814" rx="247" ry="43" fill="#2473a6"/>
+    <ellipse cx="720" cy="814" rx="245" ry="41" fill="#eaf3fb"/>
+  </g>
+  <g text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#102a43">
+    <text x="720" y="155">UC-01 · Enter/edit story</text><text x="720" y="176">and game parameters</text>
+    <text x="720" y="264">UC-02 · Submit generation</text><text x="720" y="285">request</text>
+    <text x="720" y="373">UC-03 · Check progress</text><text x="720" y="394">or failure</text>
+    <text x="720" y="482">UC-04 · Inspect result</text><text x="720" y="503">and simplifications</text>
+    <text x="720" y="591">UC-05 · Preview, play,</text><text x="720" y="612">finish and replay</text>
+    <text x="720" y="700">UC-06 · Browse catalogue</text><text x="720" y="721">and versions</text>
+    <text x="720" y="809">UC-07 · Edit and retry</text><text x="720" y="830">or regenerate</text>
+  </g>
+</svg>

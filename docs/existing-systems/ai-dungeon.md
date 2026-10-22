@@ -1,0 +1,29 @@
+# Existing System 3 AI Dungeon
+
+**Task 12 owner in the project plan:** Yessengeldi Nurgeldi. **Evidence checked:** 22 October 2026. This is a desk review of AI Dungeon's official public help pages, not a hands-on test. It applies the same C1–C9 criteria defined in `criteria-and-system-1.md`. “Undocumented” means the inspected pages do not establish the capability; it does not prove the product lacks it.
+
+AI Dungeon is a browser-accessible AI-guided interactive storytelling and role-play service. A player begins from Quick Start or an author-created Scenario, submits text actions, and receives generated narrative continuations. The official guide describes a **text adventure** with optional generated pictures, rather than an automatically generated 2D visual game with a fixed rule system. This makes it useful for studying story input and iteration, while the output format differs from our proposed browser game. [D1][D2]
+
+| ID | Evidence-based observation | Classification |
+| --- | --- | --- |
+| C1 | Quick Start asks for a setting, character and name, while a custom Scenario lets an author set a Prompt and plot components. During play, `Story` accepts the player's own text. This supports free-form narrative entry, although the documented workflow is a continuing text adventure rather than conversion of a complete submitted storyline into a finished game artifact. [D1][D3][D4] | Documented with qualification |
+| C2 | A Scenario can specify Prompt, AI Instructions, Plot Essentials, Author's Note, Story Cards and optional scripting. An author can guide setting, theme and characters; the inspected guide does not describe a validated form for genre, player controls and completion goal comparable with a 2D game specification. [D3][D5] | Documented with qualification |
+| C3 | Adventures run through a website in a browser. Gameplay consists primarily of text input and AI-generated narrative; `See` can insert an image. These pages do not describe generating a separate playable 2D visual browser game from the story. [D1][D2] | Documented with qualification: playable text adventure, not documented 2D game output |
+| C4 | Players take `Do`, `Say` or `Story` turns; the AI responds with more story. Scenario creators may add scripts that alter behavior or display state/messages, but this requires authoring or attaching scripts and does not establish automatic conversion of free-form action requests into deterministic 2D rules. [D1][D2][D3][D6] | Documented with qualification |
+| C5 | Authors can guide plot and manually script behavior. The inspected getting-started, scenario and scripting pages do not establish an automatically generated, machine-verified win predicate or a checked path to an ending for each Adventure. We therefore cannot infer that every story has a reachable completion condition. [D1][D3][D6] | Undocumented in inspected sources: automated ending verification |
+| C6 | AI Dungeon recommends that Scenario creators proofread and test a Scenario before publication, and its scripting guide asks creators to test scripts in an Adventure. The pages do not describe automated rule validation or reachability tests of the resulting story. Content rating before publication is a different kind of check. [D3][D6] | Documented manual testing; automated playability checks undocumented |
+| C7 | The inspected guides explain retry/edit for undesirable responses, but do not document a user-visible list of simplified or omitted requested mechanics with reasons. [D1][D2][D3] | Undocumented in inspected sources |
+| C8 | `Undo`, `Redo`, `Retry` and `Edit` allow the player to revise the narrative or try a different continuation. The official guide acknowledges that AI output can have quirks and suggests retry/edit; a script that errors is skipped for that turn with an error badge. This is recovery for narrative turns/scripts, not proof of automatic repair of an entire generated game. [D1][D2][D6] | Documented with qualification |
+| C9 | Adventures and Scenarios are saved in `My Stuff`; an author can edit or duplicate them. Publication makes content discoverable, and Share provides an external link. Duplicating supports manual branching; the inspected pages do not establish a versioned generated-game artifact history analogous to our planned project versions. [D1][D3][D7] | Documented with qualification |
+
+**Implication for the diploma project.** AI Dungeon illustrates strong free-form narrative interaction and quick player correction. Our planned output is a finite 2D game with bounded mechanics, an explicit ending, validated actions and a disclosed simplification record. The public AI Dungeon sources establish different product goals, not a measured superiority claim about either system. The comparison should not present optional generated images as a 2D game engine or absence of a documented automated check as proof that no internal checking occurs. [D1][D2][D3]
+
+## Official sources
+
+- **[D1]** AI Dungeon, “Getting Started,” official help, accessed 22 October 2026. https://help.aidungeon.com/getting-started
+- **[D2]** AI Dungeon, “How do I play AI Dungeon?”, official help, accessed 22 October 2026. https://help.aidungeon.com/faq/how-to-play
+- **[D3]** AI Dungeon, “What are Scenarios?”, official help, accessed 22 October 2026. https://help.aidungeon.com/faq/what-are-scenarios
+- **[D4]** AI Dungeon, “What is the Story mode and how do I use it?”, official help, accessed 22 October 2026. https://help.aidungeon.com/faq/story-mode
+- **[D5]** AI Dungeon, “Understanding AI Dungeon System Settings,” official help, accessed 22 October 2026. https://help.aidungeon.com/understanding-settings
+- **[D6]** AI Dungeon, “Scripting,” official help, accessed 22 October 2026. https://help.aidungeon.com/scripting
+- **[D7]** AI Dungeon, “Where do I find my old Adventures or Scenarios?”, official help, accessed 22 October 2026. https://help.aidungeon.com/faq/my-stuff

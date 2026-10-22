@@ -1,0 +1,22 @@
+flowchart LR
+    author["Author<br/>story writer, teacher, small team"]
+    provider["External model provider<br/>(optional)"]
+
+    subgraph platform["Proposed game generation platform — trust boundary"]
+        direction LR
+        client["Browser client<br/>authoring + trusted 2D runtime"]
+        api["Platform API<br/>projects, versions, jobs, publication"]
+        ai["AI generation service<br/>intent, specification, validation"]
+        storage[("Managed storage<br/>projects, jobs, specs, artifacts")]
+        client -- "story / parameters / play input" --> api
+        api -- "status / simplifications / approved game" --> client
+        api -- "generation request / version ID" --> ai
+        ai -- "validated spec or failure" --> api
+        api -- "persist / retrieve records" --> storage
+        storage -- "records / approved artifact" --> api
+    end
+
+    author -- "story / settings / gameplay" --> client
+    client -- "progress / game / ending / error" --> author
+    ai -- "minimum required prompt" --> provider
+    provider -- "untrusted model response" --> ai

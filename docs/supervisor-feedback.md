@@ -1,15 +1,9 @@
-# October scope note
+# Supervisor Review Record
 
-**Recorded:** 22 October 2026, from the student's message in this working session. The professor's original send date and channel have not been supplied; the text below is a forwarded quotation, not a signed approval of this repository.
+**Status on 22 October 2026:** The team forwarded the supervisor's instruction: “Сделайте только project proposal, project relevance и минимально по репо и задачам. Минимум только, потому что к концу ноября к середине декабря думаю будут уже четкое понимание и требования у нас. До этого момента нужен качественный анализ и больше входных данных. Сделайте минимально для каждой секции. На предзащите будет меньше вопросов в таком случае.” The team's clarified interpretation is that **every section remains present at minimal depth**, and Git/YouTrack requirements remain in scope. The date and channel of the original message have not been independently documented here. No substantive supervisor comments on the current comparisons, requirements, diagrams or manuscript have been supplied. This record intentionally contains no invented feedback.
 
-> Сделайте только project proposal, project relevance и минимально по репо и задачам.
->
-> Минимум только, потому что к концу ноября к середине декабря думаю будут уже четкое понимание и требования у нас.
->
-> До этого момента нужен качественный анализ и больше входных данных. Сделайте минимально для каждой секции.
->
-> На предзащите будет меньше вопросов в таком случае.
+## Materials to review
 
-**Working interpretation for 24 October:** present the proposal and qualified relevance statement, with a minimal repository and task record. Detailed comparisons, frozen requirements, diagrams, prototype and evaluation design move to later research and review. The earlier uploaded written checklist was broader; the team should confirm how the professor's later instruction will be applied by the committee and retain the original message with its date.
+Send the supervisor the proposal and first-version scope, research summaries, requirements, three diagrams, prototype and verification plan as soon as those drafts are ready. Ask specifically whether the narrow first executable mechanic set is acceptable, whether brief written follow-ups count toward 3–5 user discussions, and whether the first pre-defense needs any runnable slice beyond mockups and planning.
 
-No feedback on these specific drafts or approval of their claims has yet been recorded.
+After an actual review, record its date, reviewed artifact/version, the supervisor's substantive comment, the responsible student, the decision, the changed file/commit and whether the comment is resolved. Preserve the real feedback and resulting revision. If no review occurs before the deadline, list this requirement as open in the submission summary.

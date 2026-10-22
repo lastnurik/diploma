@@ -1,40 +1,48 @@
-# AI-Assisted Browser Game Generation — Diploma Proposal
+# AI-assisted browser game generation
 
-Software Engineering group diploma project at Astana IT University (SE-2417), supervised by **Shyngys Alshynov**. The proposed AI-assisted platform would transform a user-authored game concept or storyline into a playable 2D browser game without requiring the user to program or work in a game engine. Writers, educators and small creative teams are candidate user groups; their needs and preferred workflows require direct investigation.
+Group diploma project, Astana IT University, Software Engineering (SE-2417). The proposed platform accepts a user's game idea or storyline and aims to produce a complete, playable 2D game in the browser. The first implementation scope, supported mechanics and evaluation thresholds are under investigation. **There is no runnable generator or game here yet.**
 
-## Current status and October review
+**Problem and users:** Nontechnical story authors, educators and small teams face programming and game-engine work when turning a story into an interactive game. The intended outcome is a browser game with meaningful player actions and a reachable ending, with unsupported mechanics simplified transparently. Whether this meets users' needs still requires actual user evidence.
 
-This repository currently holds the **minimal October proposal and planning files**, not a working game. The team reports that the supervisor narrowed this checkpoint to the proposal, relevance evidence, and a minimal repository with traceable tasks; the exact revised wording still needs to be recorded. Detailed research and design drafts are kept separately as future material. No technology stack has been approved or implemented here.
+**Team:** Almadi Madiuly — browser frontend and UX/UI; Zhaksylyk Aldiyar — platform and backend; Yessengeldi Nurgeldi — AI generation and validation. Supervisor: Shyngys Alshynov. Research, shared contracts, integration and manuscript review require contributions from all three students.
 
-Read these in order:
+## Preparation materials
 
-1. [Project proposal](docs/proposal.md) — aim, scope, proposed outcome, stages and team responsibilities.
-2. [Relevance and evidence status](docs/evidence/relevance.md) — what is evidenced, what remains an assumption, and the proposed user-input protocol. No survey responses or qualifying discussions have been recorded here yet.
-3. [October task board](docs/october-tasks.md) — bounded deliverables, owners, reviewers, dependencies and open conditions for this checkpoint.
+| Required section | Current artifact | State |
+| --- | --- | --- |
+| 1. Project proposal | [Proposal](docs/proposal.md) | Draft |
+| 2. Relevance and actual input | [Relevance record](docs/evidence/relevance.md), [questionnaire](docs/evidence/questionnaire.md) | Rationale drafted; no recorded user input |
+| 3. Literature | [Critical review](docs/literature.md) | Draft synthesis of 14 scholarly sources; team/source review pending |
+| 4. Existing systems | [Comparison](docs/existing-systems.md) | Three systems, nine shared criteria; desk research only |
+| 5. Technology alternatives | [Comparison](docs/technology-comparison.md) | Three provisional decisions; feasibility tests pending |
+| 6. Requirements | [Prioritized specification](docs/requirements.md) | Draft acceptance criteria; user validation pending |
+| 7. Architecture | [Architecture](docs/architecture.md), [editable diagrams and SVG exports](diagrams/) | Three proposed diagrams; integration pending |
+| 8. UX concept | [Prototype navigation](prototype/README.md): [authoring and progress](prototype/authoring-flow.svg), [result and play](prototype/result-play.svg), [catalogue and recovery](prototype/catalogue-recovery.svg); [use cases](docs/use-cases.md) | Linked SVG mockups; user review pending; no working application |
+| 9. Verification | [Test and evaluation plan](docs/verification-plan.md), [prompt corpus](tests/evaluation-prompts.md) | Test designs; no execution or measured results |
+| 10. Management and risks | [Milestones and risks](docs/project-plan.md), [proposed project backlog](docs/youtrack-backlog.md), [preparation audit](docs/project-task-plan.md) | Separate proposed project backlog; external YouTrack absent |
+| 11. Supervisor response | [Feedback record](docs/supervisor-feedback.md) | Scope instruction received; substantive artifact comments absent |
 
-## Team responsibilities
+The [plan reconciliation](docs/plan-reconciliation.md) compares the original 36 **preparation tasks** with actual evidence and unfinished work. Those historical internal tasks organize our preparation of the eleven sections, repository and presentation. They remain a trace and audit record and must not be imported wholesale into YouTrack. The diploma project has a separate [minimal proposed backlog](docs/youtrack-backlog.md). The separate academic DOCX presents a concise version of all eleven sections. The repository carries editable material and future revisions.
 
-| Student | Planned development area |
-| --- | --- |
-| Almadi Madiuly | Browser frontend, UX/UI, authoring and playable client. |
-| Zhaksylyk Aldiyar | Platform API, projects/versions, asynchronous jobs, storage and safe delivery. |
-| Yessengeldi Nurgeldi | Story interpretation, game specification, AI generation, validation and evaluation. |
+## Preparation workflow
 
-The team will agree the shared specification and integration contract together. These are responsibilities for planned development, not a claim that the modules have been implemented.
+Each owner receives one unblocked task from the [chronological preparation plan](docs/project-task-plan.md), reviews its acceptance criteria, prepares its assigned artifact, and checks the result. A different member reviews it before merge. The coordinator reconciles shared terms, IDs, interfaces and citations before assigning dependent preparation tasks. AI-authored material remains a draft until the actual student owner and reviewer accept it; AI activity does not count as a student's contribution.
 
-## Next evidence step
+The submitted academic manuscript is a separate `.docx`. Source analysis, requirement IDs, diagrams, prototype, evaluation protocol, task links and review evidence live in this repository and are summarized in the manuscript. A separate, provisional [implementation roadmap](docs/project-plan.md) describes later project stages without converting the 36 preparation tasks into coding tickets.
 
-Use the draft [questionnaire](docs/evidence/questionnaire.md) to collect dated, anonymized responses from prospective users, then seek 3–5 follow-up discussions or substantive client input if required by the review criteria. Record response counts, methods, findings and resulting decisions in the relevance record. Confirm the revised October expectations with the supervisor and maintain the task board as work proceeds.
+## Proposed technologies
 
-There are no application setup or run instructions yet because this repository has no runnable application.
+The [technology comparison](docs/technology-comparison.md) provisionally recommends a Spring Boot API, PostgreSQL, RabbitMQ and a separate Python generation worker. Generation would produce a versioned, structured game specification for validation and interpretation by a fixed Phaser 3 runtime. The proposed first slice is a bounded top-down 2D scene game. These choices require team review and feasibility checks; no stack has been installed or demonstrated for this project.
 
-## Repository workflow and pending setup
+## Git and YouTrack handoff
 
-The uploaded repository rules require one continuing GitHub or GitLab repository, individual student accounts, a YouTrack project, task branches, peer-reviewed pull/merge requests, and a `pre-defense-1` tag identifying the exact submitted revision. This working tree is local; it has no remote, verified collaborator access, YouTrack IDs, completed student reviews or submission tag. Do not present those items as complete.
+This is a **local Git repository on `pre-defense-draft`** with no remote, no verified student/supervisor/committee access, no YouTrack project or issue IDs, no verified student peer-review history and no submission tag. Local preparation commits contain draft materials; committing them does not establish student acceptance or review. Existing history includes both `Codex Draft` and `last_nurik` identities, but does not establish contributions from all three students. AI draft commits are not evidence of individual student contributions.
 
-1. One student creates a private repository, adds this project as its initial contents, and grants the other two students and supervisor access. Arrange committee access before the review. Record the URL in `docs/october-submission.md`.
-2. Create the assigned tasks in YouTrack with owner, deadline, deliverable and acceptance criteria; add the real project URL and issue IDs to this repository. Use the issue ID in each subsequent branch and commit or pull-request description.
-3. Each student reviews and revises their own assigned draft from their own identifiable Git account. Use a task branch, open a pull request describing the change and its checks, obtain another student's review, and merge into `main` only after the task's criteria are met. Link the pull request or commit from YouTrack.
-4. After the actual submission revision is reviewed and merged, tag that commit `pre-defense-1` and record the repository URL, tag, completed work, limitations and open tasks in `docs/october-submission.md`. Continue later stages in the same repository without moving the submitted tag.
+**Connection status at the 22 October 2026 audit:** GitHub authenticated read access works as `lastnurik`. The available connected tools can work with an existing repository's files, commits, issues and pull requests, but provide no repository-creation, collaborator-invitation or tag-creation tool. No YouTrack connection or project access is established. The account holder must complete those setup steps through the service interfaces or another authenticated route before the external workflow can be verified:
 
-The selected technology stack remains undecided and will be recorded here after the research and scope review. Add setup, run and test commands when executable code exists. Keep secrets and personal data out of Git.
+1. Have the assigned students review the local preparation drafts and commit any accepted revisions with truthful attribution. Decide the repository name, visibility and license; create one continuing GitHub or GitLab repository, preserve and push the local history, and establish `main` as the reviewed baseline. Give all three students and the supervisor access, arrange committee access, and record and verify the URL and permissions.
+2. Create the YouTrack project from the separate [minimal proposed diploma-project backlog](docs/youtrack-backlog.md), after team review of its scope, owners, priorities and acceptance criteria. Record real issue IDs and links only after the issues exist; the 36 internal preparation numbers are not issue IDs and are not an import list. Link repository and issue tracker in both directions.
+3. Each student works from their own account on a branch named with the real issue ID. Use descriptive commits and a pull/merge request linking the issue, verification and deliverable; a different student reviews it before merging to `main`.
+4. After actual review, create and push immutable `pre-defense-1` at the exact reviewed revision. Verify access, history, links, documents and tag during the walkthrough. Record the URL and commit in the [submission record](docs/october-submission.md).
+
+No setup, run or test command exists for an application yet. Add configuration examples, instructions and executed verification evidence when code is introduced. Keep credentials and identifiable research responses out of Git.

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">System context for the proposed AI assisted browser game platform</title>
+  <desc id="desc">An author interacts with the browser client. The client exchanges requests and approved results with the platform API. The API delegates generation to the AI service and persists versions and artifacts in managed storage. The AI service may call an external model provider, whose response is untrusted. The browser client, API, AI service, and storage are inside the proposed platform boundary.</desc>
+  <defs>
+    <style>
+      .page{fill:#ffffff}.boundary{fill:#f7f9fc;stroke:#64829f;stroke-width:2;stroke-dasharray:10 7}.card{fill:#ffffff;stroke:#264462;stroke-width:2;rx:12}.external{fill:#f1f6fa;stroke:#264462;stroke-width:2;rx:12}.heading{font-family:Arial,sans-serif;font-size:17px;font-weight:700;fill:#173650}.text{font-family:Arial,sans-serif;font-size:14px;fill:#334a5d}.edge{fill:none;stroke:#264462;stroke-width:2}.arrowhead{fill:#264462}.label{font-family:Arial,sans-serif;font-size:13px;fill:#173650}.boundary-label{font-family:Arial,sans-serif;font-size:17px;font-weight:700;fill:#264462}.note{font-family:Arial,sans-serif;font-size:13px;fill:#516477}
+    </style>
+  </defs>
+  <rect class="page" x="0" y="0" width="1280" height="760"/>
+  <text class="heading" x="50" y="43" style="font-size:24px">System context</text>
+  <text class="note" x="50" y="68">Proposed first version · 22 October 2026 · arrows show data and control flow, not implemented connections</text>
+  <rect class="boundary" x="240" y="110" width="800" height="590" rx="24"/>
+  <text class="boundary-label" x="265" y="145">Proposed platform boundary</text>
+
+  <rect class="external" x="28" y="315" width="175" height="96"/>
+  <text class="heading" x="115" y="347" text-anchor="middle">Author</text>
+  <text class="text" x="115" y="370" text-anchor="middle">writer · teacher</text>
+  <text class="text" x="115" y="390" text-anchor="middle">small team</text>
+
+  <rect class="card" x="285" y="295" width="195" height="135"/>
+  <text class="heading" x="382" y="330" text-anchor="middle">Browser client</text>
+  <text class="text" x="382" y="355" text-anchor="middle">story authoring</text>
+  <text class="text" x="382" y="377" text-anchor="middle">trusted 2D runtime</text>
+  <text class="text" x="382" y="399" text-anchor="middle">preview and play</text>
+
+  <rect class="card" x="540" y="295" width="195" height="135"/>
+  <text class="heading" x="637" y="330" text-anchor="middle">Platform API</text>
+  <text class="text" x="637" y="355" text-anchor="middle">projects and versions</text>
+  <text class="text" x="637" y="377" text-anchor="middle">jobs and status</text>
+  <text class="text" x="637" y="399" text-anchor="middle">approved delivery</text>
+
+  <rect class="card" x="795" y="295" width="195" height="135"/>
+  <text class="heading" x="892" y="330" text-anchor="middle">AI generation</text>
+  <text class="text" x="892" y="355" text-anchor="middle">story interpretation</text>
+  <text class="text" x="892" y="377" text-anchor="middle">specification and rules</text>
+  <text class="text" x="892" y="399" text-anchor="middle">validation or failure</text>
+
+  <rect class="external" x="1080" y="315" width="175" height="96"/>
+  <text class="heading" x="1168" y="347" text-anchor="middle">External model</text>
+  <text class="text" x="1168" y="371" text-anchor="middle">provider (optional)</text>
+  <text class="note" x="1168" y="392" text-anchor="middle">untrusted output</text>
+
+  <rect class="card" x="540" y="548" width="195" height="108"/>
+  <text class="heading" x="637" y="581" text-anchor="middle">Managed storage</text>
+  <text class="text" x="637" y="606" text-anchor="middle">projects · jobs · specs</text>
+  <text class="text" x="637" y="628" text-anchor="middle">approved artifacts</text>
+
+  <line x1="203" y1="344" x2="285" y2="344" stroke="#264462" stroke-width="2"/>
+  <text class="label" x="244" y="311" text-anchor="middle">story · settings · play</text>
+  <line x1="285" y1="391" x2="203" y2="391" stroke="#264462" stroke-width="2"/>
+  <text class="label" x="244" y="454" text-anchor="middle">progress · game · error</text>
+
+  <line x1="480" y1="344" x2="540" y2="344" stroke="#264462" stroke-width="2"/>
+  <text class="label" x="510" y="275" text-anchor="middle">requests</text>
+  <line x1="540" y1="391" x2="480" y2="391" stroke="#264462" stroke-width="2"/>
+  <text class="label" x="510" y="460" text-anchor="middle">approved results</text>
+
+  <line x1="735" y1="344" x2="795" y2="344" stroke="#264462" stroke-width="2"/>
+  <text class="label" x="765" y="275" text-anchor="middle">job + version ID</text>
+  <line x1="795" y1="391" x2="735" y2="391" stroke="#264462" stroke-width="2"/>
+  <text class="label" x="765" y="460" text-anchor="middle">spec or failure</text>
+
+  <line x1="990" y1="344" x2="1080" y2="344" stroke="#264462" stroke-width="2"/>
+  <text class="label" x="1035" y="274" text-anchor="middle">minimal prompt</text>
+  <line x1="1080" y1="391" x2="990" y2="391" stroke="#264462" stroke-width="2"/>
+  <text class="label" x="1035" y="460" text-anchor="middle">model response</text>
+
+  <line x1="611" y1="430" x2="611" y2="548" stroke="#264462" stroke-width="2"/>
+  <line x1="665" y1="548" x2="665" y2="430" stroke="#264462" stroke-width="2"/>
+  <polygon class="arrowhead" points="285,344 275,338 275,350"/>
+  <polygon class="arrowhead" points="203,391 213,385 213,397"/>
+  <polygon class="arrowhead" points="540,344 530,338 530,350"/>
+  <polygon class="arrowhead" points="480,391 490,385 490,397"/>
+  <polygon class="arrowhead" points="795,344 785,338 785,350"/>
+  <polygon class="arrowhead" points="735,391 745,385 745,397"/>
+  <polygon class="arrowhead" points="1080,344 1070,338 1070,350"/>
+  <polygon class="arrowhead" points="990,391 1000,385 1000,397"/>
+  <polygon class="arrowhead" points="611,548 605,538 617,538"/>
+  <polygon class="arrowhead" points="665,430 659,440 671,440"/>
+  <text class="label" x="570" y="508" text-anchor="middle">persist</text>
+  <text class="label" x="706" y="508" text-anchor="middle">retrieve</text>
+
+  <text class="note" x="905" y="600" text-anchor="middle">Only validated game data reaches the runtime.</text>
+  <text class="note" x="905" y="623" text-anchor="middle">The external response crosses the trust boundary.</text>
+</svg>

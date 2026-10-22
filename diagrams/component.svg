@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="1040" viewBox="0 0 2100 1040" role="img" aria-labelledby="title desc">
+  <title id="title">Proposed game generation platform component diagram</title>
+  <desc id="desc">Authoring browser, platform API and validation gate, database, broker and private artifact storage, Python generation worker and optional external model. Candidate data crosses a validation boundary before ready artifacts reach the trusted game runtime.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#315c70"/></marker>
+    <marker id="redArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#b44933"/></marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#17313e} .heading{font-size:28px;font-weight:700} .sub{font-size:19px;fill:#49616b} .band{font-size:19px;font-weight:700} .nodeTitle{font-size:20px;font-weight:700;text-anchor:middle} .nodeSub{font-size:16px;text-anchor:middle} .lab{font-size:16px;fill:#20495b;paint-order:stroke;stroke:#fff;stroke-width:7px;stroke-linejoin:round} .redlab{fill:#a03928} .flow{fill:none;stroke:#315c70;stroke-width:3;marker-end:url(#arrow)} .failure{fill:none;stroke:#b44933;stroke-width:3;stroke-dasharray:8 6;marker-end:url(#redArrow)} .group{stroke:#a6b9c2;stroke-width:2;stroke-dasharray:9 7;rx:18} .box{fill:#fff;stroke:#47758b;stroke-width:2.5;rx:14} .risk{fill:#fff0eb;stroke:#b44933} .gate{fill:#e4f2ec;stroke:#218365}
+    </style>
+  </defs>
+  <rect width="2100" height="1040" fill="#fbfcfc"/>
+  <text x="50" y="48" class="heading">Draft component architecture</text>
+  <text x="50" y="78" class="sub">Proposed first executable slice · validated data drives a trusted 2D runtime · not implemented</text>
+
+  <rect class="group" x="35" y="115" width="335" height="785" fill="#eff6fa"/>
+  <text x="55" y="149" class="band">Browser boundary</text>
+  <rect class="group" x="395" y="115" width="585" height="785" fill="#f1f7f4"/>
+  <text x="415" y="149" class="band">Platform boundary · proposed Spring Boot</text>
+  <rect class="group" x="1005" y="115" width="350" height="785" fill="#f4f5fa"/>
+  <text x="1025" y="149" class="band">Platform infrastructure</text>
+  <rect class="group" x="1380" y="115" width="340" height="785" fill="#fff6f1"/>
+  <text x="1400" y="149" class="band">Python worker boundary</text>
+
+  <!-- Interface lines are behind components. Parallel return paths are offset. -->
+  <path class="flow" d="M 320 265 H 455"/><text class="lab" x="327" y="250">story / parameters</text>
+  <path class="flow" d="M 455 306 H 320"/><text class="lab" x="344" y="329">status / safe error</text>
+  <path class="flow" d="M 690 258 H 760 V 375"/><text class="lab" x="705" y="240">new version</text>
+  <path class="flow" d="M 900 425 H 1135 V 440"/><text class="lab" x="984" y="407">job event</text>
+  <path class="flow" d="M 1270 470 H 1440"/><text class="lab" x="1355" y="452">deliver</text>
+  <path class="flow" d="M 1655 440 H 1780"/><text class="lab" x="1677" y="421">prompt</text>
+  <path class="failure" d="M 1780 495 H 1655"/><text class="lab redlab" x="1663" y="520">untrusted</text>
+  <path class="failure" d="M 1440 528 H 1270"/><text class="lab redlab" x="1320" y="553">candidate / failure</text>
+  <path class="failure" d="M 1135 530 H 945 V 615 H 900"/><text class="lab redlab" x="953" y="574">result event</text>
+  <path class="flow" d="M 690 217 H 1080 V 250"/><text class="lab" x="769" y="202">authorized reads / status</text>
+  <path class="flow" d="M 900 382 H 1025 V 310 H 1080"/><text class="lab" x="947" y="364">handoff intent</text>
+  <path class="failure" d="M 900 660 H 1045 V 315 H 1080"/><text class="lab redlab" x="1002" y="686">findings / failed</text>
+  <path class="flow" d="M 900 695 H 1135 V 735"/><text class="lab" x="941" y="714">validated only</text>
+  <path class="flow" d="M 320 290 H 370 V 680 H 145 V 730"/><text class="lab" x="54" y="704">play ready version</text>
+  <path class="flow" d="M 320 795 H 455"/><text class="lab" x="322" y="778">game data request</text>
+  <path class="flow" d="M 690 766 H 995 V 320 H 1080"/><text class="lab" x="754" y="752">authorize ready / owner</text>
+  <path class="flow" d="M 900 830 H 1135"/><text class="lab" x="945" y="813">approved read</text>
+  <path class="flow" d="M 455 853 H 320"/><text class="lab" x="323" y="878">validated data</text>
+
+  <rect class="box" x="85" y="215" width="235" height="90"/><text class="nodeTitle" x="202" y="251">UI</text><text class="nodeSub" x="202" y="278">Authoring / catalogue</text>
+  <rect class="box" x="85" y="730" width="235" height="125"/><text class="nodeTitle" x="202" y="768">RT</text><text class="nodeSub" x="202" y="795">Trusted 2D runtime</text><text class="nodeSub" x="202" y="822">ending events</text>
+  <rect class="box" x="455" y="207" width="235" height="100"/><text class="nodeTitle" x="572" y="246">API</text><text class="nodeSub" x="572" y="273">Projects / status</text><text class="nodeSub" x="572" y="294">authentication</text>
+  <rect class="box" x="690" y="375" width="210" height="100"/><text class="nodeTitle" x="795" y="412">JOB</text><text class="nodeSub" x="795" y="440">Coordinator / outbox</text>
+  <rect class="box gate" x="690" y="605" width="210" height="105" fill="#e4f2ec" stroke="#218365"/><text class="nodeTitle" x="795" y="643">GATE</text><text class="nodeSub" x="795" y="670">Validate / publish</text><text class="nodeSub" x="795" y="692">or fail safely</text>
+  <rect class="box gate" x="455" y="745" width="235" height="105" fill="#e4f2ec" stroke="#218365"/><text class="nodeTitle" x="572" y="784">ART</text><text class="nodeSub" x="572" y="812">Controlled artifact route</text>
+  <rect class="box" x="1080" y="235" width="190" height="100"/><text class="nodeTitle" x="1175" y="274">DB</text><text class="nodeSub" x="1175" y="301">PostgreSQL records</text>
+  <rect class="box" x="1080" y="430" width="190" height="105"/><text class="nodeTitle" x="1175" y="470">MQ</text><text class="nodeSub" x="1175" y="498">RabbitMQ events</text>
+  <rect class="box" x="1135" y="735" width="190" height="115"/><text class="nodeTitle" x="1230" y="776">STORE</text><text class="nodeSub" x="1230" y="805">Private approved data</text>
+  <rect class="box risk" x="1440" y="425" width="215" height="115" fill="#fff0eb" stroke="#b44933"/><text class="nodeTitle" x="1547" y="467">AI</text><text class="nodeSub" x="1547" y="495">Intent / generation</text><text class="nodeSub" x="1547" y="518">bounded repair</text>
+  <rect class="box risk" x="1780" y="420" width="245" height="100" fill="#fff0eb" stroke="#b44933"/><text class="nodeTitle" x="1902" y="459">MODEL</text><text class="nodeSub" x="1902" y="486">Optional external provider</text>
+
+  <path class="flow" d="M 720 601 C 680 550 830 530 830 602"/><text class="lab" x="704" y="550">strict checks</text>
+  <text class="sub" x="55" y="960">Blue: approved request, metadata or delivery path</text>
+  <text class="sub" x="730" y="960" fill="#a03928">Red dashed: untrusted candidate or failure path</text>
+  <text class="sub" x="55" y="994">Ready is published only after schema, references, allowed actions/assets, safety and ending checks pass. See docs/architecture.md for contracts and recovery.</text>
+</svg>

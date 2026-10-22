@@ -1,0 +1,50 @@
+%% Task 23: proposed first executable slice; not an implemented deployment.
+%% IDs correspond to the component table in docs/architecture.md.
+flowchart LR
+  subgraph browser["Browser trust boundary"]
+    UI["Authoring UI and catalogue"]
+    RT["Trusted 2D game runtime"]
+  end
+
+  subgraph platform["Platform trust boundary — proposed Spring Boot"]
+    API["Authenticated project and status API"]
+    JOB["Job coordinator and outbox"]
+    GATE["Result validator and publisher"]
+    ART["Controlled artifact route"]
+  end
+
+  subgraph data["Platform infrastructure"]
+    DB[("PostgreSQL: project, version, job, audit")]
+    MQ[("RabbitMQ: request and result events")]
+    STORE[("Private artifact storage")]
+  end
+
+  subgraph generation["Generation worker boundary — proposed Python"]
+    AI["Intent, mapping, bounded repair"]
+  end
+  MODEL["Optional external model provider"]
+
+  UI -->|"story, parameters; catalogue and status polling"| API
+  API -->|"authorized records, state, safe errors"| DB
+  API -->|"create generation and version"| JOB
+  JOB -->|"transactional intent / recovery"| DB
+  JOB -->|"versioned job request"| MQ
+  MQ -->|"at-least-once request delivery"| AI
+  AI -->|"minimum story input"| MODEL
+  MODEL -->|"untrusted model output"| AI
+  AI -->|"candidate or classified failure; IDs"| MQ
+  MQ -->|"result event / retry or failure"| GATE
+  GATE -->|"strict schema, references, safety, ending checks"| GATE
+  GATE -->|"validation findings, terminal status"| DB
+  GATE -->|"only validated immutable data"| STORE
+  API -->|"ready artifact reference only"| UI
+  UI -->|"play ready version"| RT
+  RT -->|"authorized game-data request"| ART
+  ART -->|"check owner, ready, type and version"| DB
+  ART -->|"approved data and assets"| STORE
+  ART -->|"trusted runtime bundle plus validated data"| RT
+
+  classDef untrusted fill:#fff0eb,stroke:#b64c35,color:#4b1e16;
+  classDef gate fill:#e3f2ed,stroke:#177459,color:#12382d;
+  class AI,MODEL untrusted;
+  class GATE,ART gate;
