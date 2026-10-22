@@ -25,7 +25,7 @@
 
 ## Later research backlog (November–December)
 
-These are planning decisions, not October completion gates. Split them into small owned tasks with evidence and checks once the supervisor confirms scope and dates.
+These are provisional planning targets drawn from the earlier written checklist, not October completion gates or newly approved thresholds. Confirm their scale and dates with the supervisor, then split them into small owned tasks with evidence and checks.
 
 | Window | Next work and decision | Coordinator |
 | --- | --- | --- |
