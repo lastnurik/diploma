@@ -14,11 +14,11 @@
 
 ## Problem and proposed audience
 
-A person can describe a game story in ordinary language, but turning it into a working game also requires coherent rules, controls, scene data and an achievable ending. A prose outline or generated code file does not by itself demonstrate a playable result. We propose to investigate a browser-based tool for story authors, teachers and small creative teams who may want a quick game prototype. Whether these groups need this tool, which mechanics matter to them and what compromises they accept remain research questions. The [relevance section](evidence/relevance.md) separates current evidence from those assumptions.
+Creative people may have a game idea or storyline but lack the programming and game-development skills needed to turn it into a game they can play and share. The proposed platform would let them describe the story and desired game in ordinary language, then generate a ready-to-play 2D game directly in the browser. The primary proposed audience is aspiring creators without technical game-development skills; story authors, educators and small creative teams are possible groups within that audience. Whether they need this tool, what kind of game they expect and what compromises they accept remain research questions. Coherent rules, controls, scenes and a reachable ending are the technical challenge behind delivering a genuinely playable result. The [relevance section](evidence/relevance.md) separates current evidence from these assumptions.
 
 ## Aim and preliminary objectives
 
-The proposed aim is a platform that transforms a user-provided storyline and selected parameters into a playable browser game with a beginning, meaningful player actions and an ending. We will examine how faithfully it can preserve the central story if mechanics must be simplified. Preliminary objectives are:
+The proposed aim is to enable a person without game-development skills to turn a storyline or narrative game idea and selected parameters into a ready-to-play browser game with a beginning, meaningful player actions and an ending. We will examine how faithfully it can preserve the central story if mechanics must be simplified. Preliminary objectives are:
 
 1. Investigate intended users, comparable tools and relevant research; collect actual stakeholder input.
 2. Determine a feasible range of game mechanics and a representation of story goals, scenes, player actions and endings.
@@ -29,7 +29,7 @@ The October submission addresses objective 1 only in its initial desk-research f
 
 ## Intended outcome and boundaries to decide
 
-The intended final outcome is a working prototype that accepts a story and launches a game in the browser that a person can complete. The concept includes a browser interface, a service for projects and generation workflow, and a component that interprets the story. The exact division, game types, AI method, supported actions, simplification policy, data contract and technologies are **not yet approved**. A generated outline alone is an intermediate artifact rather than the intended final result. We will choose a bounded first scope based on the evidence and feasibility work, and distinguish supported behavior from transparently simplified or rejected requests.
+The intended final outcome is a working prototype through which a nontechnical creator enters a storyline or narrative game idea and receives a game they can play to completion in the browser. The concept includes a browser interface, a service for projects and generation workflow, and a component that interprets the story. The exact division, game types, AI method, supported actions, simplification policy, data contract and technologies are **not yet approved**. A generated outline alone is an intermediate artifact rather than the intended final result. We will choose a bounded first scope based on the evidence and feasibility work, and distinguish supported behavior from transparently simplified or rejected requests.
 
 ## Team contribution
 

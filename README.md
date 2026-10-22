@@ -1,6 +1,6 @@
 # AI-Assisted Browser Game Generation — Diploma Proposal
 
-Software Engineering group project at Astana IT University (SE-2417), supervised by **Shyngys Alshynov**. The proposed system will turn a user-provided storyline and parameters into a validated, playable 2D browser game with an explicit ending. Story authors, teachers and small teams are proposed users; their needs still require direct evidence.
+Software Engineering group project at Astana IT University (SE-2417), supervised by **Shyngys Alshynov**. The proposed system would let people with game ideas or storylines, especially those without game-development skills, generate ready-to-play 2D browser games. Story authors, teachers and small creative teams are possible user groups; their needs still require direct evidence.
 
 ## Current status and October review
 
