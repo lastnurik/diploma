@@ -1,0 +1,24 @@
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*
+
+# Python, Java, JavaScript and editor output
+__pycache__/
+*.py[cod]
+.venv/
+target/
+build/
+dist/
+node_modules/
+.idea/
+.vscode/
+
+# Generated reports and private research records
+docs/evidence/raw/
+docs/evidence/contacts/
+*.log
+.DS_Store
