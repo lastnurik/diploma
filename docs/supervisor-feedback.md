@@ -4,6 +4,6 @@
 
 ## Materials to review
 
-Send the supervisor the proposal and first-version scope, research summaries, requirements, three diagrams, prototype and verification plan as soon as those drafts are ready. Ask specifically whether the narrow first executable mechanic set is acceptable, whether brief written follow-ups count toward 3–5 user discussions, and whether the first pre-defense needs any runnable slice beyond mockups and planning.
+Send the supervisor the proposal and first-version scope, research summaries, requirements, three diagrams, prototype and verification plan as soon as those drafts are ready. Ask specifically whether the narrow first executable mechanic set is acceptable, whether survey findings can serve as preliminary evidence while the required discussions/client agreement remain pending, and whether the first review needs any runnable slice beyond mockups and planning. Do not imply that a survey has been accepted as equivalent to 3–5 discussions.
 
 After an actual review, record its date, reviewed artifact/version, the supervisor's substantive comment, the responsible student, the decision, the changed file/commit and whether the comment is resolved. Preserve the real feedback and resulting revision. If no review occurs before the deadline, list this requirement as open in the submission summary.

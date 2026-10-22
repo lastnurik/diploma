@@ -6,7 +6,7 @@
 
 | Period | Deliverable and completion evidence | Lead development owner |
 | --- | --- | --- |
-| By 24 October 2026 | Proposal, relevance evidence or explicit gap, critical literature, existing and technology comparisons, requirements, three editable diagrams, UX prototype, evaluation plan, Git history, YouTrack and supervisor response; reviewed `pre-defense-1` tag. | Shared; each student owns the assigned plan tasks. |
+| By 24 October 2026 | Proposal, relevance rationale and prepared survey with an explicit evidence gap, critical literature, existing and technology comparisons, requirements, three editable diagrams, UX prototype, evaluation plan, Git history, YouTrack and supervisor response; reviewed `pre-defense-1` tag if the external review gates are met. No interviews are scheduled for this checkpoint. | Shared; each student owns the assigned plan tasks. |
 | Late October–November 2026 | Dated, anonymized user discussions or substantive client evidence, divergent needs and resulting scope questions; disclose any evidence gap. | Almadi; Nurgeldi reviews. |
 | Late November–mid-December 2026 | Reviewed first mechanic set, requirements and acceptance criteria informed by user/supervisor input. | Nurgeldi; Aldiyar reviews, all agree interfaces. |
 | Mid–late December 2026 | Versioned game/job contract, valid and invalid fixtures, status/result examples and explicit limits; strict validator checks recorded. | Aldiyar; Nurgeldi reviews. |
@@ -32,7 +32,7 @@ The [36 historical preparation tasks](project-task-plan.md) separately organize 
 | Generated content executes with platform privileges | Untrusted code or content could affect users/data | Aldiyar owns safe serving and trust boundary; use validated data through fixed runtime, restrict assets and browser permissions; test delivery. |
 | Queue handoff, duplicate delivery or worker failure | Stuck jobs or duplicate artifacts | Aldiyar defines idempotent generation IDs, durable status and bounded retries; integration tests exercise failure paths. |
 | Client/server/AI contracts diverge | Late integration failure | Aldiyar maintains versioned contract; Almadi and Nurgeldi review changes before merge; run a manual game integration spike early. |
-| User evidence lacks qualifying discussions/client agreement | Requirement 2 not fully evidenced | Almadi owns questionnaire/distribution; Nurgeldi seeks supervisor ruling on text follow-ups; recruit 3–5 actual participants or mark the gap. |
+| User evidence lacks qualifying discussions/client agreement | Requirement 2 not fully evidenced | Almadi owns the survey and its documented distribution. Do not plan interviews before the immediate submission; after it, obtain qualifying discussions/client agreement or record the unresolved criterion and supervisor's actual decision. |
 | Supervisor review cannot happen before submission | Requirement 11 and improvements absent | Nurgeldi requests a review slot early and supplies drafts; track actual response and unresolved feedback transparently. |
 | Repository or YouTrack access unavailable | Traceability and required submission links missing | Aldiyar creates GitHub repository; Almadi creates YouTrack; arrange access and maintain local files until connected, then upload honestly with original timestamps/history. |
 | Three-person schedule slips | Incomplete first pre-defense | All prioritize mandatory evidence, requirements, diagrams, prototype and repository; maintain daily status and explicit limitations. |

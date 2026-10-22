@@ -1,6 +1,6 @@
 # Project Relevance — October 2026
 
-**Status, 22 October 2026:** This is a preliminary rationale for the [project proposal](../proposal.md). No survey responses, user interviews, client agreement or prototype evaluation have been documented. Three to five actual user discussions or substantive client agreement remain pending. The [draft questionnaire](questionnaire.md) has not been administered. Conclusions about user demand and the final requirements depend on direct input and feasibility analysis, provisionally scheduled through late November to mid-December.
+**Status, 23 October 2026:** This is a preliminary rationale for the [project proposal](../proposal.md). A [survey instrument](questionnaire.md) and a [Google Forms creation script](../../tools/create-google-survey.gs) are prepared, but no live form, responses, user discussions, client agreement or prototype evaluation have been documented. No interviews are scheduled for the immediate submission. The checklist's 3–5 user-discussion or substantive actual-client criterion remains unmet; a survey alone does not establish it. Conclusions about user demand and final requirements depend on direct input and feasibility analysis, provisionally scheduled through late November to mid-December.
 
 ## Problem and proposed contribution
 
@@ -14,9 +14,9 @@ Wang et al.'s [ByteSized32 study](https://aclanthology.org/2023.emnlp-main.830/)
 
 | Question to test | Focused input needed before fixing requirements |
 | --- | --- |
-| Which prospective creators would use a generated browser game, and for what purpose? | Ask candidate users about their concepts, technical experience, prior creation attempts, barriers and expected outputs; record roles, dates, anonymized statements and divergent views. Distinguish stated interest from observed use. |
-| Which story elements and mechanics must survive simplification? | Ask users to rank premise, central actions and ending against examples that replace unsupported mechanics; compare judgments rather than assume one genre-independent rule. |
-| What constitutes an acceptable generated game? | Discuss a small, manually authored playable example and several story scenarios; assess the clarity of controls, objectives, outcomes and failure explanations. Evaluate actual generated outputs separately at a later stage. |
+| Which prospective creators would use a generated browser game, and for what purpose? | Use survey answers about creator role, technical experience, prior attempts, obstacles and preferred output; record distribution dates, counts and divergent views. Distinguish stated interest from observed use. |
+| Which story elements and mechanics must survive simplification? | Compare survey priorities for central idea, player actions and ending, and responses about substitutions; treat the result as exploratory. |
+| What constitutes an acceptable generated game? | Analyze selected unacceptable outcomes and requested actions in the survey. Assess actual playability and narrative correspondence separately after a prototype exists. |
 | What feasible technical boundary should the team promise? | Review the drafted literature and technology comparisons, test feasibility assumptions, and agree a bounded mechanic set and verification criteria with the supervisor; revise the proposed requirements in light of the findings. |
 
 The [supervisor clarification](../supervisor-feedback.md) retains all eleven required sections at minimal depth, including Git and YouTrack preparation. The repository now contains initial drafts of the proposal, relevance, literature review, existing-system and technology comparisons, requirements, architecture, UX concept, verification plan, management plan and supervisor response record. Their presence does not establish approval, implementation or evaluation; the [handoff status](../october-submission.md) records outstanding evidence and external setup.

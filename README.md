@@ -11,7 +11,7 @@ Group diploma project, Astana IT University, Software Engineering (SE-2417). The
 | Required section | Current artifact | State |
 | --- | --- | --- |
 | 1. Project proposal | [Proposal](docs/proposal.md) | Draft |
-| 2. Relevance and actual input | [Relevance record](docs/evidence/relevance.md), [questionnaire](docs/evidence/questionnaire.md) | Rationale drafted; no recorded user input |
+| 2. Relevance and actual input | [Relevance record](docs/evidence/relevance.md), [questionnaire](docs/evidence/questionnaire.md), [Google Forms creation script](tools/create-google-survey.gs) | Rationale and form prepared; no live form or recorded responses |
 | 3. Literature | [Critical review](docs/literature.md) | Draft synthesis of 14 scholarly sources; team/source review pending |
 | 4. Existing systems | [Comparison](docs/existing-systems.md) | Three systems, nine shared criteria; desk research only |
 | 5. Technology alternatives | [Comparison](docs/technology-comparison.md) | Three provisional decisions; feasibility tests pending |
