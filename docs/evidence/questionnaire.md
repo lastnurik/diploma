@@ -1,6 +1,6 @@
 # User Relevance Survey and Outreach Method
 
-**Purpose.** Gather early evidence about whether story authors, educators, and small creative/game teams would use a tool that turns a storyline into a playable 2D browser game. This questionnaire asks about present workflow, desired actions and output, and unacceptable compromises. It is designed for about five minutes. It has **not yet been distributed**; no responses or discussions are claimed here.
+**Purpose.** Investigate whether prospective game creators without development expertise, including writers, educators and small creative teams, would use a system that converts a storyline into a playable 2D browser game. The questions cover existing workflows, expected output, essential player actions and acceptable compromises. Estimated completion time is five minutes. The questionnaire has **not yet been distributed**; no responses or discussions are claimed here.
 
 ## Survey introduction and consent
 

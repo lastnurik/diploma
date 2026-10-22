@@ -14,30 +14,30 @@
 
 ## Problem and proposed audience
 
-Creative people may have a game idea or storyline but lack the programming and game-development skills needed to turn it into a game they can play and share. The proposed platform would let them describe the story and desired game in ordinary language, then generate a ready-to-play 2D game directly in the browser. The primary proposed audience is aspiring creators without technical game-development skills; story authors, educators and small creative teams are possible groups within that audience. Whether they need this tool, what kind of game they expect and what compromises they accept remain research questions. Coherent rules, controls, scenes and a reachable ending are the technical challenge behind delivering a genuinely playable result. The [relevance section](evidence/relevance.md) separates current evidence from these assumptions.
+Prospective game creators may possess an original concept or storyline without the programming and game-engine expertise needed to implement it as a playable digital game. The proposed platform would accept a user-authored narrative and selected game preferences, then generate a complete 2D game that can be launched and played in a web browser. The central technical problem is to convert an underspecified narrative into a consistent representation of game state, player actions, progression rules and a reachable ending while retaining the essential elements of the original concept. The intended primary users are people without game-development experience; writers, educators and small creative teams are candidate groups for investigation. Their actual needs, preferred workflows and tolerance for simplification remain to be established through direct research. The [relevance section](evidence/relevance.md) distinguishes existing evidence from these hypotheses.
 
 ## Aim and preliminary objectives
 
-The proposed aim is to enable a person without game-development skills to turn a storyline or narrative game idea and selected parameters into a ready-to-play browser game with a beginning, meaningful player actions and an ending. We will examine how faithfully it can preserve the central story if mechanics must be simplified. Preliminary objectives are:
+The aim is to design and evaluate an AI-assisted platform that transforms a user-provided storyline and selected constraints into a playable 2D browser game without requiring the user to program or operate a game engine. The evaluation will distinguish successful generation and launch from the ability to perform meaningful actions, reach an ending and recognize the intended story in the result. The preliminary objectives are:
 
-1. Investigate intended users, comparable tools and relevant research; collect actual stakeholder input.
-2. Determine a feasible range of game mechanics and a representation of story goals, scenes, player actions and endings.
-3. Design and build a browser authoring and play experience with a platform service and an AI-assisted generation component.
-4. Evaluate actual outputs for launch, central player actions, observed ending and fidelity to the story; report failures and limitations.
+1. Investigate intended users and their authoring needs through direct input, a review of relevant research and a comparison of existing tools.
+2. Define a feasible initial set of game mechanics and a representation for narrative goals, scenes, player actions and endings.
+3. Design and implement the browser interface, supporting platform service and AI-assisted generation workflow once the initial scope has been agreed.
+4. Evaluate generated games for execution, player actions, attainable completion and correspondence to the source narrative; document failure cases and limitations.
 
 The October submission addresses objective 1 only in its initial desk-research form. Further input will inform the precise requirements and acceptance measures in late November to mid December.
 
 ## Intended outcome and boundaries to decide
 
-The intended final outcome is a working prototype through which a nontechnical creator enters a storyline or narrative game idea and receives a game they can play to completion in the browser. The concept includes a browser interface, a service for projects and generation workflow, and a component that interprets the story. The exact division, game types, AI method, supported actions, simplification policy, data contract and technologies are **not yet approved**. A generated outline alone is an intermediate artifact rather than the intended final result. We will choose a bounded first scope based on the evidence and feasibility work, and distinguish supported behavior from transparently simplified or rejected requests.
+The intended final outcome is a working prototype that accepts a narrative game concept and produces a browser-playable game with an identifiable objective, consequential player input and a reachable conclusion. The proposed system comprises an authoring and play interface, a service that manages projects and generation requests, and a component that interprets the narrative for game generation. Supported genres and mechanics, the AI method, system architecture, data contract and evaluation thresholds are **not yet approved**. A synopsis or code fragment alone would not satisfy the intended outcome. The research and feasibility phase will establish how to handle requests outside the supported scope, including when to simplify a mechanic and when to explain that generation is infeasible.
 
 ## Team contribution
 
 | Student | Preliminary area of independent contribution |
 | --- | --- |
-| Almadi Madiuly | Frontend and UX/UI: investigate author workflow and expectations; later implement and evaluate the browser experience. |
-| Zhaksylyk Aldiyar | Backend and platform: investigate integration and delivery constraints; later implement the service and end-to-end path. |
-| Yessengeldi Nurgeldi | AI and generation: investigate generation, validation and fidelity; later implement and evaluate the generation component. |
+| Almadi Madiuly | Frontend and UX/UI: study the authoring workflow; subsequently implement and evaluate the browser interface. |
+| Zhaksylyk Aldiyar | Backend and platform: assess integration constraints; subsequently implement the service and generation workflow. |
+| Yessengeldi Nurgeldi | AI and generation: assess generation and validation methods; subsequently implement and evaluate the generation component. |
 
 All three will agree shared interfaces and evaluation criteria after the research phase. [October tasks](october-tasks.md) assign the limited submission and the next input collection.
 
@@ -52,6 +52,6 @@ All three will agree shared interfaces and evaluation criteria after the researc
 
 ## First pre-defense status
 
-The limited October package does not claim a built or evaluated system, conducted interviews, finalized requirements, approved architecture or supervisor acceptance of technical choices. It gives the committee a concrete proposal and exposes what evidence is still needed. Earlier detailed working drafts are retained separately for later review and are not part of this submission.
+The October package presents a defined project concept and the questions that the next research phase must resolve. It contains no implemented or evaluated system, completed interviews, finalized requirements or approved architecture. Earlier detailed working drafts are retained separately for later review and are outside this submission.
 
 **Source:** Supplied supervisor proposal, *Представление научного руководителя о готовности обучающихся к выполнению дипломного проекта*, pp. 1–5. This text extracts the project description and role division; the separate form contains personal academic information and should not be published in a public repository. The October scope follows the supervisor's later message supplied by the user.
