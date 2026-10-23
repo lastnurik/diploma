@@ -1,147 +1,83 @@
-# Diploma Development Tasks
+# Next Diploma Development Increment
 
-**Status, October 2026:** Proposed repository tasks ready to copy into YouTrack. They are not claims of live tracker issues or implemented features. Each task has one owner and a different reviewer. Dependencies refer to task titles below. Deadlines are proposed as ends of weeks after the development kickoff; assign calendar dates when copying the tasks into YouTrack. The target is one bounded top-down 2D story-to-browser-game slice; the [requirements](requirements.md) and [verification plan](verification-plan.md) specify detailed behavior.
+**Status, October 2026:** Seven proposed repository tasks for the next technical increment, ready to transfer into YouTrack. They are not live issues or implemented features. Deadlines are proposed ends of weeks after development kickoff; assign calendar dates when scheduling. The team first agrees the bounded top-down action set (`move`, `inspect`, `collect`, `interact`, `choose`) and asset limits described in the [scope draft](decisions/scope-and-contract.md). The [technology comparison](technology-comparison.md) identifies provisional Spring Boot/PostgreSQL/RabbitMQ, Python worker and Phaser 3 options; no stack is final here.
 
-## Specify supported actions and game schema
+**Increment outcome:** The same hand-authored game data passes strict checks and runs to an ending in a browser. A small project/job API and author UI exercise the seam with an explicitly labelled fixture-backed job. Separately, the AI pilot produces or rejects one candidate under the same schema. This increment does not claim an integrated, reliable story-to-game generator.
 
-- **Owner:** Zhaksylyk Aldiyar (platform). **Reviewer:** Yessengeldi Nurgeldi (generation).
-- **Priority:** Critical. **Deadline:** End of Week 1 after development kickoff (proposed).
-- **Dependency:** None; agree the action set with Almadi (runtime) and Nurgeldi (generation) before freezing the schema.
-- **Deliverable:** Versioned game/job schemas and one valid hand-authored game fixture with a goal and ending.
-- **Acceptance:** Schemas define scene/entity IDs, allowed actions and effects, controls, ending predicate, simplifications, bounds, and project/version/job IDs. The fixture uses only agreed actions and has a replayable start-to-win sequence; all three owners can consume the same fields.
+## Define the game schema and hand-authored key/door fixture
+
+- **Owner/reviewer:** Zhaksylyk Aldiyar (platform) / Yessengeldi Nurgeldi (generation). **Priority:** Critical. **Deadline:** End of Week 1.
+- **Depends on:** All three owners agreeing the supported actions, asset allowlist and first-game limits.
+- **Build:** Versioned JSON Schema or equivalent, one valid key/door game fixture and one documented start-to-win action trace. Keep project/user/job IDs separate from game data.
+- **Input → output:** Candidate with `schemaVersion`, scenes, entities, initial state, actions, goal/win predicate, controls and simplifications → a game-data file the validator and runtime can both consume.
+- **Steps:** Fix field types, action preconditions/effects and size limits; author the fixture; record expected action/state transitions.
+- **Acceptance:** Collecting the key permits opening the door and triggers an explicit ending; trying the door first does not. Unknown schema major version and out-of-limit data have defined errors. Almadi and Nurgeldi review the same fixture/contract.
 - **Trace:** `R-04–05`, `R-08`, `Q-03`; `V02`, `V05`.
 
-## Validate game schema and references
+## Implement schema, reference and action validation
 
-- **Owner:** Yessengeldi Nurgeldi (generation). **Reviewer:** Zhaksylyk Aldiyar (platform).
-- **Priority:** Critical. **Deadline:** End of Week 2 after development kickoff (proposed).
-- **Dependency:** Specify supported actions and game schema.
-- **Deliverable:** Strict validator and valid/invalid fixture set.
-- **Acceptance:** The valid fixture passes; unknown schema version or action, duplicate/broken references, and disallowed assets fail with stable error codes. Record validator results against exact fixture hashes.
-- **Trace:** `R-05`, `R-07`, `Q-01`; `V02–V04`.
+- **Owner/reviewer:** Yessengeldi Nurgeldi (generation) / Zhaksylyk Aldiyar (platform). **Priority:** Critical. **Deadline:** End of Week 2.
+- **Depends on:** Define the game schema and hand-authored key/door fixture.
+- **Build:** Callable validator with fixture-based checks and stable error codes; retain reports for later independent platform-gate tests.
+- **Input → output:** Game-data JSON → `{valid, schemaVersion, findings[]}`; never silently alter the candidate.
+- **Steps:** Check schema/limits, start scene, unique and resolved IDs, allowed operations, declared state variables and approved asset references.
+- **Acceptance:** The valid fixture passes. Unknown action/version, broken target, undeclared state, unsafe asset and oversize content each fail with a specific finding; no invalid fixture is reported valid.
+- **Trace:** `R-05`, `R-07`, `Q-01`, `Q-03`; `V02–V04`.
 
-## Persist projects, story requests and versions
+## Play the hand-authored fixture in the browser
 
-- **Owner:** Zhaksylyk Aldiyar (platform). **Reviewer:** Almadi Madiuly (frontend).
-- **Priority:** Critical. **Deadline:** End of Week 2 after development kickoff (proposed).
-- **Dependency:** Specify supported actions and game schema.
-- **Deliverable:** Project/version create and read API with stored story and parameters.
-- **Acceptance:** A valid request returns stable IDs; two attempts create distinct immutable versions. Read/list returns the owner's records, while another user cannot read them; invalid input creates no version.
-- **Trace:** `R-01–02`, `R-10–11`, `Q-02`; `V01`, `V11`.
-
-## Queue jobs and expose durable status
-
-- **Owner:** Zhaksylyk Aldiyar (platform). **Reviewer:** Yessengeldi Nurgeldi (generation).
-- **Priority:** Critical. **Deadline:** End of Week 3 after development kickoff (proposed).
-- **Dependency:** Persist projects, story requests and versions.
-- **Deliverable:** Versioned worker handoff and status endpoint.
-- **Acceptance:** Submission returns a generation ID and `queued` before worker completion. Polling after reload shows the same IDs, timestamps and allowed `queued → generating → validating → ready` or `failed` transitions. A worker receives the matching version and schema reference.
-- **Trace:** `R-02–03`, `R-12`, `Q-02`; `V06`.
-
-## Recover failed handoff and duplicate jobs
-
-- **Owner:** Zhaksylyk Aldiyar (platform). **Reviewer:** Yessengeldi Nurgeldi (generation).
-- **Priority:** High. **Deadline:** End of Week 4 after development kickoff (proposed).
-- **Dependency:** Queue jobs and expose durable status.
-- **Deliverable:** Bounded timeout/retry handling and idempotent job processing.
-- **Acceptance:** Broker outage and worker restart resolve to recorded recovery or bounded failure, never a silent permanent `queued` state. Redelivery of one event retains one job and terminal outcome; a deliberate new request creates a new linked version. Retain fault-injection trace.
-- **Trace:** `R-12`, `Q-02–03`; `V08–V10`.
-
-## Run the hand-authored game in a fixed browser runtime
-
-- **Owner:** Almadi Madiuly (frontend/runtime). **Reviewer:** Yessengeldi Nurgeldi (generation).
-- **Priority:** Critical. **Deadline:** End of Week 4 after development kickoff (proposed).
-- **Dependency:** Specify supported actions and game schema; validate game schema and references.
-- **Deliverable:** Runnable browser scene driven by the valid fixture, with movement, interaction, ending and restart.
-- **Acceptance:** A reviewer follows setup instructions, performs a consequential action, reaches the explicit ending, then restarts to initial state. Invalid fixture data shows a controlled error. The runtime interprets data and never executes model-generated JavaScript; retain browser version and play trace.
+- **Owner/reviewer:** Almadi Madiuly (frontend/runtime) / Yessengeldi Nurgeldi (generation). **Priority:** Critical. **Deadline:** End of Week 4.
+- **Depends on:** Define the game schema and hand-authored key/door fixture; implement schema, reference and action validation.
+- **Build:** Fixed runtime adapter for the agreed top-down scene, action preconditions/effects, visible goal/controls, ending and restart. Phaser 3 remains a provisional renderer choice.
+- **Input → output:** Valid fixture game data → rendered scene and start/action/ending events; restart → initial state.
+- **Steps:** Parse approved data, render allowed assets, apply declarative actions, show state feedback, and handle invalid/missing data.
+- **Acceptance:** A reviewer cannot open the door before collecting the key, can reach the ending afterward, and can restart. Invalid data displays a controlled error rather than partial play. Record fixture hash and browser version; no model-generated JavaScript executes.
 - **Trace:** `R-08–09`, `Q-01`, `Q-06`; `V14–V15`.
 
-## Convert one story into a candidate game
+## Create a project/version API and fixture-backed job
 
-- **Owner:** Yessengeldi Nurgeldi (AI generation). **Reviewer:** Zhaksylyk Aldiyar (platform).
-- **Priority:** Critical. **Deadline:** End of Week 3 after development kickoff (proposed).
-- **Dependency:** Specify supported actions and game schema.
-- **Deliverable:** Worker pilot that extracts objective/actions from one supported story and emits a candidate specification or classified scope failure.
-- **Acceptance:** Candidate keeps the stated goal and central actions within the agreed vocabulary. A changed mechanic records original request, replacement and reason; an unacceptable substitution returns a specific failure. Retain input/configuration and candidate hash.
-- **Trace:** `R-04–06`, `Q-07`; `V16`.
+- **Owner/reviewer:** Zhaksylyk Aldiyar (platform) / Almadi Madiuly (frontend). **Priority:** Critical. **Deadline:** End of Week 3.
+- **Depends on:** Define the game schema and hand-authored key/door fixture.
+- **Build:** Draft project create/read, generation submission and status operations backed by persistent project, version and job records. A development-only worker returns the validated hand-authored fixture; it must be labelled as fixture-backed.
+- **Input → output:** Authenticated story and parameters → project/version/generation IDs and immediate `queued`; status read → IDs, timestamp, actual state and safe message; completed fixture job → reference to the exact fixture version.
+- **Steps:** Store immutable version input, return before job work, persist allowed state transitions and use an explicit development fixture handoff.
+- **Acceptance:** Reload returns the same job/version state; a second deliberate attempt has a new version without replacing the first. Invalid input makes no job; foreign or unknown IDs reveal no story or artifact. The fixture route does not masquerade as AI generation.
+- **Trace:** `R-01–03`, `R-10`, `Q-02`; `V01`, `V06`, `V11`.
 
-## Check a candidate's winning path
+## Connect the story form and job-progress view
 
-- **Owner:** Yessengeldi Nurgeldi (AI generation). **Reviewer:** Almadi Madiuly (runtime).
-- **Priority:** Critical. **Deadline:** End of Week 4 after development kickoff (proposed).
-- **Dependency:** Validate game schema and references; convert one story into a candidate game.
-- **Deliverable:** Bounded state exploration with a replayable action trace.
-- **Acceptance:** A reachable fixture yields a path from start to win; a provably unreachable fixture fails; a search exceeding the configured bound is `unverified`, never ready. Retain bounds and traces for all three cases.
-- **Trace:** `R-08`, `Q-03`, `Q-07`; `V05`.
+- **Owner/reviewer:** Almadi Madiuly (frontend/UX) / Zhaksylyk Aldiyar (platform). **Priority:** High. **Deadline:** End of Week 4.
+- **Depends on:** Create a project/version API and fixture-backed job.
+- **Build:** Editable story, genre intent, goal and main-action form plus a progress view, using the [static prototype](../prototype/README.md) only as design reference.
+- **Input → output:** Reviewed form values → one API submission and displayed project/version/job IDs; generation ID → polled server status after navigation or reload.
+- **Steps:** Add labels and field errors, connect API calls, prevent accidental duplicate clicks, poll until terminal state and explain fixture-backed results.
+- **Acceptance:** Saved values match the reviewed form; empty fields show corrections. Reload preserves the same job and real status. A failed/pending job has no Play action; network loss says status is uncertain, not failed. Keyboard and 375/768/1280 px checks find no clipped essentials.
+- **Trace:** `R-01–03`, `Q-04`; `V01`, `V06`, `V17`.
 
-## Repair or fail invalid generation output
+## Generate one candidate under the shared game schema
 
-- **Owner:** Yessengeldi Nurgeldi (AI generation). **Reviewer:** Zhaksylyk Aldiyar (platform).
-- **Priority:** High. **Deadline:** End of Week 5 after development kickoff (proposed).
-- **Dependency:** Validate game schema and references; check a candidate's winning path.
-- **Deliverable:** Bounded repair loop and classified terminal worker result.
-- **Acceptance:** Every repair reruns full validation and winning-path checks. A repairable fixture passes within the configured limit; exhausted, unsafe or unverified output returns `failed` with a reason and no playable artifact. Retain attempt count and reports.
-- **Trace:** `R-07–08`, `Q-01`, `Q-03`; `V07`.
+- **Owner/reviewer:** Yessengeldi Nurgeldi (AI generation) / Zhaksylyk Aldiyar (platform). **Priority:** High. **Deadline:** End of Week 5.
+- **Depends on:** Define the game schema and hand-authored key/door fixture; implement schema, reference and action validation.
+- **Build:** Bounded worker pilot for one supported story, with a malformed-output case and an unsupported-essential-mechanic case. This is an offline pilot, not a production generation endpoint.
+- **Input → output:** Versioned request `{generation_id, project_version_id, spec_version, story_ref, parameters}` → candidate game data, interpreted goal/actions and `simplifications[]`, or a classified failure without a playable artifact.
+- **Steps:** Extract intent, map only to approved actions, generate candidate scenes/rules, run full validator and bounded winning-path check, then retain report and trace.
+- **Acceptance:** A supported story yields schema-valid data with goal, central action and replayable winning path or a clear failure. Broken references and unsupported essential actions do not pass; search timeout is `unverified`, not ready. Record prompt/config, candidate hash and simplification reasons. One success is not reported as a general success rate.
+- **Trace:** `R-04–08`, `Q-03`, `Q-07`; `V02–V05`, `V16`.
 
-## Submit and edit a story in the browser
+## Reproduce the fixture-backed author-to-play path
 
-- **Owner:** Almadi Madiuly (frontend/UX). **Reviewer:** Zhaksylyk Aldiyar (platform).
-- **Priority:** High. **Deadline:** End of Week 3 after development kickoff (proposed).
-- **Dependency:** Persist projects, story requests and versions.
-- **Deliverable:** Working story form based on the [static UX concept](../prototype/README.md).
-- **Acceptance:** Valid story, goal and main action submit together and display the returned project/version IDs. Required-field and size errors identify the field to correct; editing a new attempt does not mutate an earlier version. Check keyboard access and 375, 768 and 1280 px layouts.
-- **Trace:** `R-01–02`, `Q-04`; `V01`, `V17`.
+- **Owner/reviewer:** Zhaksylyk Aldiyar (platform integration) / Almadi Madiuly (frontend). **Priority:** High. **Deadline:** End of Week 6.
+- **Depends on:** Play the hand-authored fixture in the browser; create a project/version API and fixture-backed job; connect the story form and job-progress view.
+- **Build:** Clean-start instructions and one automated/API plus browser smoke test for the fixture-backed request, status, exact-version launch and ending.
+- **Input → output:** Fixed story/request and known fixture hash → correlated project/version/job/fixture trace and browser recording; injected invalid fixture or failed job → controlled failure with no Play action.
+- **Steps:** Start documented services, submit through the form, capture status sequence, launch the selected fixture and replay the key/door path; exercise one negative case.
+- **Acceptance:** Another team member reproduces the same IDs, fixture hash, action state change and ending from a recorded commit. Invalid fixture or failed job never launches. Evidence explicitly calls this a hand-authored runtime and integration baseline, not a generated game.
+- **Trace:** `R-01–03`, `R-08–09`, `Q-06–07`; `V06`, `V14–V15`, `V18`.
 
-## Show live progress and recoverable failure
+## Later implementation milestones
 
-- **Owner:** Almadi Madiuly (frontend/UX). **Reviewer:** Zhaksylyk Aldiyar (platform).
-- **Priority:** High. **Deadline:** End of Week 4 after development kickoff (proposed).
-- **Dependency:** Queue jobs and expose durable status; submit and edit a story in the browser.
-- **Deliverable:** Progress and failure screens backed by the status API.
-- **Acceptance:** Reload restores the actual job/version and current state. A failed job shows a safe reason and recovery action; pending or failed jobs show no Play action. Keyboard users can perceive state and error changes.
-- **Trace:** `R-03`, `R-12–13`, `Q-04–05`; `V06`, `V08`, `V17`.
+These are sequencing markers, not detailed tickets for this submission. Create implementable issues when the first increment's schema, runtime and API behavior are verified:
 
-## Independently gate game publication
-
-- **Owner:** Zhaksylyk Aldiyar (platform). **Reviewer:** Yessengeldi Nurgeldi (generation).
-- **Priority:** Critical. **Deadline:** End of Week 6 after development kickoff (proposed).
-- **Dependency:** Queue jobs and expose durable status; validate game schema and references; check a candidate's winning path; repair or fail invalid generation output.
-- **Deliverable:** Version-bound result intake and server-side publication gate.
-- **Acceptance:** Worker success alone cannot mark a game ready. Mismatched IDs, unknown schema/action, failed safety checks or unverified ending produce no Play URL. A valid result publishes once against the exact immutable version; duplicate delivery cannot publish twice.
-- **Trace:** `R-05`, `R-07–08`, `R-12`, `Q-01–02`; `V03–V05`, `V10`.
-
-## Serve only authorized game data and assets
-
-- **Owner:** Zhaksylyk Aldiyar (platform). **Reviewer:** Almadi Madiuly (runtime).
-- **Priority:** Critical. **Deadline:** End of Week 7 after development kickoff (proposed).
-- **Dependency:** Independently gate game publication; run the hand-authored game in a fixed browser runtime.
-- **Deliverable:** Exact-version artifact/data endpoint for the trusted runtime.
-- **Acceptance:** Ready owner requests receive only approved data/assets with safe content types. Pending, failed, missing, foreign-user, wrong-version, traversal and unapproved-file requests are denied. No model-generated executable script is served.
-- **Trace:** `R-09–10`, `Q-01–02`; `V12–V13`.
-
-## Show results, history and deliberate retry
-
-- **Owner:** Almadi Madiuly (frontend/UX). **Reviewer:** Zhaksylyk Aldiyar (platform).
-- **Priority:** High. **Deadline:** End of Week 8 after development kickoff (proposed).
-- **Dependency:** Show live progress and recoverable failure; serve only authorized game data and assets.
-- **Deliverable:** Result, simplification, Play, catalogue and retry views backed by exact-version API data.
-- **Acceptance:** A ready result shows controls and each simplification and launches its own version. Catalogue retains earlier ready and failed versions; retry creates a linked new attempt without replacing an old result. A failed or pending version has no Play action.
-- **Trace:** `R-06`, `R-09–11`, `Q-02`; `V11`, `V14`.
-
-## Reproduce one complete request-to-play run
-
-- **Owner:** Zhaksylyk Aldiyar (platform integration). **Reviewer:** Almadi Madiuly (frontend).
-- **Priority:** Critical. **Deadline:** End of Week 9 after development kickoff (proposed).
-- **Dependency:** Recover failed handoff and duplicate jobs; show results, history and deliberate retry.
-- **Deliverable:** Recorded run from a supported story through job status, validated artifact and browser ending, plus one provider-failure retry.
-- **Acceptance:** Correlate request/version/job/artifact IDs and retain a browser play trace. The ready game reaches its ending; failure gives a safe reason, retry makes a new version, and an earlier ready game still launches. Another team member can repeat the run from documented commands and fixture hashes.
-- **Trace:** `R-01–03`, `R-08–12`, `Q-06–07`; `V06`, `V08`, `V11`, `V14`, `V18`.
-
-## Evaluate the fixed story corpus
-
-- **Owner:** Yessengeldi Nurgeldi (AI evaluation). **Reviewer:** Almadi Madiuly (frontend).
-- **Priority:** High. **Deadline:** End of Week 11 after development kickoff (proposed).
-- **Dependency:** Reproduce one complete request-to-play run.
-- **Deliverable:** Executed report using [fixed prompts](../tests/evaluation-prompts.md), the [verification protocol](verification-plan.md) and the hand-authored runtime baseline.
-- **Acceptance:** Freeze prompt/code/schema/model configuration before runs; record every scheduled attempt and failure. Report separate denominators for valid specification, launch, central actions, reachable and observed ending, and simplification fidelity. Two reviewers annotate fidelity independently and retain disagreements; link defects to reproducible cases and mark blocked checks as blocked.
-- **Trace:** `R-04–09`, `Q-07–08`; `V14`, `V16`, `V18` and fixed-corpus protocol.
+1. Integrate the AI worker with durable queue recovery, bounded repair, independent platform validation, immutable publication and authorized game-data delivery.
+2. Complete ready-result, simplification, project-history and deliberate-retry screens against the approved API; verify negative and accessibility paths.
+3. Run the [fixed-corpus evaluation](../tests/evaluation-prompts.md) under the [verification protocol](verification-plan.md), reporting every trial, browser ending, narrative-fidelity judgment and failure.

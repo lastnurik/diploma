@@ -39,23 +39,18 @@ The intended final outcome is a working prototype that accepts a narrative game 
 | Zhaksylyk Aldiyar | Backend and platform: assess integration constraints; subsequently implement the service and generation workflow. |
 | Yessengeldi Nurgeldi | AI and generation: assess generation and validation methods; subsequently implement and evaluate the generation component. |
 
-All three share research synthesis and interface decisions. The [project work packages](youtrack-backlog.md) outline the proposed development sequence; shared interfaces and evaluation criteria remain provisional.
+All three share research synthesis and interface decisions. The [next development increment](youtrack-backlog.md) details seven initial tasks and sketches later milestones; shared interfaces and evaluation criteria remain provisional.
 
 ## Provisional stages
 
-| Period | Checkpoint |
+| Period | Intended evidence |
 | --- | --- |
-| October 2026 | Initial proposal, relevance analysis, research and technology comparisons, requirements, three diagrams, UX concept, verification plan and presentation. |
-| Late October–November 2026 | Gather actual user/supervisor input, preserve divergent needs and investigate feasibility assumptions before scope agreement. |
-| Late November–mid-December 2026 | Agree bounded scope, requirements and acceptance criteria using that input. |
-| Mid–late December 2026 | Freeze the proposed shared game/job contract with valid/invalid fixtures and recorded checks; review the static UX journey with users in December after scope agreement. |
-| Late December 2026–January 2027 | Target one manually authored browser-playable game with a meaningful action, ending and restart. |
-| January–February 2027 | Target one bounded AI generation/validation pilot with explicit simplification and failure handling. |
-| February–March 2027 | Integrate the first complete request-to-play journey across client, platform and generation. |
-| March–April 2027 | Evaluate the slice under fixed conditions, report failures and revise defects. |
-| May 2027 | Reconcile final review, documentation and demonstration. |
+| October 2026 | Proposal, relevance, comparisons, initial requirements, diagrams, static UX concept and evaluation plan. |
+| November–December 2026 | Direct user/client and supervisor input, agreed first mechanic set and acceptance criteria, then a versioned game/job contract. |
+| January–March 2027 | Manually authored browser game, bounded generation pilot and integrated request-to-play flow. |
+| April–May 2027 | Fixed-corpus evaluation, defect and supervisor-response review, final demonstration. |
 
-These provisional windows follow the [project plan](project-plan.md) and depend on evidence, feasibility and supervisor/team review.
+Dates depend on evidence and feasibility; the [project plan](project-plan.md) gives the finer sequence and risks.
 
 ## Current stage
 

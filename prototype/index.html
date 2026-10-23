@@ -12,39 +12,32 @@
     <a class="skip" href="#main">
       Skip to prototype
     </a>
-    <header>
-      <strong>
-        Story / Play
-      </strong>
-      <span class="meta">
-        Academic UX prototype · October 2026
-      </span>
-    </header>
+    <header><strong>Story <span>/</span> Play</strong><span class="header-context">Workspace / Flooded town</span><span class="demo-label">Static design prototype</span></header>
     <div class="layout">
-      <aside>
+      <aside><div class="rail-project"><strong>Flooded town</strong><span>Story-to-game project</span></div>
         <nav aria-label="Prototype screens">
           <small>
-            AUTHOR JOURNEY
+            PROJECT WORKSPACE
           </small>
           <a href="#story">
-            01 · Story request
+            Story request
           </a>
           <a href="#progress">
-            02 · Generation
+            Generation
           </a>
           <a href="#result">
-            03 · Review result
+            Review result
           </a>
           <a href="#play">
-            04 · Play concept
+            Play concept
           </a>
           <a href="#ending">
-            04b · Ending
+            Ending
           </a>
           <a href="#catalogue">
-            05 · Versions
+            Versions
           </a>
-          <details>
+          <details open>
             <summary>Recovery examples</summary>
             <a href="#failure">Failed request · v3</a>
             <a href="#retry">Revised request · v4</a>
@@ -52,31 +45,13 @@
           </details>
         </nav>
         <p class="help">
-          One static state at a time.
+          Academic UX study.
           <br>
-          Links move through the storyboard.
+          Nine fixed storyboard states.
         </p>
       </aside>
       <main id="main">
-        <div class="intro">
-          <p class="label">
-            From an idea to a playable scene
-          </p>
-          <h1>
-            Story-to-game authoring
-          </h1>
-          <p>
-            A proposed author journey for creating a bounded 2D browser game from a storyline.
-          </p>
-          <div class="note">
-            <strong>
-              Design evidence, not a working generator.
-            </strong>
-            <br>
-            Links show fixed example states. No request is sent, no result is generated,
-            and the game scene is not playable.
-          </div>
-        </div>
+        <div class="intro"><h1>Story-to-game workspace</h1><p><strong>Fixed example states.</strong> Links navigate the design. No generation, saving or playable game is implemented.</p></div>
         <section class="screen" tabindex="-1" id="story" aria-labelledby="story-title">
           <div class="screen-head">
             <p class="meta">
@@ -88,14 +63,14 @@
           </div>
           <div class="screen-body">
             <h2 id="story-title">
-              Describe your game
+              What happens in your story?
             </h2>
             <p>
               Start with a character, a place and a goal. Choose what the player should do.
             </p>
             <div class="cols">
               <div>
-                <div class="field">
+                <div class="author-label"><strong>Your request</strong><span>Version 2 · draft example</span></div><div class="field">
                   <label for="story-text">
                     Story or game idea
                   </label>
@@ -127,51 +102,7 @@
                   <input id="action" readonly value="Explore, collect and interact">
                 </div>
               </div>
-              <div>
-                <div class="note">
-                  <h3>
-                    First proposed game format
-                  </h3>
-                  <p>
-                    A small top-down 2D scene with a clear objective and ending.
-                  </p>
-                  <ul>
-                    <li>
-                      Move and inspect the scene
-                    </li>
-                    <li>
-                      Collect and use story objects
-                    </li>
-                    <li>
-                      Interact and choose dialogue
-                    </li>
-                  </ul>
-                  <p>
-                    Free sailing may become movement along a fixed route. Any accepted
-                    change appears in the result before play.
-                  </p>
-                </div>
-                <h3>
-                  Review this request
-                </h3>
-                <p>
-                  The story and preferences form one version. Earlier versions remain available.
-                </p>
-                <details>
-                  <summary>
-                    Empty-request feedback example
-                  </summary>
-                  <div class="note error">
-                    <strong>
-                      Story is required.
-                    </strong>
-                    <br>
-                    Describe the character and what they need to achieve before
-                    continuing. The proposed submission action remains unavailable until
-                    corrected.
-                  </div>
-                </details>
-              </div>
+              <div class="preview-pane"><div class="preview-toolbar"><span>Game preview</span><span>Not generated</span></div><div class="preview-content"><div class="preview-placeholder"><strong>Your scene starts here</strong><span>A result appears after the request has been generated and checked.</span></div><div class="note"><h3>A small world.<br>A clear objective.</h3><p>The proposed first format is a bounded, top-down 2D scene.</p><ul><li>Move and inspect the scene</li><li>Collect and use story objects</li><li>Interact and choose dialogue</li></ul><p>Free sailing may become a fixed route. Review any substitution before opening the game.</p></div><details><summary>Empty-request feedback example</summary><p class="note error"><strong>Story is required.</strong> Describe the character and their goal before continuing.</p></details></div></div>
             </div>
             <div class="actions">
               <a class="button" href="#progress">
@@ -284,6 +215,7 @@
               Carry medicine across a flooded town and reach the clinic. A short adventure about
               helping a community through a crisis.
             </p>
+            <div class="result-preview"><img src="scene.svg" alt="Static scene: a courier beside a medicine depot, with a raised walkway leading to the clinic"><div><p class="label">VERSION 2 · SCENE CONCEPT</p><h3>The last delivery</h3><p>One route through the floodwater.<br>One delivery that matters.</p><span class="badge">Ready · fixed example</span><p class="help">Illustrative composition, not a running game.</p></div></div>
             <div class="cols">
               <div>
                 <h3>
@@ -405,39 +337,7 @@
             </p>
             <div class="cols">
               <div>
-                <svg class="game-map" viewBox="0 0 600 380" role="img" aria-labelledby="map-title map-desc">
-                  <title id="map-title">
-                    Top-down flooded town scene
-                  </title>
-                  <desc id="map-desc">
-                    The courier stands beside the depot on the left. A raised walkway
-                    connects the depot to the clinic on the right. The medicine crate is
-                    at the depot; water surrounds the route.
-                  </desc>
-                  <rect width="600" height="380" fill="#d9e8e7"/>
-                  <path d="M20 90H580M20 300H580M80 30V350M280 30V350M480 30V350" stroke="#c2d9d6" stroke-width="2"/>
-                  <path d="M85 210H510" stroke="#8c9f8d" stroke-width="68"/>
-                  <path d="M85 210H510" stroke="#e8dfc6" stroke-width="48"/>
-                  <rect x="40" y="80" width="145" height="100" rx="4" fill="#e9ede5" stroke="#718579" stroke-width="3"/>
-                  <rect x="420" y="80" width="145" height="100" rx="4" fill="#f5f4e9" stroke="#718579" stroke-width="3"/>
-                  <rect x="100" y="150" width="32" height="32" fill="#cba45f" stroke="#67542e" stroke-width="3"/>
-                  <circle cx="155" cy="216" r="15" fill="#176456" stroke="white" stroke-width="4"/>
-                  <text x="64" y="118" fill="#172e36" font-family="sans-serif" font-size="20" font-weight="bold">
-                    Depot
-                  </text>
-                  <text x="447" y="118" fill="#172e36" font-family="sans-serif" font-size="20" font-weight="bold">
-                    Clinic
-                  </text>
-                  <text x="72" y="278" fill="#172e36" font-family="sans-serif" font-size="18">
-                    Courier
-                  </text>
-                  <text x="263" y="202" fill="#172e36" font-family="sans-serif" font-size="17">
-                    Walkway →
-                  </text>
-                  <text x="30" y="350" fill="#3c5e60" font-family="sans-serif" font-size="17">
-                    Floodwater · not traversable
-                  </text>
-                </svg>
+                <img class="game-map" src="scene.svg" alt="Top-down flooded town: the courier and medicine crate are at the depot; a fixed raised walkway leads east to the clinic. Floodwater is not traversable.">
                 <p class="game-caption">
                   Static scene composition. The map is not a running game canvas.
                 </p>
@@ -472,7 +372,7 @@
                     </dd>
                   </div>
                 </dl>
-                <h3 style="margin-top:24px">
+                <h3 class="controls-title">
                   Proposed controls
                 </h3>
                 <p>

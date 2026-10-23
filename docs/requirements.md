@@ -4,6 +4,8 @@
 
 **Priority:** Must means needed for the first integrated request-to-playable-game slice; Should means a later enhancement. **Evidence provenance:** P = supervisor proposal via `proposal.md`; C = proposed scope contract; L = literature implications. The supplied questionnaire records have unresolved respondent provenance, so no requirement is represented as confirmed by user evidence.
 
+**First-slice reading guide:** An author submits a story, receives traceable progress, reviews any simplification, and plays an approved version to an ending. The platform must keep versions and failures visible; the generator must stay within supported mechanics; the runtime must use validated data. The tables below state observable acceptance for each requirement. Module files linked above hold implementation-level detail.
+
 ## Functional requirements and acceptance
 
 | ID | Priority · source | Requirement | Observable acceptance and detailed IDs |

@@ -1,5 +1,7 @@
 # Verification Plan for the First Executable Slice
 
+**Committee overview:** This is a plan, not executed results. First prove a hand-authored game can run; then test invalid data and failure paths; finally evaluate generated games on a fixed prompt corpus. A game passes only when its specification is valid, the browser launches safely, central actions work, an ending is reached, and any story simplification is disclosed and judged acceptable. The detailed cases and metrics below make those claims testable.
+
 **Status, October 2026:** Planned evaluation, with no executed cases. The checks assess the proposed [requirements](requirements.md) and [scope contract](decisions/scope-and-contract.md) using the [story prompt set](../tests/evaluation-prompts.md). A `ready` label requires independent verification.
 
 ## Strategy and execution record
@@ -42,16 +44,6 @@ The V02/V14 fixture establishes that the trusted runtime and checks can handle a
 ## Coverage and release gate
 
 The first integrated slice can be called verified only if the executed Must cases for schema/reference/safety (V01–V05, V12–V13), bounded generation and job handling (V06–V10), version history (V11), browser launch/action/ending/error (V14–V15), and reproducible setup (V18) pass under recorded conditions. V16 addresses the human fidelity claim and V17 the stated UI checks. A reachable state-space ending alone does not replace browser observation. A browser launch alone does not establish that central story actions or the ending work. Failures, blocked cases and unverified search outcomes remain visible in the report.
-
-| Requirement group | Test cases |
-| --- | --- |
-| R-01–R-03 authoring and job visibility | V01, V06, V08–V11, V15, V17 |
-| R-04–R-08 intent, spec, safety, repair and ending | V02–V05, V07, V14, V16 |
-| R-09–R-13 runtime, history, retries, errors and guidance | V08–V18 |
-| Q-01–Q-03 trust, consistency and bounds | V01, V03–V05, V07–V10, V12–V13, V15 |
-| Q-04–Q-05 interface accessibility | V17 |
-| Q-06–Q-07 reproducibility and traceability | V02, V05–V06, V11, V14, V18 |
-| Q-08 evaluation reporting | See the metrics and baseline section below; V16 and the fixed corpus supply inputs, not measured scores. |
 
 ## Metrics and baseline
 

@@ -1,39 +1,22 @@
 # AI-Assisted Browser Game Generation
 
-**Diploma project — Astana IT University, Software Engineering (SE-2417)**
+**Diploma project · Astana IT University · Software Engineering (SE-2417)**
+**Students:** Almadi Madiuly (frontend and UX/UI), Zhaksylyk Aldiyar (platform), Yessengeldi Nurgeldi (AI generation). **Supervisor:** Shyngys Alshynov.
 
-The project investigates a platform that turns a user-provided game idea or storyline into a short, playable 2D browser game without requiring programming or a game engine. The intended result has consequential player actions, a goal and a reachable ending. This repository contains the project proposal and initial analysis, research synthesis, requirements and design drafts, static interface mockups, and an evaluation protocol. It does not contain an implemented game generator or measured product results.
+The proposed platform turns a user-provided storyline into a short, playable 2D browser game with meaningful actions and a reachable ending. This repository contains proposal-stage research and design, not a working generator or measured game results.
 
-**Students:** Almadi Madiuly (frontend and UX/UI), Zhaksylyk Aldiyar (backend and platform), Yessengeldi Nurgeldi (AI generation and validation). **Supervisor:** Shyngys Alshynov.
+## Start here
 
-## Academic materials
+1. [Proposal and initial analysis](submission/diploma-final-proposal-and-analysis.docx) — the eleven required sections and references.
+2. [Presentation](submission/diploma-final-presentation.pptx) — the concise committee overview.
+3. [Architecture](docs/architecture.md) and [static UX prototype](prototype/README.md) — see the proposed system and author journey.
 
-| Material | Contents |
-| --- | --- |
-| [Proposal and initial analysis](submission/diploma-final-proposal-and-analysis.docx) | Twelve-page manuscript with the eleven required sections and references. |
-| [Presentation](submission/diploma-final-presentation.pptx) | Twelve-slide summary of the proposal, research, design and evaluation plan. |
-| [Project proposal](docs/proposal.md) and [relevance](docs/evidence/relevance.md) | Problem, intended users, objectives, preliminary questionnaire distributions and evidence limitations. |
-| [Literature](docs/literature.md) and [existing systems](docs/existing-systems.md) | Critical research synthesis and three-product comparison using nine shared criteria. |
-| [Technology comparison](docs/technology-comparison.md) and [requirements](docs/requirements.md) | Three provisional technology decisions and prioritized functional and quality requirements. |
-| [Architecture](docs/architecture.md) and [diagrams](diagrams/) | Proposed context, use-case and component views with editable Mermaid sources and SVG exports. |
-| [UX concept](prototype/README.md) and [verification plan](docs/verification-plan.md) | Static authoring/play storyboard and planned checks, measures and baseline. |
-| [Project plan](docs/project-plan.md), [project task outline](docs/youtrack-backlog.md), [supervisor record](docs/supervisor-feedback.md) | Team responsibilities, milestones, risks, proposed work packages and documented scope guidance. |
+## Supporting sections
 
-The manuscript is the concise academic account. The linked Markdown and editable diagrams provide detail and traceability for its design claims.
+- **Why and for whom:** [proposal](docs/proposal.md), [relevance and evidence limits](docs/evidence/relevance.md), [literature](docs/literature.md), [existing systems](docs/existing-systems.md).
+- **What and how:** [technology comparison](docs/technology-comparison.md), [requirements](docs/requirements.md), [architecture](docs/architecture.md), [prototype](prototype/README.md).
+- **How it will be checked and managed:** [verification plan](docs/verification-plan.md), [project plan and risks](docs/project-plan.md), [seven next-increment tasks](docs/youtrack-backlog.md), [supervisor record](docs/supervisor-feedback.md).
 
-## Research and design status
+The questionnaire export contains 142 response records, but recruitment and distinct participation are unverified. It does not replace the required 3–5 user discussions or substantive client agreement. The [questionnaire note](docs/evidence/questionnaire.md) records its limits. Scope, mechanics and technology choices remain provisional; the [game contract draft](docs/decisions/scope-and-contract.md) and [evaluation prompts](tests/evaluation-prompts.md) are plans, not test results. The prototype is a static storyboard. There are no application setup commands yet.
 
-A supplied Google Forms export has 142 response records. Its descriptive distributions are summarized in the [relevance analysis](docs/evidence/relevance.md); the [instrument and provenance note](docs/evidence/questionnaire.md) explains the collection limits. Respondent identities, distinct participation and recruitment have not been independently established. The figures therefore do not estimate demand or establish the priorities of the intended creator population. The separate requirement for three to five user discussions or substantive client agreement is not evidenced by the export.
-
-The proposed first implementation uses a bounded set of 2D actions and a versioned game specification interpreted by a controlled browser runtime. The precise supported mechanics and stack require feasibility assessment. The [scope draft](docs/decisions/scope-and-contract.md), [module requirements](docs/requirements.md) and [evaluation prompts](tests/evaluation-prompts.md) describe hypotheses and planned checks, not implemented features. Prototype screens in `prototype/` are static illustrations. There are no application setup or execution commands yet.
-
-## Repository structure
-
-- `submission/` — current DOCX and PPTX.
-- `docs/` — proposal, evidence, literature, comparisons, requirements, architecture, evaluation, project plan and supervisor record.
-- `diagrams/` — editable `.mmd` sources and SVG exports for the three architectural views.
-- `prototype/` — linked SVG storyboard covering authoring, progress, result, play, catalogue and recovery.
-- `tests/` — proposed story-prompt corpus, with no executed test results.
-- `tools/` — questionnaire creation source.
-
-The repository is published at [github.com/lastnurik/diploma](https://github.com/lastnurik/diploma). The [project work packages](docs/youtrack-backlog.md) describe the planned development sequence independently of the initial analysis.
+[Repository on GitHub](https://github.com/lastnurik/diploma) · [YouTrack project workspace](https://aitu-gamegen.youtrack.cloud/) · [Editable diagram sources](diagrams/)

@@ -1,1 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="760" viewBox="0 0 1320 760" role="img" aria-labelledby="title desc"><title id="title">Author journey · A / input and progress</title><desc id="desc">Conceptual low fidelity prototype. Static screens with illustrative content; no implemented generation or gameplay.</desc><rect width="1320" height="760" fill="#f1f3f4"/><g font-family="DejaVu Sans, sans-serif"><text x="40" y="42" font-size="28" font-weight="bold" fill="#263238">Author journey · A / input and progress</text><text x="40" y="76" font-size="17" fill="#263238">CONCEPT ONLY · static wireframes · all data and statuses below are illustrative</text><rect x="40" y="120" width="590" height="570" rx="4" fill="#fff" stroke="#80909b"/><text x="64" y="157" font-size="25" font-weight="bold" fill="#263238">1 · Describe your game</text><text x="64" y="186" font-size="16" fill="#536570">New project / draft</text><text x="64" y="225" font-size="17" font-weight="bold" fill="#263238">Story or game idea</text><rect x="64" y="237" width="542" height="90" rx="4" fill="#f7f8f9" stroke="#aab4bb"/><text x="76" y="264" font-size="17" fill="#263238">A courier must deliver medicine across a flooded</text><text x="76" y="288" font-size="17" fill="#263238">town. Sail freely, collect it at the depot and bring</text><text x="76" y="312" font-size="17" fill="#263238">it to the clinic before the town is cut off.</text><text x="64" y="365" font-size="17" font-weight="bold" fill="#263238">Game preferences · request example</text><rect x="64" y="377" width="542" height="85" rx="4" fill="#f7f8f9" stroke="#aab4bb"/><text x="76" y="404" font-size="17" fill="#263238">Genre intent: narrative adventure</text><text x="76" y="428" font-size="17" fill="#263238">Goal: deliver medicine · Action: explore, collect</text><text x="64" y="495" font-size="17" fill="#263238">First format: bounded top-down movement and actions.</text><text x="64" y="526" font-size="17" fill="#263238">A fixed route may replace free sailing if accepted.</text><rect x="64" y="587" width="210" height="42" rx="4" fill="#e6ebee" stroke="#536570"/><text x="76" y="614" font-size="17" font-weight="bold" fill="#263238">Generate version →</text><rect x="292" y="587" width="170" height="42" rx="4" fill="#e6ebee" stroke="#536570"/><text x="304" y="614" font-size="17" font-weight="bold" fill="#263238">Versions → 5</text><rect x="690" y="120" width="590" height="570" rx="4" fill="#fff" stroke="#80909b"/><text x="714" y="157" font-size="25" font-weight="bold" fill="#263238">2 · Follow generation</text><text x="714" y="186" font-size="16" fill="#536570">Flooded town / version 2 / job J-024 · example</text><text x="714" y="226" font-size="22" font-weight="bold" fill="#263238">Current stage: Validating</text><text x="714" y="259" font-size="16" fill="#263238">Last update: 14:32:08 UTC · illustrative</text><text x="714" y="307" font-size="18" fill="#263238">Done · Queued         14:31:10</text><text x="714" y="344" font-size="18" fill="#263238">Done · Generating    14:31:14</text><text x="714" y="381" font-size="18" font-weight="bold" fill="#263238">● Validating      14:32:08</text><text x="714" y="418" font-size="18" fill="#263238">○ Ready            waiting for checks</text><rect x="714" y="452" width="542" height="92" rx="4" fill="#f7f8f9" stroke="#80909b"/><text x="728" y="481" font-size="17" fill="#263238">The product would show recorded job stages.</text><text x="728" y="510" font-size="17" fill="#263238">No percentage or time remaining without evidence.</text><text x="714" y="573" font-size="17" fill="#263238">Return to the same job from Versions.</text><rect x="714" y="608" width="200" height="42" rx="4" fill="#e6ebee" stroke="#536570"/><text x="726" y="635" font-size="17" font-weight="bold" fill="#263238">Versions → 5</text><text x="930" y="635" font-size="16" fill="#263238">Ready state → 3 · separate failure → 6</text><text x="40" y="730" font-size="17" fill="#263238">Navigation: v2 request → progress → ready result. The v3 failure is a separate example state.</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Story request and generation · authoring workspace</title>
+  <desc id="desc">Authoring request for version 2 with a separate preview placeholder and a fixed generation status example. Static academic design, not a functioning generator or game.</desc>
+  <rect width="1440" height="900" fill="#f7f8f6" style="fill:#f7f8f6" />
+  <g font-family="DejaVu Sans, sans-serif">
+    <rect x="0" y="0" width="1440" height="68" rx="0" fill="#fff" stroke="#dde2dc" style="fill:#fff;stroke:#dde2dc" />
+    <text x="28" y="43" font-size="22" fill="#28312a" font-weight="600" style="fill:#28312a">Story / Play</text>
+    <text x="238" y="42" font-size="13" fill="#626a63" font-weight="400" style="fill:#626a63">Workspace / Flooded town</text>
+    <rect x="1222" y="22" width="190" height="27" rx="5" fill="#fff" stroke="#dde2dc" style="fill:#fff;stroke:#dde2dc" />
+    <text x="1233" y="40" font-size="12" fill="#28312a" font-weight="400" style="fill:#28312a">Static design prototype</text>
+    <rect x="0" y="68" width="218" height="832" rx="0" fill="#f3f5f1" stroke="#dde2dc" style="fill:#f3f5f1;stroke:#dde2dc" />
+    <text x="28" y="117" font-size="16" fill="#28312a" font-weight="600" style="fill:#28312a">Flooded town</text>
+    <text x="28" y="141" font-size="12" fill="#626a63" font-weight="400" style="fill:#626a63">Story-to-game project</text>
+    <text x="28" y="194" font-size="10" fill="#626a63" font-weight="600" style="fill:#626a63">PROJECT WORKSPACE</text>
+    <rect x="16" y="198" width="186" height="37" rx="6" fill="#e3e9df" stroke="#e3e9df" style="fill:#e3e9df;stroke:#e3e9df" />
+    <text x="28" y="222" font-size="14" fill="#355e49" font-weight="600" style="fill:#355e49">Story request</text>
+    <text x="28" y="267" font-size="14" fill="#626a63" font-weight="400" style="fill:#626a63">Generation</text>
+    <text x="28" y="312" font-size="14" fill="#626a63" font-weight="400" style="fill:#626a63">Review result</text>
+    <text x="28" y="357" font-size="14" fill="#626a63" font-weight="400" style="fill:#626a63">Play concept</text>
+    <text x="28" y="402" font-size="14" fill="#626a63" font-weight="400" style="fill:#626a63">Ending</text>
+    <text x="28" y="447" font-size="14" fill="#626a63" font-weight="400" style="fill:#626a63">Versions</text>
+    <text x="28" y="534" font-size="12" fill="#28312a" font-weight="600" style="fill:#28312a">Recovery examples</text>
+    <text x="36" y="570" font-size="12" fill="#626a63" font-weight="400" style="fill:#626a63">Failed request · v3</text>
+    <text x="36" y="605" font-size="12" fill="#626a63" font-weight="400" style="fill:#626a63">Revised request · v4</text>
+    <text x="36" y="640" font-size="12" fill="#626a63" font-weight="400" style="fill:#626a63">Retry progress · v4</text>
+    <text x="28" y="798" font-size="11" fill="#626a63" font-weight="400" style="fill:#626a63">Academic UX study.</text>
+    <text x="28" y="818" font-size="11" fill="#626a63" font-weight="400" style="fill:#626a63">Nine fixed storyboard states.</text>
+    <text x="258" y="118" font-size="20" fill="#28312a" font-weight="500" style="fill:#28312a">Story-to-game workspace</text>
+    <text x="830" y="117" font-size="12" fill="#626a63" font-weight="400" style="fill:#626a63">Fixed example states. No generation or gameplay.</text>
+    <rect x="258" y="146" width="1142" height="688" rx="8" fill="#ffffff" stroke="#dde2dc" style="fill:#ffffff;stroke:#dde2dc" />
+    <text x="258" y="866" font-size="11" fill="#626a63" font-weight="400" style="fill:#626a63">Academic design evidence · illustrative content · implementation and usability evaluation are not claimed.</text>
+    <text x="286" y="179" font-size="12" fill="#626a63" font-weight="400" style="fill:#626a63">Flooded town / request for version 2</text>
+    <rect x="1253" y="159" width="119" height="26" rx="4" fill="#edf2ec" stroke="#edf2ec" style="fill:#edf2ec;stroke:#edf2ec" />
+    <text x="1263" y="177" font-size="11" fill="#355e49" font-weight="600" style="fill:#355e49">Draft example</text>
+    <g>
+      <rect x="258.0" y="195.5" width="1142.0" height="1.0" fill="#dde2dc" stroke="none" />
+    </g>
+    <text x="294" y="249" font-size="29" fill="#28312a" font-weight="500" style="fill:#28312a">What happens in your story?</text>
+    <text x="294" y="279" font-size="14" fill="#626a63" font-weight="400" style="fill:#626a63">Start with a character, a place and a goal.</text>
+    <text x="294" y="327" font-size="13" fill="#28312a" font-weight="600" style="fill:#28312a">Your request</text>
+    <text x="674" y="327" font-size="12" fill="#626a63" font-weight="400" style="fill:#626a63">Version 2</text>
+    <text x="294" y="363" font-size="12" fill="#28312a" font-weight="600" style="fill:#28312a">Story or game idea</text>
+    <rect x="294" y="377" width="482" height="137" rx="8" fill="#ffffff" stroke="#dde2dc" style="fill:#ffffff;stroke:#dde2dc" />
+    <text x="310" y="406" font-size="14" fill="#626a63" font-weight="400" style="fill:#626a63">A courier must deliver medicine across a</text>
+    <text x="310" y="431" font-size="14" fill="#626a63" font-weight="400" style="fill:#626a63">flooded town. Sail freely to help a neighbour,</text>
+    <text x="310" y="456" font-size="14" fill="#626a63" font-weight="400" style="fill:#626a63">collect medicine at the depot and bring it to</text>
+    <text x="310" y="481" font-size="14" fill="#626a63" font-weight="400" style="fill:#626a63">the clinic before the town is cut off.</text>
+    <text x="294" y="535" font-size="11" fill="#626a63" font-weight="400" style="fill:#626a63">Read-only example. The planned product allows editing.</text>
+    <text x="294" y="568" font-size="12" fill="#28312a" font-weight="600" style="fill:#28312a">Genre intent</text>
+    <rect x="294" y="580" width="482" height="42" rx="8" fill="#ffffff" stroke="#dde2dc" style="fill:#ffffff;stroke:#dde2dc" />
+    <text x="308" y="607" font-size="14" fill="#28312a" font-weight="400" style="fill:#28312a">Narrative adventure</text>
+    <text x="294" y="641" font-size="12" fill="#28312a" font-weight="600" style="fill:#28312a">Desired goal</text>
+    <rect x="294" y="653" width="482" height="42" rx="8" fill="#ffffff" stroke="#dde2dc" style="fill:#ffffff;stroke:#dde2dc" />
+    <text x="308" y="680" font-size="14" fill="#28312a" font-weight="400" style="fill:#28312a">Deliver the medicine to the clinic</text>
+    <text x="294" y="727" font-size="13" fill="#626a63" font-weight="400" style="fill:#626a63">Main action: Explore, collect and interact</text>
+    <rect x="294" y="759" width="224" height="42" rx="6" fill="#28312a" stroke="#28312a" style="fill:#28312a;stroke:#28312a" />
+    <text x="310" y="786" font-size="13" fill="#fff" font-weight="600" style="fill:#fff">View submitted example →</text>
+    <rect x="812" y="226" width="552" height="574" rx="8" fill="#f7f8f6" stroke="#dde2dc" style="fill:#f7f8f6;stroke:#dde2dc" />
+    <text x="836" y="255" font-size="12" fill="#626a63" font-weight="400" style="fill:#626a63">Game preview</text>
+    <text x="1240" y="255" font-size="11" fill="#626a63" font-weight="400" style="fill:#626a63">Not generated</text>
+    <g>
+      <rect x="812.0" y="271.5" width="552.0" height="1.0" fill="#dde2dc" stroke="none" />
+    </g>
+    <rect x="838" y="296" width="500" height="132" rx="8" fill="#f7f8f6" stroke="#cbd3c8" style="fill:#f7f8f6;stroke:#cbd3c8" />
+    <text x="976" y="348" font-size="16" fill="#28312a" font-weight="500" style="fill:#28312a">Your scene starts here</text>
+    <text x="892" y="379" font-size="12" fill="#626a63" font-weight="400" style="fill:#626a63">A checked result appears in this separate pane.</text>
+    <text x="838" y="471" font-size="22" fill="#28312a" font-weight="500" style="fill:#28312a">A small world. A clear objective.</text>
+    <text x="838" y="501" font-size="13" fill="#626a63" font-weight="400" style="fill:#626a63">Bounded top-down movement, story objects and dialogue.</text>
+    <text x="838" y="524" font-size="13" fill="#626a63" font-weight="400" style="fill:#626a63">Review any mechanic substitution before opening the game.</text>
+    <text x="838" y="565" font-size="10" fill="#626a63" font-weight="600" style="fill:#626a63">NEXT FIXED STATE · GENERATION</text>
+    <rect x="1223" y="548" width="115" height="26" rx="4" fill="#f7f1e3" stroke="#f7f1e3" style="fill:#f7f1e3;stroke:#f7f1e3" />
+    <text x="1233" y="566" font-size="11" fill="#775b26" font-weight="600" style="fill:#775b26">Validating</text>
+    <text x="850" y="601" font-size="13" fill="#626a63" font-weight="400" style="fill:#626a63">1  Queued</text>
+    <text x="1180" y="601" font-size="11" fill="#626a63" font-weight="400" style="fill:#626a63">14:31:10 UTC</text>
+    <text x="850" y="643" font-size="13" fill="#626a63" font-weight="400" style="fill:#626a63">2  Generating</text>
+    <text x="1180" y="643" font-size="11" fill="#626a63" font-weight="400" style="fill:#626a63">14:31:14 UTC</text>
+    <text x="850" y="685" font-size="13" fill="#355e49" font-weight="400" style="fill:#355e49">3  Validating</text>
+    <text x="1180" y="685" font-size="11" fill="#626a63" font-weight="400" style="fill:#626a63">14:32:08 UTC</text>
+    <text x="850" y="727" font-size="13" fill="#626a63" font-weight="400" style="fill:#626a63">4  Ready</text>
+    <text x="1180" y="727" font-size="11" fill="#626a63" font-weight="400" style="fill:#626a63">Waiting for checks</text>
+    <text x="838" y="773" font-size="11" fill="#626a63" font-weight="400" style="fill:#626a63">Illustrative status only. No timer or request is running.</text>
+  </g>
+</svg>

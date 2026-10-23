@@ -1,40 +1,25 @@
-# Project Milestones Dependencies and Risks
+# Project Milestones and Risks
 
-**Status, October 2026:** Provisional project schedule informed by the [work packages](youtrack-backlog.md) and [supervisor scope guidance](supervisor-feedback.md). Research and feasibility assessment precede scope agreement in late November to mid-December. Dates are planning windows.
+**Status, October 2026:** Provisional windows, not completed milestones. Direct user/client input and feasibility work precede scope agreement in late November to mid-December. The [seven next-increment tasks](youtrack-backlog.md) specify owners, dependencies, acceptance and proposed priorities/deadlines; later work is listed there as milestones, not detailed or verified live YouTrack issues. [Supervisor guidance](supervisor-feedback.md) calls for concise initial coverage.
 
-## Milestones and evidence
-
-| Period | Deliverable and completion evidence | Lead development owner |
+| Period | Milestone and evidence | Lead |
 | --- | --- | --- |
-| October 2026 | Initial proposal and analysis, research comparisons, requirements, three editable diagrams, static UX storyboard, evaluation plan and presentation. | Shared. |
-| Late October–November 2026 | Dated, anonymized user discussions or substantive client evidence, divergent needs and resulting scope questions; disclose any evidence gap. | Almadi; Nurgeldi reviews. |
-| Late November–mid-December 2026 | Reviewed first mechanic set, requirements and acceptance criteria informed by user/supervisor input. | Nurgeldi; Aldiyar reviews, all agree interfaces. |
-| Mid–late December 2026 | Versioned game/job contract, valid and invalid fixtures, status/result examples and explicit limits; strict validator checks recorded. | Aldiyar; Nurgeldi reviews. |
-| December 2026 | Static author-journey walkthrough with prospective users and recorded UX revisions, alongside contract work after scope agreement. | Almadi; Aldiyar reviews. |
-| Late December 2026–January 2027 | One manually authored browser game with reproducible startup, meaningful action, visible ending and restart; invalid data fails safely. | Almadi; Nurgeldi reviews. |
-| January–February 2027 | One bounded story-generation/validation pilot with repair/failure fixtures and winning-path evidence; no general success-rate claim. | Nurgeldi; Aldiyar reviews. |
-| February–March 2027 | First integrated request → status → validated game → action/ending journey, with simplification and failure/retry evidence. | Aldiyar; Almadi reviews, all integrate. |
-| March–April 2027 | Fixed-corpus evaluation under frozen conditions; report all attempts/failures and reproduce defects. | Nurgeldi; Almadi reviews, all resolve module findings. |
-| May 2027 | Final review, supervisor-response reconciliation, documentation and demonstration. | Shared. |
+| October 2026 | Proposal and analysis, comparisons, initial requirements, three editable diagrams, static UX concept and evaluation plan. | Shared |
+| November–mid December | Anonymized user discussions or substantive client input; agreed first mechanics, requirements and acceptance after supervisor review. Record any missing evidence. | Almadi (input), Nurgeldi (scope) |
+| Mid December–January | Shared game/job contract with valid and invalid fixtures; prospective-user UX walkthrough; one hand-authored browser game with an action, ending, restart and safe invalid-data response. | Aldiyar (contract), Almadi (UX/runtime) |
+| January–March | Offline bounded generation pilot and a fixture-backed request → status → browser-ending path; then integrate AI output with independent publication and failure/retry checks. Do not count the fixture path as generated play. | Nurgeldi (generation), Aldiyar (integration) |
+| March–May | Fixed-corpus evaluation with all attempts/failures, defect revisions, supervisor-response record and final demonstration. | Nurgeldi (evaluation); shared review |
 
-## Dependencies and parallel work
+The first increment is agreed actions → shared fixture/contract → parallel runtime, fixture-backed API/UI and offline AI pilot → reproducible fixture-backed play. Later integration adds the AI worker, publication gate and controlled delivery before fixed-corpus evaluation. Move a dependent window if its prerequisite is not evidenced.
 
-The [16 proposed development tasks](youtrack-backlog.md) define the implementation sequence, not verified live YouTrack issues: agreed actions and game/job schema → validator, project versions and job status → parallel browser runtime, generation and authoring UI → winning-path checks, publication gate and controlled delivery → integrated request-to-play run → fixed-corpus evaluation. Complete each named dependency before treating a dependent task as done.
+## Main risks and responses
 
-## Risk register
+| Risk | Response and owner |
+| --- | --- |
+| Scope exceeds a reliably completable first game | Nurgeldi and the team agree a bounded action set and record unsupported requests and simplifications. |
+| Model output is invalid, unfaithful or unsafe | Nurgeldi checks rules and a bounded winning path; Aldiyar independently gates publication and safe delivery. Fail clearly when repair or verification fails. |
+| Queue failure or mismatched client/worker contracts | Aldiyar keeps a versioned contract, durable status and idempotent publication; all three review interfaces and test failure paths. |
+| User evidence or supervisor review is missing | Almadi records qualifying direct input and disagreements; Nurgeldi seeks substantive supervisor comments and tracks unresolved findings. Do not claim approval or validated user needs without it. |
+| Schedule, access or integration slips | Keep the first mechanic family small, review dependencies, preserve project and task links, and demonstrate one reproducible complete path before expanding. |
 
-| Risk and trigger | Consequence | Owner and response |
-| --- | --- | --- |
-| Mechanics/genre scope expands before a tested first slice | No reliably completable game | Nurgeldi owns simplification policy; all approve a bounded mechanic vocabulary and document unsupported requests. |
-| Model produces invalid or semantically wrong rules | Broken or misleading output | Nurgeldi validates schema, references and reachable ending; bounded repair, otherwise explicit failure; evaluate on fixed prompts. |
-| Generated content executes with platform privileges | Untrusted code or content could affect users/data | Aldiyar owns safe serving and trust boundary; use validated data through fixed runtime, restrict assets and browser permissions; test delivery. |
-| Queue handoff, duplicate delivery or worker failure | Stuck jobs or duplicate artifacts | Aldiyar defines idempotent generation IDs, durable status and bounded retries; integration tests exercise failure paths. |
-| Client/server/AI contracts diverge | Late integration failure | Aldiyar maintains versioned contract; Almadi and Nurgeldi review changes before merge; run a manual game integration spike early. |
-| User evidence lacks qualifying discussions/client agreement | Intended-user needs remain uncertain | Almadi coordinates qualifying direct research and records recruitment, differing views and any scope implications. |
-| Supervisor review cannot happen before submission | Requirement 11 and improvements absent | Nurgeldi requests a review slot early and supplies drafts; track actual response and unresolved feedback transparently. |
-| Repository or issue-tracker access unavailable | Traceability between project work and reviewed changes is limited | Aldiyar maintains the repository; Almadi coordinates the task tracker and project links. |
-| Three-person schedule slips | Integration or evaluation is compressed | Use the bounded mechanic set and review dependencies at each milestone. |
-
-## Working rhythm and review
-
-Each work package has one lead and a separate reviewer. Changes to the shared game specification require agreement across the frontend, platform and generation areas. Review records and subsequent decisions are kept with the relevant artifact.
+Each near-term task has a lead and a different reviewer. The team records changes to the shared game contract and decisions with their evidence.
