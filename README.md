@@ -5,6 +5,8 @@
 
 The proposed platform turns a user-provided storyline into a short, playable 2D browser game with meaningful actions and a reachable ending. This repository contains proposal-stage research and design, not a working generator or measured game results.
 
+**Provisional technologies:** Spring Boot, PostgreSQL, RabbitMQ, a Python generation worker, a versioned game specification with a fixed runtime, and Phaser 3. The [comparison](docs/technology-comparison.md) records the alternatives and feasibility checks before final selection.
+
 ## Start here
 
 1. [Proposal and initial analysis](submission/diploma-final-proposal-and-analysis.docx) — the eleven required sections and references.
