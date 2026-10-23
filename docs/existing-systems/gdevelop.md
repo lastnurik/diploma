@@ -1,6 +1,6 @@
 # Existing System 2: GDevelop AI Agent
 
-**Task 11 owner:** Zhaksylyk Aldiyar. **Evidence checked:** 22 October 2026. This desk review uses the nine criteria C1–C9 defined in `criteria-and-system-1.md`. It examines the GDevelop editor with its AI Agent, not a tested generation run. Product documentation is evidence of documented features and workflow, not independent proof of reliability.
+**Evidence checked:** 22 October 2026. This desk review uses the nine criteria C1–C9 defined in `criteria-and-system-1.md`. It examines the GDevelop editor with its AI Agent, not a tested generation run. Product documentation is evidence of documented features and workflow, not independent proof of reliability.
 
 GDevelop is a game engine with editable scenes, objects, event rules and browser publishing. Its AI Agent works inside a project: a user describes a feature; the agent plans and changes scene objects/events, shows progress, and expects inspection and iterative refinement. GDevelop explicitly says the agent is not an instant complete-game button and recommends breaking complex requests into smaller steps. [G1]
 

@@ -1,6 +1,6 @@
 # Existing System 3 AI Dungeon
 
-**Task 12 owner in the project plan:** Yessengeldi Nurgeldi. **Evidence checked:** 22 October 2026. This is a desk review of AI Dungeon's official public help pages, not a hands-on test. It applies the same C1–C9 criteria defined in `criteria-and-system-1.md`. “Undocumented” means the inspected pages do not establish the capability; it does not prove the product lacks it.
+**Evidence checked:** 22 October 2026. This is a desk review of AI Dungeon's official public help pages, not a hands-on test. It applies the same C1–C9 criteria defined in `criteria-and-system-1.md`. “Undocumented” means the inspected pages do not establish the capability; it does not prove the product lacks it.
 
 AI Dungeon is a browser-accessible AI-guided interactive storytelling and role-play service. A player begins from Quick Start or an author-created Scenario, submits text actions, and receives generated narrative continuations. The official guide describes a **text adventure** with optional generated pictures, rather than an automatically generated 2D visual game with a fixed rule system. This makes it useful for studying story input and iteration, while the output format differs from our proposed browser game. [D1][D2]
 

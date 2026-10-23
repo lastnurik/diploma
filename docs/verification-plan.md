@@ -1,6 +1,6 @@
 # Verification Plan for the First Executable Slice
 
-**Status:** Test design for pre-defense review, 22 October 2026. These cases have **not been executed**. They specify how the proposed product in [requirements.md](requirements.md) and the [scope contract](decisions/scope-and-contract.md) will be checked once an implementation exists. The fixed story inputs are in [evaluation-prompts.md](../tests/evaluation-prompts.md). A `ready` label is evidence to check, not proof of validity on its own.
+**Status, October 2026:** Planned evaluation, with no executed cases. The checks assess the proposed [requirements](requirements.md) and [scope contract](decisions/scope-and-contract.md) using the [story prompt set](../tests/evaluation-prompts.md). A `ready` label requires independent verification.
 
 ## Strategy and execution record
 
@@ -53,7 +53,7 @@ The first integrated slice can be called verified only if the executed Must case
 | Q-06–Q-07 reproducibility and traceability | V02, V05–V06, V11, V14, V18 |
 | Q-08 evaluation reporting | See the metrics and baseline section below; V16 and the fixed corpus supply inputs, not measured scores. |
 
-## Metrics and baseline (task 27)
+## Metrics and baseline
 
 **Proposed protocol, not results.** This evaluates R-04–R-09 and Q-08 in [requirements.md](requirements.md): a game must preserve meaningful story actions and reach an explicit ending, not merely launch. Review and freeze this protocol before the scored run; changes create a new version and a separately reported cohort.
 

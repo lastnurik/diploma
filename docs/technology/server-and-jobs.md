@@ -1,6 +1,6 @@
 # Server Platform and Generation Job Execution
 
-**Task 13 — Zhaksylyk Aldiyar. Decision status: proposed for team review.** The platform must store projects and versions, expose an API to the browser, start generation without holding an HTTP request open, report progress and errors, and publish only validated game artifacts. Generation is planned to run in Yessengeldi Nurgeldi’s Python AI component; the API and job system must have a clear contract with it. The alternatives below are feasible designs, not measured benchmarks or an implemented stack.
+**Decision status, October 2026:** Provisional comparison. The platform must store projects and versions, expose an API to the browser, start generation without holding an HTTP request open, report progress and errors, and publish only validated game artifacts. Generation is proposed as a separate Python component. The alternatives below are feasible designs, not measured benchmarks or an implemented stack.
 
 ## Decision criteria
 

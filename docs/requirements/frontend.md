@@ -1,8 +1,8 @@
 # Frontend Functional Requirements and User Flows
 
-**Status:** Draft for the first pre-defense, 22 October 2026. These are requirements for the eventual product, not a claim of implemented screens. The proposed first executable game is a bounded top-down 2D scene with move, inspect, collect, interact, dialogue choices and an explicit goal. The team and supervisor must approve the contract before implementation.
+**Status, October 2026:** Proposed client requirements. The first executable game is a bounded top-down 2D scene with movement, inspection, collection, interaction, dialogue choices and an explicit goal. These are not implemented screens.
 
-**Source keys:** P = [`docs/proposal.md`](../proposal.md), extracted from the supplied supervisor proposal; S = [`docs/decisions/scope-and-contract.md`](../decisions/scope-and-contract.md), proposed first-version boundary; T = [`docs/technology/browser-runtime.md`](../technology/browser-runtime.md), conditional browser runtime recommendation; L = [`docs/literature/ux-and-evaluation.md`](../literature/ux-and-evaluation.md), UX research implications. **Priority:** Must = necessary to demonstrate the proposal's request-to-playable-game path; Should = valuable for usable first release but not a reason to claim the first pre-defense is incomplete without working software. These requirements need reconciliation with API and AI requirements in task 20.
+**Source keys:** P = [proposal](../proposal.md); S = [scope contract](../decisions/scope-and-contract.md); T = [browser runtime comparison](../technology/browser-runtime.md); L = [UX research](../literature/ux-and-evaluation.md). **Priority:** Must = necessary for the request-to-playable-game path; Should = a later usability enhancement. Shared identifiers and API behavior follow the [consolidated requirements](../requirements.md).
 
 ## Functional requirements
 
@@ -32,7 +32,7 @@
 
 ## Key user flows and planned screen links
 
-The following use case IDs are proposed labels for the task 22 diagram; that task should preserve or explicitly reconcile them with the consolidated requirements in task 20.
+The use case IDs correspond to the [use-case diagram](../../diagrams/use-case.svg) and [consolidated requirements](../requirements.md).
 
 | Use case | Author action | Requirements | Planned mockup |
 | --- | --- | --- | --- |
@@ -44,10 +44,10 @@ The following use case IDs are proposed labels for the task 22 diagram; that tas
 | UC-06 | Browse catalogue and versions | FE-08 | SCR-5 |
 | UC-07 | Edit and retry or regenerate | FE-09 | SCR-2, SCR-3, SCR-1 |
 
-| Flow | Ordered user steps | Use cases | Mockup screens for task 24 |
+| Flow | Ordered user steps | Use cases | Conceptual screens |
 | --- | --- | --- | --- |
 | UF-1 Create game | Catalogue/new project → enter/edit story and parameters → review → submit → follow queued/generating/validating → ready → inspect simplifications → preview → perform action → ending/replay | UC-01–05 | SCR-1 Story form, SCR-2 Progress, SCR-3 Result, SCR-4 Game/ending |
 | UF-2 Recover failed generation | Open failed job → read error → return to retained story → change request → submit as new version → inspect new status | UC-03, UC-07, UC-02 | SCR-2 Failure state, SCR-1 Edited form, SCR-3 Result |
 | UF-3 Compare versions | Open catalogue → choose project → inspect version list → open older ready game/result → revise selected request → generate a new version | UC-06, UC-04, UC-07 | SCR-5 Catalogue/version list, SCR-3 Result, SCR-1 Form |
 
-The screen IDs are handoff labels for future mockups, not existing files. Task 20 must reconcile identifiers and API behavior with platform and generation requirements; task 24 must produce the matching mockups. User testing should observe whether participants can submit, recognize a simplification, find a prior version, recover from failure, understand controls and reach the ending without guidance. No user-testing results are claimed here.
+The screen IDs identify the [static UX prototype](../../prototype/README.md). A later usability study can observe whether participants submit a story, recognize simplifications, reopen versions, recover from failure and understand the controls. No user-testing results are claimed here.

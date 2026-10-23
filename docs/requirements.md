@@ -1,8 +1,8 @@
 # Requirements Specification
 
-**Status:** Draft for first pre-defense, 22 October 2026. These describe the planned product and its first bounded executable slice; they are not implemented or empirically validated. The [proposal](proposal.md) is the source for the product aim. The [scope and game contract](decisions/scope-and-contract.md) records proposed implementation constraints. The [frontend](requirements/frontend.md), [platform](requirements/platform.md) and [generation](requirements/generation.md) specifications provide detailed module requirements and acceptance checks.
+**Status, October 2026:** Initial requirements for the planned product and first bounded playable slice. They are not implemented or empirically validated. The [proposal](proposal.md) establishes the aim, the [scope and game contract](decisions/scope-and-contract.md) describes proposed constraints, and the [frontend](requirements/frontend.md), [platform](requirements/platform.md) and [generation](requirements/generation.md) files contain module-level acceptance checks.
 
-**Priority:** Must means needed for the first integrated request-to-playable-game slice; Should means planned but deferrable if it endangers that path. The first pre-defense needs this verifiable specification and the linked design evidence, not the implemented features. **Evidence provenance:** P = supplied supervisor proposal via `proposal.md`; C = proposed scope contract; L = literature implications; U = user evidence, currently pending. No requirement is represented as confirmed by U until real feedback is collected.
+**Priority:** Must means needed for the first integrated request-to-playable-game slice; Should means a later enhancement. **Evidence provenance:** P = supervisor proposal via `proposal.md`; C = proposed scope contract; L = literature implications. The supplied questionnaire records have unresolved respondent provenance, so no requirement is represented as confirmed by user evidence.
 
 ## Functional requirements and acceptance
 

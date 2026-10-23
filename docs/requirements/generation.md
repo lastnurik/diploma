@@ -1,8 +1,8 @@
 # Generation Service Requirements
 
-**Status:** Initial requirements for the 24 October 2026 pre-defense. They describe the eventual product and are not implementation claims. The first executable slice uses a top-down 2D scene and the bounded action vocabulary proposed in `docs/decisions/scope-and-contract.md`. The specification fields and precise limits remain a draft until the three developers approve and version the shared contract.
+**Status, October 2026:** Initial requirements for the proposed product, not implementation claims. The first executable slice is a bounded top-down 2D scene as described in `docs/decisions/scope-and-contract.md`. Specification fields and precise limits remain provisional.
 
-**Source codes:** `P` = `docs/proposal.md`, derived from the supplied supervisor proposal; `C` = `docs/decisions/scope-and-contract.md`, the proposed first-version boundary; `R` = the uploaded pre-defense checklist's requirement for testable functional/non-functional requirements. User evidence is not yet available and is not represented as a verified source. **Priority:** Must = required for a successful first integrated version; Should = useful but may follow that version. **Verification:** M = deterministic machine check; H = human judgment with a written rubric; B = both.
+**Source codes:** `P` = `docs/proposal.md`, derived from the supervisor proposal; `C` = `docs/decisions/scope-and-contract.md`, the proposed first-version boundary; `R` = the academic requirement for testable functional and non-functional requirements. The supplied questionnaire records have unresolved respondent provenance and are not represented as a verified source. **Priority:** Must = required for a successful first integrated version; Should = useful but may follow that version. **Verification:** M = deterministic machine check; H = human judgment with a written rubric; B = both.
 
 ## Functional requirements
 

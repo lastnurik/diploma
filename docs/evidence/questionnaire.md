@@ -1,6 +1,6 @@
 # Prospective Creator Survey
 
-**Status, 23 October 2026:** Questionnaire and [Google Forms creation script](../../tools/create-google-survey.gs) prepared; no live form URL, distribution or responses are recorded. The proposed respondents are people with a game idea or story, including those who cannot program. This is exploratory convenience-sample research, not a representative demand estimate or a usability test.
+**Evidence status, 23 October 2026:** A team-supplied CSV export of this questionnaire contains 142 records. The [creation script](../../tools/create-google-survey.gs) documents the instrument. Recruitment, collection settings, consent records and distinct-participant checks are not independently documented. The export's origin has not been reconciled sufficiently to substantiate a claim of 142 student or prospective-creator participants. The [relevance analysis](relevance.md) therefore reports only descriptive file-level distributions.
 
 ## Form title and introduction
 
@@ -8,9 +8,9 @@
 
 > We are Software Engineering students at Astana IT University studying a proposed tool that would turn a game idea or storyline into a short, playable 2D browser game without requiring the author to code. This survey takes about five minutes. Participation is voluntary; you can leave at any time or skip optional questions. We do not ask for your name or email. We will report combined results in our diploma work. Please do not include personal details, confidential material or someone else's story text. The proposed tool is not available for testing yet. Continue only if you agree to use your answers for this academic study.
 
-The form includes a required agreement checkbox. Google Forms settings should have email collection and one-response sign-in disabled. Verify any institution-level restrictions and the responder view before distributing. Do not claim that the survey is fully anonymous if external settings make respondents identifiable.
+The instrument includes an agreement checkbox. The settings used during collection, including sign-in and email handling, are not documented by the CSV alone.
 
-**Create in Google Forms:** In the Google account that will own the form, open [Apps Script](https://script.google.com/), create a project, paste [the creation script](../../tools/create-google-survey.gs) and run `createCreatorSurvey` once. Approve Google's Forms authorization, then open the edit URL in the execution log. Review every question and the account's responder restrictions, preview the respondent view, publish the form and copy the actual responder URL into the team's private distribution log. Running the function again creates a second form. No Google Form has been created by this repository file alone.
+The Google Apps Script source specifies the questions. It does not provide a collection log or establish respondent provenance.
 
 ## Questions and intended use
 
@@ -31,6 +31,6 @@ The agreement checkbox precedes Q1. Questions 1–6, 8–10 are required; Q7 and
 
 ## Collection and analysis
 
-Share the responder link only after a team member previews the form and checks that no sign-in or email collection is imposed. Recruit through relevant creator, writing, education and game communities; record actual channel and distribution date outside the repository. Report total responses and the subset with little or no development experience, including negative and conflicting answers. Summarize closed-question counts and anonymized free-text themes. Do not place raw responses or private text in Git. In [the relevance record](relevance.md), distinguish respondents' statements from the team's interpretations and later scope decisions.
+The current analysis describes counts from the supplied export and does not publish raw responses or free-text answers. Interpretation is limited by the unrecorded recruitment and distinct-participation evidence. The [relevance analysis](relevance.md) separates observed file values from project hypotheses.
 
 **Checklist limitation:** The supplied evidence criterion names 3–5 discussions with user representatives or substantive agreement with an actual client. The survey is useful preliminary input but does not itself prove that criterion. No interviews are planned for the immediate submission; record the criterion as unmet unless the supervisor expressly accepts a different evidence route or qualifying discussions/client agreement later occur.

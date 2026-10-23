@@ -1,50 +1,66 @@
-%% Task 23: proposed first executable slice; not an implemented deployment.
-%% IDs correspond to the component table in docs/architecture.md.
+---
+config:
+  theme: neutral
+  fontFamily: Arial
+  themeVariables:
+    fontFamily: Arial, Helvetica, sans-serif
+    fontSize: 18px
+  flowchart:
+    htmlLabels: false
+    curve: linear
+    nodeSpacing: 35
+    rankSpacing: 55
+---
+%% Proposed first executable slice, not an implemented deployment.
+%% IDs match docs/architecture.md. Technology choices and event contracts remain provisional.
 flowchart LR
+  accTitle: Draft component architecture — proposed first executable slice
+  accDescr: Browser, platform, infrastructure and worker boundaries separate authoring and a trusted runtime from asynchronous generation. The platform independently validates every candidate before immutable approved data is published. Canonical job state and authorized ready artifact delivery remain platform responsibilities. Technologies and event contracts are provisional.
   subgraph browser["Browser trust boundary"]
-    UI["Authoring UI and catalogue"]
-    RT["Trusted 2D game runtime"]
+    UI["UI · Authoring and catalogue<br/>Story, versions, status and simplifications"]
+    RT["RT · Trusted 2D runtime<br/>Allowed actions, state and ending<br/>No generated JavaScript"]
   end
 
   subgraph platform["Platform trust boundary — proposed Spring Boot"]
-    API["Authenticated project and status API"]
-    JOB["Job coordinator and outbox"]
-    GATE["Result validator and publisher"]
-    ART["Controlled artifact route"]
+    API["API · Authenticated project/status API<br/>Authorize requests; expose canonical state"]
+    JOB["JOB · Coordinator and proposed outbox<br/>Create version/job; recover handoff"]
+    GATE["GATE · Independent validator/publisher<br/>Schema, references, actions, assets,<br/>safety and verified ending"]
+    ART["ART · Controlled artifact route<br/>Recheck owner, ready version and type"]
   end
 
-  subgraph data["Platform infrastructure"]
-    DB[("PostgreSQL: project, version, job, audit")]
-    MQ[("RabbitMQ: request and result events")]
-    STORE[("Private artifact storage")]
+  subgraph data["Platform infrastructure — proposed"]
+    DB[("DB · PostgreSQL<br/>Owners, versions, jobs, findings and audit")]
+    MQ[("MQ · RabbitMQ<br/>Versioned request, status and result events")]
+    STORE[("STORE · Private artifact storage<br/>Immutable approved game data/assets")]
   end
 
-  subgraph generation["Generation worker boundary — proposed Python"]
-    AI["Intent, mapping, bounded repair"]
+  subgraph generation["Generation worker trust boundary — proposed Python"]
+    AI["AI · Generation worker<br/>Intent, mapping, candidate and bounded repair<br/>Worker checks do not authorize publication"]
   end
-  MODEL["Optional external model provider"]
+  MODEL["MODEL · Optional external provider<br/>Outside product trust boundaries"]
 
-  UI -->|"story, parameters; catalogue and status polling"| API
-  API -->|"authorized records, state, safe errors"| DB
-  API -->|"create generation and version"| JOB
-  JOB -->|"transactional intent / recovery"| DB
-  JOB -->|"versioned job request"| MQ
-  MQ -->|"at-least-once request delivery"| AI
-  AI -->|"minimum story input"| MODEL
-  MODEL -->|"untrusted model output"| AI
-  AI -->|"candidate or classified failure; IDs"| MQ
-  MQ -->|"result event / retry or failure"| GATE
-  GATE -->|"strict schema, references, safety, ending checks"| GATE
-  GATE -->|"validation findings, terminal status"| DB
-  GATE -->|"only validated immutable data"| STORE
-  API -->|"ready artifact reference only"| UI
-  UI -->|"play ready version"| RT
-  RT -->|"authorized game-data request"| ART
-  ART -->|"check owner, ready, type and version"| DB
-  ART -->|"approved data and assets"| STORE
-  ART -->|"trusted runtime bundle plus validated data"| RT
+  UI -->|"Story/parameters; catalogue/status polling"| API
+  API -->|"IDs, state, safe errors; ready reference only"| UI
+  API <-->|"Authorized records / canonical state"| DB
+  API -->|"Create generation/version"| JOB
+  JOB -->|"Persist queued + recoverable handoff intent"| DB
+  JOB -->|"Request with correlation IDs"| MQ
+  MQ -->|"At-least-once request delivery"| AI
+  AI -->|"Minimum story context"| MODEL
+  MODEL -->|"Untrusted model output"| AI
+  AI -->|"Started; candidate/findings or failure; IDs"| MQ
+  MQ -->|"Started status event; contract to be agreed"| API
+  MQ -->|"Untrusted candidate or classified failure"| GATE
+  GATE -->|"Ordered strict validation stages"| GATE
+  GATE -->|"Findings; failed OR artifact-linked ready"| DB
+  GATE -->|"Only approved immutable data"| STORE
+  UI -->|"Play selected ready version"| RT
+  RT -->|"Versioned game-data request"| ART
+  ART <-->|"Authorize owner, ready, artifact and type"| DB
+  STORE -->|"Approved data/assets after authorized read"| ART
+  ART -->|"Maintained runtime bundle + validated data"| RT
 
-  classDef untrusted fill:#fff0eb,stroke:#b64c35,color:#4b1e16;
-  classDef gate fill:#e3f2ed,stroke:#177459,color:#12382d;
+  classDef untrusted fill:#fff0eb,stroke:#a74b32,color:#47251b;
+  classDef gate fill:#e3f2ed,stroke:#277456,color:#163a2b;
   class AI,MODEL untrusted;
   class GATE,ART gate;

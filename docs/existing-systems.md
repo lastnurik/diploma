@@ -24,7 +24,7 @@ The proposed diploma project focuses on an **explicit intermediate game specific
 
 For the diploma, “complete” should mean that the validated version launches, supports its declared core actions, and has an explicit goal/ending with a retained winning trace for the supported finite rules. A browser replay must check that the runtime follows that trace. This is a proposed acceptance contract, not a result already achieved. The intended contribution is evaluating this contract and its narrative tradeoffs within a small mechanic family; neither a structured representation nor an ending check is claimed as a first-ever invention.
 
-The comparison also constrains scope. GDevelop's guidance to split complex requests and Rosebud's tutorial to start with one small game support a limited first mechanic set. The team should not promise reliable generation across platformer, racing and card genres from arbitrary stories at the first pre-defense; those are evaluation cases and future expansion until implemented and tested. [G1][R1]
+The comparison also constrains scope. GDevelop's guidance to split complex requests and Rosebud's tutorial to start with one small game support a limited first mechanic set. Platformer, racing and card genres remain evaluation cases or future expansion, rather than supported first-version mechanics. [G1][R1]
 
 ## Official sources
 

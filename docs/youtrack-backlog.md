@@ -1,10 +1,10 @@
-# Proposed YouTrack Backlog for the Diploma Project
+# Proposed Diploma Project Work Packages
 
-**Status, 22 October 2026:** Eight proposed issues for the diploma project, from user evidence to an evaluated story-to-game slice. No issue has a real YouTrack ID or completed status. Actual YouTrack project creation, access and issue entry remain pending. Copy these proposals into the real tracker after team review, then record the resulting links.
+**Status, October 2026:** Eight proposed work packages from user evidence to an evaluated story-to-game slice. They are planning descriptions, not claims of completed work or real YouTrack issue records.
 
-This backlog follows the [project proposal](proposal.md) and the [supervisor clarification](supervisor-feedback.md): prepare minimal initial material while collecting better input before fixing requirements. It is distinct from the internal [36-task document-preparation plan](project-task-plan.md). Those tasks prepare written sections and submission materials; the issues below advance the project itself. The [implementation roadmap](project-plan.md) supplies provisional periods, not approved deadlines. User evidence or feasibility findings may change order, scope and dates.
+The work packages follow the [proposal](proposal.md), [project plan](project-plan.md) and [supervisor guidance](supervisor-feedback.md). User evidence and feasibility findings may change their order, scope and timing.
 
-**Assignment rule:** Each issue has one accountable owner and a different student reviewer. Acceptance requires the named evidence and a recorded review, not a draft alone. Dependencies refer to proposed titles below, not real issue IDs. Priority is proposed as **High** for work blocking the first slice and **Normal** for a bounded review activity. Each implementation issue covers one small example or interface; further mechanics and production hardening require later issues.
+Each work package has one lead and a different proposed reviewer. Priorities distinguish work blocking the first playable slice from bounded review activities. Dependencies refer to titles below.
 
 ## Collect initial user evidence
 
@@ -69,7 +69,3 @@ This backlog follows the [project proposal](proposal.md) and the [supervisor cla
 - **Window:** March–April 2027 for evaluation; May 2027 for final review and demonstration.
 - **Deliverable:** An executed report using the [verification plan](verification-plan.md) and [fixed prompt corpus](../tests/evaluation-prompts.md), plus an actual supervisor response record.
 - **Acceptance:** Freeze prompt/configuration and commit versions before runs. Report denominators, conditions, failures and separate validity, launch, main-action, ending and narrative-fidelity outcomes. Use two independent fidelity annotations and record disagreements. Link defects to reproducible cases and record fixes or unresolved limits. Record actual supervisor comments, decisions and resulting revisions, then demonstrate the reviewed version. Do not omit failed cases or call blocked checks passed.
-
-## Entering the real tracker
-
-After setup, retain these titles or document agreed changes. Set the actual assignee, reviewer, priority, dependencies and provisional milestone on each issue, and link its repository deliverable and review. The team should refine the later implementation issues after the scope decision rather than treat this short backlog as a complete engineering task breakdown. Track repository/access/YouTrack setup separately in the [handoff record](october-submission.md).

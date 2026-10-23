@@ -1,6 +1,6 @@
 # First Version Scope and Game Contract
 
-**Status:** Proposed design boundary for pre-defense review, 22 October 2026. Technology comparisons and supervisor review can revise it. Changes must update requirements, diagrams, mockups and evaluation cases together.
+**Status, October 2026:** Proposed first-version design boundary. Technology and supervisor assessment may revise it.
 
 ## First executable slice
 
@@ -45,10 +45,3 @@ Failure classes include invalid user request, unavailable model service, schema 
 ## Completion and acceptance for the eventual product
 
 Success requires valid schema and references, safe launch in supported browsers, functioning central actions, a start and ending reachable in the supported state space, and an explanation of any simplification. Human review assesses whether the result keeps the user's premise; machine validation alone cannot establish narrative fidelity. An evaluator will record each criterion independently and report denominator, conditions and failures. The manually authored game is the baseline for the runtime and presentation before automated generation is integrated.
-
-## Decisions still to settle
-
-- Runtime and server technologies after the three alternatives comparisons.
-- Exact schema types, resource limits, supported asset catalogue and precise runtime mechanics.
-- Whether the supervisor accepts the narrow initial mechanic family as the first version, and the wording of genre support in the presentation.
-- Whether user follow-up discussions can be performed in time for pre-defense; survey responses alone are supplemental.

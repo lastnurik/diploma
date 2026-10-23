@@ -1,17 +1,31 @@
-%% Proposed author use cases; IDs reconcile with docs/requirements/frontend.md.
-%% Mermaid flowchart uses oval use-case nodes within the system boundary.
+---
+config:
+  theme: neutral
+  fontFamily: Arial
+  themeVariables:
+    fontFamily: Arial, Helvetica, sans-serif
+    fontSize: 18px
+  flowchart:
+    htmlLabels: false
+    curve: linear
+    nodeSpacing: 35
+    rankSpacing: 55
+---
+%% Proposed author goals; associations are not execution-order arrows.
+%% UC identifiers correspond to docs/use-cases.md; system responsibilities are in component.mmd.
 flowchart LR
-    author["Author"]
+  accTitle: Author use cases — proposed design
+  accDescr: One author is associated with seven goals: enter story, submit a request, inspect progress or failure, inspect a ready result and simplifications, play and finish, browse versions, and deliberately regenerate a linked version. Associations do not imply execution order.
+    author["Author<br/>Writer, teacher or small-team member"]
 
-    subgraph system["AI-assisted browser-game platform — proposed"]
-        direction TB
-        uc01(["UC-01 Enter/edit story<br/>and game parameters"])
-        uc02(["UC-02 Submit generation<br/>request"])
-        uc03(["UC-03 Check progress<br/>or failure"])
-        uc04(["UC-04 Inspect result<br/>and simplifications"])
-        uc05(["UC-05 Preview, play,<br/>finish and replay"])
-        uc06(["UC-06 Browse catalogue<br/>and versions"])
-        uc07(["UC-07 Edit and retry<br/>or regenerate"])
+    subgraph system["Proposed AI-assisted browser-game platform"]
+        uc01(["UC-01 · Enter or edit story<br/>Genre intent, goal and main action"])
+        uc02(["UC-02 · Submit generation request<br/>Obtain project/version/job IDs"])
+        uc03(["UC-03 · Check progress or failure<br/>Queued / generating / validating / ready / failed"])
+        uc04(["UC-04 · Inspect ready result<br/>Read simplifications and reasons"])
+        uc05(["UC-05 · Preview, play, finish and replay<br/>Selected immutable ready version only"])
+        uc06(["UC-06 · Browse catalogue and versions<br/>Find failures and earlier ready games"])
+        uc07(["UC-07 · Edit, retry or regenerate<br/>Create linked version; preserve predecessor"])
     end
 
     author --- uc01
@@ -21,3 +35,8 @@ flowchart LR
     author --- uc05
     author --- uc06
     author --- uc07
+
+    classDef actor fill:#fff,stroke:#385569,color:#193347;
+    classDef goal fill:#eef4f8,stroke:#385569,color:#193347;
+    class author actor;
+    class uc01,uc02,uc03,uc04,uc05,uc06,uc07 goal;

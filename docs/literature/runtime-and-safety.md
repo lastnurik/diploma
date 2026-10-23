@@ -1,6 +1,6 @@
 # Runtime Architecture Validation and Safe Execution
 
-**Task 08 — Zhaksylyk Aldiyar.** This section reviews research relevant to turning a game specification into executable mechanics, checking whether generated games can end, and containing untrusted output in a browser. It informs design choices; it does not claim that our platform or tests already exist. Five distinct scientific publications from 2021–2025 are used below. The browser documentation at the end is an implementation reference, not counted as a scientific publication.
+This section reviews research relevant to turning a game specification into executable mechanics, checking whether generated games can end, and containing untrusted output in a browser. It informs design choices rather than reporting implemented tests. Five scientific publications from 2021–2025 are analyzed. Browser documentation is listed separately as an implementation reference.
 
 | Publication | Approach and evidence | Finding and limitation | Consequence for this project |
 | --- | --- | --- | --- |

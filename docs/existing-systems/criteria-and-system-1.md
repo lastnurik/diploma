@@ -1,6 +1,6 @@
 # Existing Systems Comparison Criteria and Rosebud AI
 
-**Task 10 owner:** Almadi Madiuly. **Evidence checked:** 22 October 2026. This is a desk review of public product documentation, not a hands-on benchmark. The same nine criteria and evidence labels must be applied to all three systems. A feature not documented in the inspected sources is **undocumented**, not proven absent.
+**Evidence checked:** 22 October 2026. This is a desk review of public product documentation, not a hands-on benchmark. The same nine criteria and evidence labels apply to all three systems. A feature not documented in the inspected sources is **undocumented**, not proven absent.
 
 ## Selection and comparison method
 

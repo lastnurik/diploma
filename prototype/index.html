@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>
+      Story to playable game · Academic UX prototype
+    </title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip" href="#main">
+      Skip to prototype
+    </a>
+    <header>
+      <strong>
+        Story / Play
+      </strong>
+      <span class="meta">
+        Academic UX prototype · October 2026
+      </span>
+    </header>
+    <div class="layout">
+      <aside>
+        <nav aria-label="Prototype screens">
+          <small>
+            AUTHOR JOURNEY
+          </small>
+          <a href="#story">
+            01 · Story request
+          </a>
+          <a href="#progress">
+            02 · Generation
+          </a>
+          <a href="#result">
+            03 · Review result
+          </a>
+          <a href="#play">
+            04 · Play concept
+          </a>
+          <a href="#ending">
+            04b · Ending
+          </a>
+          <a href="#catalogue">
+            05 · Versions
+          </a>
+          <a href="#failure">
+            06 · Failure &amp; retry
+          </a>
+        </nav>
+        <p class="help">
+          Static screen states.
+          <br>
+          Links move through the storyboard.
+        </p>
+      </aside>
+      <main id="main">
+        <div class="intro">
+          <p class="label">
+            From an idea to a playable scene
+          </p>
+          <h1>
+            Story-to-game authoring
+          </h1>
+          <p>
+            A proposed author journey for creating a bounded 2D browser game from a storyline.
+          </p>
+          <div class="note">
+            <strong>
+              Design evidence, not a working generator.
+            </strong>
+            <br>
+            All requests, game states, job identifiers and dates below are illustrative.
+            Navigation links connect fixed screens; no data is sent or saved, and no gameplay
+            runs.
+          </div>
+        </div>
+        <section class="screen" tabindex="-1" id="story" aria-labelledby="story-title">
+          <div class="screen-head">
+            <p class="meta">
+              SCR-1 · Flooded town / request for version 2
+            </p>
+            <span class="badge">
+              Draft example
+            </span>
+          </div>
+          <div class="screen-body">
+            <h2 id="story-title">
+              Describe your game
+            </h2>
+            <p>
+              Start with a character, a place and a goal. Choose what the player should do.
+            </p>
+            <div class="cols">
+              <div>
+                <div class="field">
+                  <label for="story-text">
+                    Story or game idea
+                  </label>
+                  <textarea id="story-text" readonly aria-describedby="story-help">A courier must deliver medicine across a flooded town. Sail freely to help a neighbour, collect the medicine at the depot and bring it to the clinic before the town is cut off.</textarea>
+                  <p class="help" id="story-help">
+                    Read-only example for this static prototype. The proposed product
+                    supports editing and draft recovery.
+                  </p>
+                </div>
+                <div class="field">
+                  <label for="genre">
+                    Genre intent
+                  </label>
+                  <input id="genre" readonly value="Narrative adventure">
+                  <p class="help">
+                    An intended mood and experience, not a promise of unsupported
+                    mechanics.
+                  </p>
+                </div>
+                <div class="field">
+                  <label for="goal">
+                    Desired goal
+                  </label>
+                  <input id="goal" readonly value="Deliver the medicine to the clinic">
+                </div>
+                <div class="field">
+                  <label for="action">
+                    Main player action
+                  </label>
+                  <input id="action" readonly value="Explore, collect and interact">
+                </div>
+              </div>
+              <div>
+                <div class="note">
+                  <h3>
+                    First proposed game format
+                  </h3>
+                  <p>
+                    A small top-down 2D scene with a clear objective and ending.
+                  </p>
+                  <ul>
+                    <li>
+                      Move and inspect the scene
+                    </li>
+                    <li>
+                      Collect and use story objects
+                    </li>
+                    <li>
+                      Interact and choose dialogue
+                    </li>
+                  </ul>
+                  <p>
+                    Free sailing may become movement along a fixed route. Any accepted
+                    change appears in the result before play.
+                  </p>
+                </div>
+                <h3>
+                  Review this request
+                </h3>
+                <p>
+                  The story and preferences shown here would be submitted together as a new
+                  version. Earlier versions remain available.
+                </p>
+                <p class="help">
+                  Supported actions and final input limits remain subject to the agreed
+                  specification.
+                </p>
+                <details>
+                  <summary>
+                    Empty-request feedback example
+                  </summary>
+                  <div class="note error">
+                    <strong>
+                      Story is required.
+                    </strong>
+                    <br>
+                    Describe the character and what they need to achieve before
+                    continuing. The proposed submission action remains unavailable until
+                    corrected.
+                  </div>
+                </details>
+              </div>
+            </div>
+            <div class="actions">
+              <a class="button" href="#progress">
+                View submitted example →
+              </a>
+              <a class="button secondary" href="#catalogue">
+                Back to versions
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="screen" tabindex="-1" id="progress" aria-labelledby="progress-title">
+          <div class="screen-head">
+            <p class="meta">
+              SCR-2 · Project FT-01 / version 2 / job J-024
+            </p>
+            <span class="badge pending">
+              Validating
+            </span>
+          </div>
+          <div class="screen-body">
+            <h2 id="progress-title">
+              Checking the game
+            </h2>
+            <p>
+              The proposed service checks the scene, supported actions and whether the ending
+              can be reached.
+            </p>
+            <div class="cols">
+              <ol class="timeline">
+                <li>
+                  ✓ Queued
+                  <span>
+                    22 Oct · 14:31:10 UTC
+                  </span>
+                </li>
+                <li>
+                  ✓ Generating
+                  <span>
+                    22 Oct · 14:31:14 UTC
+                  </span>
+                </li>
+                <li class="active">
+                  Current: validating
+                  <span>
+                    Last update · 14:32:08 UTC
+                  </span>
+                </li>
+                <li>
+                  Ready
+                  <span>
+                    Waiting for checks
+                  </span>
+                </li>
+              </ol>
+              <div>
+                <div class="note">
+                  <strong>
+                    You can return later.
+                  </strong>
+                  <p>
+                    Opening this version from the catalogue returns to the same job.
+                    Leaving the screen does not cancel generation.
+                  </p>
+                </div>
+                <p class="help">
+                  Illustrative recorded stages. No percentage or completion estimate is
+                  implied.
+                </p>
+                <details>
+                  <summary>
+                    Connection interrupted example
+                  </summary>
+                  <p>
+                    Unable to retrieve the latest status. Last known state: validating.
+                    This does not mean generation failed.
+                  </p>
+                  <a href="#progress">
+                    Check status again (example)
+                  </a>
+                </details>
+              </div>
+            </div>
+            <div class="actions">
+              <a class="button" href="#result">
+                View ready outcome →
+              </a>
+              <a class="button secondary" href="#failure">
+                View failed request · v3
+              </a>
+              <a class="button secondary" href="#catalogue">
+                Return to versions
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="screen" tabindex="-1" id="result" aria-labelledby="result-title">
+          <div class="screen-head">
+            <p class="meta">
+              SCR-3 · Project FT-01 / version 2 / job J-024
+            </p>
+            <span class="badge">
+              Ready · example
+            </span>
+          </div>
+          <div class="screen-body">
+            <h2 id="result-title">
+              The last delivery
+            </h2>
+            <p>
+              Carry medicine across a flooded town and reach the clinic. A short adventure about
+              helping a community through a crisis.
+            </p>
+            <div class="cols">
+              <div>
+                <h3>
+                  One mechanic has been simplified
+                </h3>
+                <div class="comparison">
+                  <div>
+                    <p class="label">
+                      Requested
+                    </p>
+                    <p>
+                      Free sailing across the flooded town.
+                    </p>
+                  </div>
+                  <div>
+                    <p class="label">
+                      In this version
+                    </p>
+                    <p>
+                      Top-down movement along a fixed raised walkway.
+                    </p>
+                  </div>
+                </div>
+                <p>
+                  <strong>
+                    Reason:
+                  </strong>
+                  the proposed first game format supports bounded movement and interactions,
+                  without boat physics or open-water navigation.
+                </p>
+                <p>
+                  The courier, flooded setting, medicine delivery and clinic ending are
+                  retained. If sailing is essential to your story, revise the request
+                  instead of accepting this change.
+                </p>
+              </div>
+              <dl class="summary">
+                <div>
+                  <dt>
+                    Genre intent
+                  </dt>
+                  <dd>
+                    Narrative adventure
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    Actual mechanic family
+                  </dt>
+                  <dd>
+                    Top-down exploration and delivery
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    Objective
+                  </dt>
+                  <dd>
+                    Collect medicine → deliver at clinic
+                  </dd>
+                </div>
+                <div>
+                  <dt>
+                    Selected immutable version
+                  </dt>
+                  <dd>
+                    FT-01 / v2 · specification example
+                  </dd>
+                </div>
+              </dl>
+            </div>
+            <div class="actions">
+              <a class="button" href="#play">
+                Open play concept · v2 →
+              </a>
+              <a class="button secondary" href="#story">
+                Review original request
+              </a>
+              <a class="button secondary" href="#catalogue">
+                All versions
+              </a>
+            </div>
+            <details>
+              <summary>
+                Other result conditions
+              </summary>
+              <p>
+                <strong>
+                  No substitutions:
+                </strong>
+                “No mechanic changes were needed for this version.”
+              </p>
+              <p>
+                <strong>
+                  Missing or invalid artifact:
+                </strong>
+                “This version cannot be loaded. Return to the result and check availability.”
+                The proposed runtime would not start a partial game.
+              </p>
+            </details>
+          </div>
+        </section>
+        <section class="screen" tabindex="-1" id="play" aria-labelledby="play-title">
+          <div class="screen-head">
+            <p class="meta">
+              SCR-4 · The last delivery / version 2
+            </p>
+            <span class="badge">
+              Conceptual game state
+            </span>
+          </div>
+          <div class="screen-body">
+            <h2 id="play-title">
+              Bring the medicine to the clinic
+            </h2>
+            <p>
+              You have reached the depot. Inspect the crate, collect the medicine and follow the
+              walkway east.
+            </p>
+            <div class="cols">
+              <div>
+                <svg class="game-map" viewBox="0 0 600 380" role="img" aria-labelledby="map-title map-desc">
+                  <title id="map-title">
+                    Top-down flooded town scene
+                  </title>
+                  <desc id="map-desc">
+                    The courier stands beside the depot on the left. A raised walkway
+                    connects the depot to the clinic on the right. The medicine crate is
+                    at the depot; water surrounds the route.
+                  </desc>
+                  <rect width="600" height="380" fill="#d9e8e7"/>
+                  <path d="M20 90H580M20 300H580M80 30V350M280 30V350M480 30V350" stroke="#c2d9d6" stroke-width="2"/>
+                  <path d="M85 210H510" stroke="#8c9f8d" stroke-width="68"/>
+                  <path d="M85 210H510" stroke="#e8dfc6" stroke-width="48"/>
+                  <rect x="40" y="80" width="145" height="100" rx="4" fill="#e9ede5" stroke="#718579" stroke-width="3"/>
+                  <rect x="420" y="80" width="145" height="100" rx="4" fill="#f5f4e9" stroke="#718579" stroke-width="3"/>
+                  <rect x="100" y="150" width="32" height="32" fill="#cba45f" stroke="#67542e" stroke-width="3"/>
+                  <circle cx="155" cy="216" r="15" fill="#176456" stroke="white" stroke-width="4"/>
+                  <text x="64" y="118" fill="#172e36" font-family="sans-serif" font-size="20" font-weight="bold">
+                    Depot
+                  </text>
+                  <text x="447" y="118" fill="#172e36" font-family="sans-serif" font-size="20" font-weight="bold">
+                    Clinic
+                  </text>
+                  <text x="72" y="278" fill="#172e36" font-family="sans-serif" font-size="18">
+                    Courier
+                  </text>
+                  <text x="263" y="202" fill="#172e36" font-family="sans-serif" font-size="17">
+                    Walkway →
+                  </text>
+                  <text x="30" y="350" fill="#3c5e60" font-family="sans-serif" font-size="17">
+                    Floodwater · not traversable
+                  </text>
+                </svg>
+                <p class="game-caption">
+                  Static scene composition. The map is not a running game canvas.
+                </p>
+              </div>
+              <div>
+                <h3>
+                  Player state
+                </h3>
+                <dl class="summary">
+                  <div>
+                    <dt>
+                      Inventory
+                    </dt>
+                    <dd>
+                      Empty
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>
+                      Nearby object
+                    </dt>
+                    <dd>
+                      Medicine crate
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>
+                      Available action
+                    </dt>
+                    <dd>
+                      Inspect / collect medicine
+                    </dd>
+                  </div>
+                </dl>
+                <h3 style="margin-top:24px">
+                  Proposed controls
+                </h3>
+                <p>
+                  <kbd>
+                    W A S D
+                  </kbd>
+                  or arrow keys to move.
+                  <br>
+                  <kbd>
+                    E
+                  </kbd>
+                  to inspect, collect or interact.
+                  <br>
+                  Dialogue choices: Tab, then Enter.
+                </p>
+                <p class="help">
+                  The goal requires collecting the medicine before the clinic can accept the
+                  delivery.
+                </p>
+              </div>
+            </div>
+            <div class="actions">
+              <a class="button" href="#ending">
+                View delivery and ending state →
+              </a>
+              <a class="button secondary" href="#result">
+                Back to result · v2
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="screen" tabindex="-1" id="ending" aria-labelledby="ending-title">
+          <div class="screen-head">
+            <p class="meta">
+              SCR-4b · The last delivery / version 2
+            </p>
+            <span class="badge">
+              Ending example
+            </span>
+          </div>
+          <div class="screen-body">
+            <h2 id="ending-title">
+              A visible conclusion
+            </h2>
+            <div class="ending">
+              <p class="label">
+                Goal reached · conceptual state
+              </p>
+              <h3>
+                The clinic has its medicine.
+              </h3>
+              <p>
+                “You made it. We can keep the clinic open tonight.”
+              </p>
+              <p>
+                The courier hands over the supplies. Across the water, the town's lights begin
+                to return.
+              </p>
+              <p>
+                <strong>
+                  Completed actions:
+                </strong>
+                medicine collected → route traversed → clinic interaction → medicine
+                delivered.
+              </p>
+            </div>
+            <p class="help">
+              This screen specifies the proposed ending feedback. It is not evidence that a
+              generated game's ending has been verified.
+            </p>
+            <div class="actions">
+              <a class="button" href="#play">
+                Replay concept · v2
+              </a>
+              <a class="button secondary" href="#result">
+                Back to result
+              </a>
+              <a class="button secondary" href="#catalogue">
+                Browse versions
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="screen" tabindex="-1" id="catalogue" aria-labelledby="catalogue-title">
+          <div class="screen-head">
+            <p class="meta">
+              SCR-5 · Catalogue / project FT-01
+            </p>
+            <span class="badge pending">
+              Latest: validating
+            </span>
+          </div>
+          <div class="screen-body">
+            <h2 id="catalogue-title">
+              Flooded town
+            </h2>
+            <p>
+              Choose a version to see its original request, status and result. Generating again
+              keeps earlier versions intact.
+            </p>
+            <div class="version">
+              <div>
+                <strong>
+                  Version 4
+                </strong>
+                <span class="badge pending">
+                  Validating
+                </span>
+                <p class="meta">
+                  22 Oct 2026 · 15:10 UTC · J-026
+                </p>
+                <p>
+                  Revised from version 3. Earlier failure remains available.
+                </p>
+              </div>
+              <a href="#retry-progress">
+                Check progress · v4 →
+              </a>
+            </div>
+            <div class="version">
+              <div>
+                <strong>
+                  Version 3
+                </strong>
+                <span class="badge failed">
+                  Failed
+                </span>
+                <p class="meta">
+                  22 Oct 2026 · 15:02 UTC · J-025
+                </p>
+                <p>
+                  Requested open-water sailing as an essential mechanic.
+                </p>
+              </div>
+              <a href="#failure">
+                Review failure · v3 →
+              </a>
+            </div>
+            <div class="version">
+              <div>
+                <strong>
+                  Version 2
+                </strong>
+                <span class="badge">
+                  Ready
+                </span>
+                <p class="meta">
+                  22 Oct 2026 · 14:33 UTC · J-024
+                </p>
+                <p>
+                  Fixed walkway, collection and clinic delivery.
+                </p>
+              </div>
+              <a href="#result">
+                Open this result · v2 →
+              </a>
+            </div>
+            <div class="empty">
+              <h3>
+                Empty catalogue alternative
+              </h3>
+              <p>
+                No projects yet. Begin with a short story and a goal for the player.
+              </p>
+              <a href="#story">
+                Create your first request →
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="screen" tabindex="-1" id="failure" aria-labelledby="failure-title">
+          <div class="screen-head">
+            <p class="meta">
+              SCR-6 · Project FT-01 / version 3 / job J-025
+            </p>
+            <span class="badge failed">
+              Failed
+            </span>
+          </div>
+          <div class="screen-body">
+            <h2 id="failure-title">
+              This request could not become a game
+            </h2>
+            <div class="note error">
+              <strong>
+                Essential mechanic is outside the proposed scope.
+              </strong>
+              <p>
+                This request requires open-water sailing. Replacing it with a fixed walking
+                route would change the core experience, so no playable result is offered.
+              </p>
+              <span class="meta">
+                Last update · 22 Oct 2026, 15:02 UTC · illustrative safe error
+              </span>
+            </div>
+            <div class="cols">
+              <div>
+                <h3>
+                  Retained version 3 request
+                </h3>
+                <p>
+                  “A courier must sail freely across a flooded town, collect medicine and
+                  deliver it to the clinic. Steering a boat through open water is
+                  essential.”
+                </p>
+                <p>
+                  <strong>
+                    Genre:
+                  </strong>
+                  narrative adventure
+                  <br>
+                  <strong>
+                    Goal:
+                  </strong>
+                  deliver medicine
+                  <br>
+                  <strong>
+                    Main action:
+                  </strong>
+                  free sailing
+                </p>
+              </div>
+              <div>
+                <h3>
+                  Revise before retrying
+                </h3>
+                <p>
+                  The version 4 example removes the essential sailing requirement and
+                  permits the fixed walkway. The delivery goal and flooded setting remain.
+                </p>
+                <p>
+                  A new request gets a new version and job. Version 3 stays failed; version
+                  2 stays ready.
+                </p>
+              </div>
+            </div>
+            <div class="actions">
+              <a class="button" href="#retry">
+                Review revised request →
+              </a>
+              <a class="button secondary" href="#result">
+                Open earlier ready version · v2
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="screen" tabindex="-1" id="retry" aria-labelledby="retry-title">
+          <div class="screen-head">
+            <p class="meta">
+              SCR-1b · Revision from version 3
+            </p>
+            <span class="badge">
+              New version 4 · example
+            </span>
+          </div>
+          <div class="screen-body">
+            <h2 id="retry-title">
+              Review the retry
+            </h2>
+            <div class="note">
+              <strong>
+                Changed:
+              </strong>
+              free sailing is no longer essential. A fixed raised walkway is acceptable.
+            </div>
+            <dl class="summary">
+              <div>
+                <dt>
+                  Story
+                </dt>
+                <dd>
+                  A courier crosses a flooded town using the raised walkway, collects
+                  medicine at the depot and delivers it to the clinic.
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  Genre intent / desired goal / main action
+                </dt>
+                <dd>
+                  Narrative adventure / deliver medicine / explore, collect and interact
+                </dd>
+              </div>
+            </dl>
+            <p class="help">
+              This complete example request would be submitted as version 4, linked to failed
+              version 3. The prototype does not submit or persist data.
+            </p>
+            <div class="actions">
+              <a class="button" href="#retry-progress">
+                View new request progress · v4 →
+              </a>
+              <a class="button secondary" href="#failure">
+                Return to failed version · v3
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="screen" tabindex="-1" id="retry-progress" aria-labelledby="retry-progress-title">
+          <div class="screen-head">
+            <p class="meta">
+              SCR-2b · Project FT-01 / version 4 / job J-026
+            </p>
+            <span class="badge pending">
+              Validating
+            </span>
+          </div>
+          <div class="screen-body">
+            <h2 id="retry-progress-title">
+              A separate attempt, a retained history
+            </h2>
+            <p>
+              Version 4 is checking the revised request. Version 3 and its failure explanation
+              remain available.
+            </p>
+            <ol class="timeline">
+              <li>
+                ✓ Queued
+                <span>
+                  22 Oct · 15:08:10 UTC
+                </span>
+              </li>
+              <li>
+                ✓ Generating
+                <span>
+                  22 Oct · 15:08:14 UTC
+                </span>
+              </li>
+              <li class="active">
+                Current: validating
+                <span>
+                  Last update · 15:10:00 UTC
+                </span>
+              </li>
+              <li>
+                Ready
+                <span>
+                  Waiting for checks
+                </span>
+              </li>
+            </ol>
+            <p class="help">
+              No Play action is available while this example version is validating.
+            </p>
+            <div class="actions">
+              <a class="button secondary" href="#catalogue">
+                Return to versions
+              </a>
+              <a class="button secondary" href="#retry">
+                Review submitted request
+              </a>
+            </div>
+          </div>
+        </section>
+        <footer>
+          Academic design evidence for the proposed storyline-to-browser-game platform. Screen
+          content is illustrative; implementation and usability evaluation are not claimed.
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
