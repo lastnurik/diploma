@@ -19,7 +19,7 @@
 
 ## Dependencies and parallel work
 
-The [eight proposed project tickets](youtrack-backlog.md) define the current project sequence: actual user evidence → agreed scope/requirements → shared game/job contract. The UX walkthrough can proceed alongside contract work after scope agreement. The manually authored runtime slice and bounded generation pilot then progress against the same contract; both feed the integrated author-to-play journey, followed by fixed-corpus evaluation and final review. Move a dependent window if its evidence is missing rather than describing a planned prerequisite as complete.
+The [16 proposed development tasks](youtrack-backlog.md) define the implementation sequence, not verified live YouTrack issues: agreed actions and game/job schema → validator, project versions and job status → parallel browser runtime, generation and authoring UI → winning-path checks, publication gate and controlled delivery → integrated request-to-play run → fixed-corpus evaluation. Complete each named dependency before treating a dependent task as done.
 
 ## Risk register
 

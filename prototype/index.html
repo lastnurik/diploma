@@ -44,12 +44,15 @@
           <a href="#catalogue">
             05 · Versions
           </a>
-          <a href="#failure">
-            06 · Failure &amp; retry
-          </a>
+          <details>
+            <summary>Recovery examples</summary>
+            <a href="#failure">Failed request · v3</a>
+            <a href="#retry">Revised request · v4</a>
+            <a href="#retry-progress">Retry progress · v4</a>
+          </details>
         </nav>
         <p class="help">
-          Static screen states.
+          One static state at a time.
           <br>
           Links move through the storyboard.
         </p>
@@ -70,9 +73,8 @@
               Design evidence, not a working generator.
             </strong>
             <br>
-            All requests, game states, job identifiers and dates below are illustrative.
-            Navigation links connect fixed screens; no data is sent or saved, and no gameplay
-            runs.
+            Links show fixed example states. No request is sent, no result is generated,
+            and the game scene is not playable.
           </div>
         </div>
         <section class="screen" tabindex="-1" id="story" aria-labelledby="story-title">
@@ -99,8 +101,7 @@
                   </label>
                   <textarea id="story-text" readonly aria-describedby="story-help">A courier must deliver medicine across a flooded town. Sail freely to help a neighbour, collect the medicine at the depot and bring it to the clinic before the town is cut off.</textarea>
                   <p class="help" id="story-help">
-                    Read-only example for this static prototype. The proposed product
-                    supports editing and draft recovery.
+                    Read-only example. The planned product would allow editing.
                   </p>
                 </div>
                 <div class="field">
@@ -154,12 +155,7 @@
                   Review this request
                 </h3>
                 <p>
-                  The story and preferences shown here would be submitted together as a new
-                  version. Earlier versions remain available.
-                </p>
-                <p class="help">
-                  Supported actions and final input limits remain subject to the agreed
-                  specification.
+                  The story and preferences form one version. Earlier versions remain available.
                 </p>
                 <details>
                   <summary>
@@ -242,8 +238,7 @@
                   </p>
                 </div>
                 <p class="help">
-                  Illustrative recorded stages. No percentage or completion estimate is
-                  implied.
+                Example stages; no completion estimate is implied.
                 </p>
                 <details>
                   <summary>
@@ -261,10 +256,10 @@
             </div>
             <div class="actions">
               <a class="button" href="#result">
-                View ready outcome →
+                Show ready state · v2 →
               </a>
               <a class="button secondary" href="#failure">
-                View failed request · v3
+                Show failure state · v3
               </a>
               <a class="button secondary" href="#catalogue">
                 Return to versions
@@ -635,17 +630,13 @@
                 Open this result · v2 →
               </a>
             </div>
-            <div class="empty">
-              <h3>
-                Empty catalogue alternative
-              </h3>
-              <p>
-                No projects yet. Begin with a short story and a goal for the player.
-              </p>
-              <a href="#story">
-                Create your first request →
-              </a>
-            </div>
+            <details>
+              <summary>Empty catalogue example</summary>
+              <div class="empty">
+                <p>No projects yet. Begin with a short story and a goal for the player.</p>
+                <a href="#story">Create your first request →</a>
+              </div>
+            </details>
           </div>
         </section>
         <section class="screen" tabindex="-1" id="failure" aria-labelledby="failure-title">

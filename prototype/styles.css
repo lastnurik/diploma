@@ -104,6 +104,20 @@ nav a:hover {
   color: var(--ink);
 }
 
+nav details {
+  padding: 0;
+}
+
+nav summary {
+  padding: 10px 12px;
+  color: var(--muted);
+  border-left: 3px solid transparent;
+}
+
+nav details a {
+  padding-left: 24px;
+}
+
 nav small {
   display: block;
   margin: 20px 12px 8px;
@@ -143,12 +157,23 @@ p {
 }
 
 .screen {
+  display: none;
   scroll-margin-top: 24px;
   margin-bottom: 40px;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
+}
+
+/* Keep the storyboard focused on one illustrative state at a time. */
+main > #story,
+main > .screen:target {
+  display: block;
+}
+
+main:has(> .screen:target) > #story:not(:target) {
+  display: none;
 }
 
 .screen:target {
@@ -503,6 +528,7 @@ footer {
     padding: 0;
   }
   .screen {
+    display: block;
     break-inside: avoid;
     margin-bottom: 24px;
   }

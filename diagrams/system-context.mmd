@@ -1,42 +1,25 @@
 ---
 config:
   theme: neutral
-  fontFamily: Arial
-  themeVariables:
-    fontFamily: Arial, Helvetica, sans-serif
-    fontSize: 18px
   flowchart:
     htmlLabels: false
     curve: linear
-    nodeSpacing: 35
-    rankSpacing: 55
 ---
-%% Proposed system context. The outer box is a product boundary, not one trusted process.
-%% Internal browser/server/worker trust zones are expanded in component.mmd.
+%% Proposed system context. The centre box is the whole product, not an implemented deployment.
 flowchart LR
-  accTitle: System context — proposed browser-game platform
-  accDescr: The author and optional external model provider surround a proposed product boundary. Browser authoring and local play, the independently validating platform service, generation worker and managed infrastructure are internal components. Provider output and worker candidates remain untrusted until the publication gate approves data.
-    author["Author<br/>Writer, teacher or small-team member"]
-    provider["External model provider<br/>Optional; outside product boundary"]
+  accTitle: Proposed browser-game platform — system context
+  accDescr: An author submits a story and receives status, a playable game, or a safe failure. The proposed platform may use an optional external model provider. Model output is untrusted; only validated data reaches the maintained browser runtime.
 
-    subgraph product["Proposed browser-game platform — overall product boundary"]
-        client["Browser client<br/>Authoring and trusted 2D runtime<br/>Gameplay state stays local"]
-        api["Platform service<br/>Projects, versions and job status<br/>Independent validation and publication gate"]
-        ai["Generation service<br/>Intent, candidate data and bounded repair<br/>Output remains untrusted at platform gate"]
-        storage[("Managed infrastructure<br/>Project/job records and events<br/>Private approved artifacts")]
-        client -->|"Story, parameters and status requests"| api
-        api -->|"Status, safe errors; ready game and simplifications"| client
-        api -->|"Generation request with version IDs"| ai
-        ai -->|"Worker-checked candidate or failure"| api
-        api <-->|"Persist / retrieve records and approved artifacts"| storage
-    end
+  AUTHOR["Author<br/>Creates a story<br/>and plays"]
+  PLATFORM["Proposed platform<br/>Authoring · generation<br/>Validation · play<br/>Maintained browser runtime"]
+  MODEL["External model<br/>Optional provider<br/>Untrusted output"]
 
-    author -->|"Story, settings and local gameplay"| client
-    client -->|"Progress, game, ending or safe error"| author
-    ai -->|"Minimum required story context"| provider
-    provider -->|"Untrusted model output"| ai
+  AUTHOR -->|"Story"| PLATFORM
+  PLATFORM -->|"Result"| AUTHOR
+  PLATFORM -->|"Prompt"| MODEL
+  MODEL -->|"Output"| PLATFORM
 
-    classDef external fill:#fff1eb,stroke:#9a492d,color:#3f261e;
-    classDef gate fill:#e6f2ed,stroke:#33745b,color:#17382b;
-    class provider external;
-    class api gate;
+  classDef product fill:#eaf1f4,stroke:#385569,color:#193347;
+  classDef external fill:#fff1eb,stroke:#9a492d,color:#3f261e;
+  class PLATFORM product;
+  class MODEL external;

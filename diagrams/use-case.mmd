@@ -1,42 +1,34 @@
 ---
 config:
   theme: neutral
-  fontFamily: Arial
-  themeVariables:
-    fontFamily: Arial, Helvetica, sans-serif
-    fontSize: 18px
   flowchart:
     htmlLabels: false
     curve: linear
-    nodeSpacing: 35
-    rankSpacing: 55
 ---
-%% Proposed author goals; associations are not execution-order arrows.
-%% UC identifiers correspond to docs/use-cases.md; system responsibilities are in component.mmd.
+%% Proposed author goals; the seven plain associations are not execution-order arrows.
+%% Detailed states and acceptance conditions remain in docs/use-cases.md.
 flowchart LR
-  accTitle: Author use cases — proposed design
-  accDescr: One author is associated with seven goals: enter story, submit a request, inspect progress or failure, inspect a ready result and simplifications, play and finish, browse versions, and deliberately regenerate a linked version. Associations do not imply execution order.
-    author["Author<br/>Writer, teacher or small-team member"]
+  accTitle: Proposed author use cases
+  accDescr: The author can enter a storyline, submit generation, check status or failure, inspect the result and changes, play through an ending, browse saved versions, and retry or regenerate as a linked version.
 
-    subgraph system["Proposed AI-assisted browser-game platform"]
-        uc01(["UC-01 · Enter or edit story<br/>Genre intent, goal and main action"])
-        uc02(["UC-02 · Submit generation request<br/>Obtain project/version/job IDs"])
-        uc03(["UC-03 · Check progress or failure<br/>Queued / generating / validating / ready / failed"])
-        uc04(["UC-04 · Inspect ready result<br/>Read simplifications and reasons"])
-        uc05(["UC-05 · Preview, play, finish and replay<br/>Selected immutable ready version only"])
-        uc06(["UC-06 · Browse catalogue and versions<br/>Find failures and earlier ready games"])
-        uc07(["UC-07 · Edit, retry or regenerate<br/>Create linked version; preserve predecessor"])
-    end
+  AUTHOR["Author"]
+  subgraph PLATFORM["Proposed AI-assisted browser-game platform"]
+    UC01(["UC-01 · Enter or edit storyline"])
+    UC02(["UC-02 · Submit generation request"])
+    UC03(["UC-03 · Check status or failure"])
+    UC04(["UC-04 · Inspect result and changes"])
+    UC05(["UC-05 · Play, finish and replay"])
+    UC06(["UC-06 · Browse saved versions"])
+    UC07(["UC-07 · Retry or regenerate version"])
+  end
 
-    author --- uc01
-    author --- uc02
-    author --- uc03
-    author --- uc04
-    author --- uc05
-    author --- uc06
-    author --- uc07
+  AUTHOR --- UC01
+  AUTHOR --- UC02
+  AUTHOR --- UC03
+  AUTHOR --- UC04
+  AUTHOR --- UC05
+  AUTHOR --- UC06
+  AUTHOR --- UC07
 
-    classDef actor fill:#fff,stroke:#385569,color:#193347;
-    classDef goal fill:#eef4f8,stroke:#385569,color:#193347;
-    class author actor;
-    class uc01,uc02,uc03,uc04,uc05,uc06,uc07 goal;
+  classDef goal fill:#eaf2f8,stroke:#385569,color:#193347;
+  class UC01,UC02,UC03,UC04,UC05,UC06,UC07 goal;

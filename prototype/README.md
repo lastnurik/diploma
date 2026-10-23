@@ -4,7 +4,7 @@
 
 ## Open the prototype
 
-Open [index.html](index.html) in a browser. It is a self-contained, navigable HTML/CSS storyboard with no build step, external assets, JavaScript, network requests or server dependency. The accompanying [stylesheet](styles.css) must remain beside it. The navigation and action links move between fixed screen states; native disclosure controls expose alternate feedback examples. Request fields are explicitly read-only examples. Generation, validation, persistence, editing and gameplay are represented, not executed.
+Open [index.html](index.html) in a browser. It is a self-contained, navigable HTML/CSS storyboard with no build step, external assets, JavaScript, network requests or server dependency. The accompanying [stylesheet](styles.css) must remain beside it. One fixed screen state is shown at a time; navigation links change states, and disclosure controls contain alternate examples. Request fields are read-only. Generation, validation, persistence, editing and gameplay are represented, not executed.
 
 The interface uses a restrained green accent, consistent status labels, persistent field labels, visible keyboard focus and responsive layouts. A scene diagram shows the proposed top-down game composition. All story content, dates, identifiers and outcomes are illustrative. Supported mechanics and the final contract remain provisional.
 
@@ -36,12 +36,12 @@ Version 2's progress and ready screens are successive illustrative states. The c
 
 This static storyboard illustrates proposed interface behavior. It does not demonstrate implemented generation, validation, persistence or gameplay, and no usability study is claimed.
 
-## Earlier overview wireframes
+## Overview wireframes
 
-The original SVG storyboards remain available as complementary low-fidelity overview figures:
+The SVG storyboards summarize the same version 2 ready result, version 3 unsupported-mechanic failure and version 4 retry shown in the HTML:
 
 - [Input and progress](authoring-flow.svg)
 - [Result and play](result-play.svg)
 - [Catalogue and recovery](catalogue-recovery.svg)
 
-Their buttons are drawn labels, not interactive controls. The HTML storyboard is the primary detailed UX artifact and includes the explicit version history and retry review described above.
+Their buttons are drawn labels, not interactive controls. The HTML storyboard is the primary detailed UX artifact.
