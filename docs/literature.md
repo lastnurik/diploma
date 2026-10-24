@@ -9,7 +9,7 @@
 - **Set a safe execution boundary.** Browser studies [L09][L10] motivate treating model output as untrusted data interpreted by a fixed runtime. Generated executable pages would need a separate origin and capability review; [MDN iframe guidance](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe) is an implementation reference, not a research source.
 - **Help authors correct the result.** Novice prompting and human–AI/UX studies [L11–L14] motivate guided inputs, visible limitations and simplifications, recovery, and observed play with prospective users. These are design hypotheses, not validated preferences for this project.
 
-The research gap is transfer from constrained games and adjacent interfaces to varied user stories and complete browser-playable games. The first implementation should use one bounded mechanic family, include out-of-scope prompts and failures in evaluation, and compare against a hand-authored runtime baseline. Platformer, racing and card examples in the corpus do not imply first-version support.
+The research gap is transfer from constrained games and adjacent interfaces to varied user stories and complete browser-playable games. The first implementation should use one bounded mechanic family, include out-of-scope prompts and failures in evaluation, and compare later revisions against the first integrated generator version on the same stories. Platformer, racing and card examples in the corpus do not imply first-version support.
 
 ## Evidence limits
 

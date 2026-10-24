@@ -31,7 +31,7 @@ A strict validator must reject invalid references and unsupported operations. A 
 | PixiJS 8 | Flexible 2D rendering, but more gameplay infrastructure must be built. [R2] |
 | Godot 4 web export | Strong editor/game facilities, with a larger web packaging and data-loading boundary. [R3] |
 
-The first proof of concept must load a **hand-authored** valid specification, perform a consequential action, reach an ending and reject invalid data in the target browsers. No runtime alone guarantees a completable game.
+The first integrated proof of concept must load a validated **AI-generated** specification, perform a consequential action, reach an ending and reject invalid data in the target browsers. No runtime alone guarantees a completable game.
 
 ## Decision gate
 

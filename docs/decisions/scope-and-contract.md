@@ -34,7 +34,7 @@ The contract is a design draft. Each field should eventually have a JSON Schema 
 | `simplifications` | List of requested mechanic, actual replacement and reason, shown to the user. Empty if none. |
 | `controls`, `instructions` | Mapped to supported inputs and visible before/during play. |
 
-The game data should be separated from platform metadata (user, project, version, job and artifact IDs). The same immutable specification version should be used by validator, evaluator and runtime. No draft schema is declared final until M, A and N agree on it and a manually authored example can run through the chosen client.
+The game data should be separated from platform metadata (user, project, version, job and artifact IDs). The same immutable specification version should be used by validator, evaluator and runtime. No draft schema is declared final until M, A and N agree on it and generated output can pass validation and run through the chosen client.
 
 ## Job and error states
 
@@ -44,4 +44,4 @@ Failure classes include invalid user request, unavailable model service, schema 
 
 ## Completion and acceptance for the eventual product
 
-Success requires valid schema and references, safe launch in supported browsers, functioning central actions, a start and ending reachable in the supported state space, and an explanation of any simplification. Human review assesses whether the result keeps the user's premise; machine validation alone cannot establish narrative fidelity. An evaluator will record each criterion independently and report denominator, conditions and failures. The manually authored game is the baseline for the runtime and presentation before automated generation is integrated.
+Success requires valid schema and references, safe launch in supported browsers, functioning central actions, a start and ending reachable in the supported state space, and an explanation of any simplification. Human review assesses whether the result keeps the user's premise; machine validation alone cannot establish narrative fidelity. An evaluator will record each criterion independently and report denominator, conditions and failures. The first integrated generator version is the baseline for later revisions on the same stories.

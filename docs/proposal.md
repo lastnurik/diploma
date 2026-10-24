@@ -39,7 +39,7 @@ The intended final outcome is a working prototype that accepts a narrative game 
 | Zhaksylyk Aldiyar | Backend and platform: assess integration constraints; subsequently implement the service and generation workflow. |
 | Yessengeldi Nurgeldi | AI and generation: assess generation and validation methods; subsequently implement and evaluate the generation component. |
 
-All three share research synthesis and interface decisions. The [project plan](project-plan.md) details seven initial tasks and sketches later work; shared interfaces and evaluation criteria remain provisional.
+All three share research synthesis and interface decisions. The [project plan](project-plan.md) details one Agile development increment; shared interfaces and evaluation criteria remain provisional.
 
 ## Provisional stages
 
@@ -47,7 +47,7 @@ All three share research synthesis and interface decisions. The [project plan](p
 | --- | --- |
 | October 2026 | Proposal, relevance, comparisons, initial requirements, diagrams, static UX concept and evaluation plan. |
 | November–December 2026 | Direct user/client and supervisor input, agreed first mechanic set and acceptance criteria, then a versioned game/job contract. |
-| January–March 2027 | Manually authored browser game, bounded generation pilot and integrated request-to-play flow. |
+| January–March 2027 | AI-generated game data, validation, browser play and an integrated request-to-play flow. |
 | April–May 2027 | Fixed-corpus evaluation, defect and supervisor-response review, final demonstration. |
 
 Dates depend on evidence and feasibility; the [project plan](project-plan.md) gives the task sequence and risks.
