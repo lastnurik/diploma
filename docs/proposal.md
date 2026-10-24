@@ -25,7 +25,7 @@ The aim is to design and evaluate an AI-assisted platform that transforms a user
 3. Design and implement the browser interface, supporting platform service and AI-assisted generation workflow once the initial scope has been agreed.
 4. Evaluate generated games for execution, player actions, attainable completion and correspondence to the source narrative; document failure cases and limitations.
 
-Initial research, proposed scope and requirements, architecture and UX drafts, and a verification plan address these objectives at the proposal stage. Implementation and measured evaluation remain later work.
+Initial research, proposed scope and requirements, architecture and UX drafts, and planned evaluation address these objectives at the proposal stage. Implementation and measured evaluation remain later work.
 
 ## Intended outcome and boundaries to decide
 
@@ -39,7 +39,7 @@ The intended final outcome is a working prototype that accepts a narrative game 
 | Zhaksylyk Aldiyar | Backend and platform: assess integration constraints; subsequently implement the service and generation workflow. |
 | Yessengeldi Nurgeldi | AI and generation: assess generation and validation methods; subsequently implement and evaluate the generation component. |
 
-All three share research synthesis and interface decisions. The [next development increment](youtrack-backlog.md) details seven initial tasks and sketches later milestones; shared interfaces and evaluation criteria remain provisional.
+All three share research synthesis and interface decisions. The [project plan](project-plan.md) details seven initial tasks and sketches later work; shared interfaces and evaluation criteria remain provisional.
 
 ## Provisional stages
 
@@ -50,7 +50,7 @@ All three share research synthesis and interface decisions. The [next developmen
 | January–March 2027 | Manually authored browser game, bounded generation pilot and integrated request-to-play flow. |
 | April–May 2027 | Fixed-corpus evaluation, defect and supervisor-response review, final demonstration. |
 
-Dates depend on evidence and feasibility; the [project plan](project-plan.md) gives the finer sequence and risks.
+Dates depend on evidence and feasibility; the [project plan](project-plan.md) gives the task sequence and risks.
 
 ## Current stage
 

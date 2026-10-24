@@ -16,6 +16,6 @@ An author submits a story → the platform returns project/version/job IDs and `
 - A versioned specification defines actions, state changes and an ending. Validation checks schema, references, allowed assets and a bounded path to the goal. A timed-out path search is **unverified** and cannot be published as ready; the path must also work in the browser.
 - The runtime interprets approved data and never executes model-generated JavaScript. Artifact delivery rechecks ownership, version and `ready` status. Retries preserve earlier versions; duplicate work must not publish twice. These guarantees still require implementation and tests.
 
-The exact schema, limits, queue recovery method, publication transaction and browser delivery policy remain open design decisions. The [verification plan](verification-plan.md) defines the checks needed before any of these behaviors can be claimed.
+The exact schema, limits, queue recovery method, publication transaction and browser delivery policy remain open design decisions. The [project plan](project-plan.md) identifies the checks needed before any of these behaviors can be claimed.
 
 For boundaries and acceptance detail, see the [scope and contract draft](decisions/scope-and-contract.md), [requirements](requirements.md) and [technology comparison](technology-comparison.md). The [system context](../diagrams/system-context.svg) and [use-case view](../diagrams/use-case.svg) provide the two other required diagrams; the [static prototype](../prototype/README.md) shows the intended author flow.

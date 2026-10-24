@@ -17,7 +17,7 @@ The proposed platform turns a user-provided storyline into a short, playable 2D 
 
 - **Why and for whom:** [proposal](docs/proposal.md), [relevance and evidence limits](docs/evidence/relevance.md), [literature](docs/literature.md), [existing systems](docs/existing-systems.md).
 - **What and how:** [technology comparison](docs/technology-comparison.md), [requirements](docs/requirements.md), [architecture](docs/architecture.md), [prototype](prototype/README.md).
-- **How it will be checked and managed:** [verification plan](docs/verification-plan.md), [project plan and risks](docs/project-plan.md), [seven next-increment tasks](docs/youtrack-backlog.md), [supervisor record](docs/supervisor-feedback.md).
+- **How it will be checked and managed:** [project plan and seven tasks](docs/project-plan.md), [supervisor record](docs/supervisor-feedback.md).
 
 The questionnaire export contains 142 response records, but recruitment and distinct participation are unverified. It does not replace the required 3–5 user discussions or substantive client agreement. The [questionnaire note](docs/evidence/questionnaire.md) records its limits. Scope, mechanics and technology choices remain provisional; the [game contract draft](docs/decisions/scope-and-contract.md) and [evaluation prompts](tests/evaluation-prompts.md) are plans, not test results. The prototype is a static storyboard. There are no application setup commands yet.
 

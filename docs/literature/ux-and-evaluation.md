@@ -13,7 +13,7 @@ This section informs the story-entry interface, generation feedback, error recov
 
 The prompting studies point to a tension between expressive story writing and enough structure to communicate gameplay constraints. We should preserve an open story field while making a few consequential choices visible and editable. The HCI guidelines add recovery and explanation: when the requested mechanics are simplified or generation fails, the result screen should identify the change and give the author a clear next action. These are design decisions to test, not demonstrated outcomes of this project [1–3].
 
-The game evaluation review broadens the verification plan beyond “a file launches.” A first user test can ask a participant to describe a game idea, generate or inspect a representative prototype, identify the simplifications, start playing, perform the intended action, and reach the ending. Record observed completion and confusion separately from the participant's account of whether the game reflects the story [4]. Technical validity, user comprehension and enjoyment are distinct outcomes; no current measurement is claimed.
+The game evaluation review broadens planned checks beyond “a file launches.” A first user test can ask a participant to describe a game idea, generate or inspect a representative prototype, identify the simplifications, start playing, perform the intended action, and reach the ending. Record observed completion and confusion separately from the participant's account of whether the game reflects the story [4]. Technical validity, user comprehension and enjoyment are distinct outcomes; no current measurement is claimed.
 
 ## References
 
